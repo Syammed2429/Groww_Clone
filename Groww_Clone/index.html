@@ -31,7 +31,7 @@
         <div class="left-container">
             <h2>Invest in <span class="text-change"></span></h2>
             <p>Trusted by <strong>Millions</strong> of Indians. Start investing today.</p>
-            <button class="btn-color">Get Started</button>
+            <button id="getStarted" class="btn-color">Get Started</button>
         </div>
         <div class="stockslst">
             <a href="#">
@@ -92,5 +92,60 @@
         </div>
     </div>
 
+    <div class="our-products">
+        <div class="ophead">
+            <h3>Our Products</h3>
+        </div>
+
+        <h2 class="motto">Your money. Your choice.</h2>
+        <div class="tabcontainer">
+
+            <div id="stockstab">
+                <img class="stocktablogo">
+                <div onclick="stocksbox()"> Stocks</div>
+            </div>
+
+            <div id="stockstab">
+                <img class="stocktablogo">
+                <div onclick="mfbox()"> Mutual Funds</div>
+            </div>
+
+            <div id="stockstab">
+                <img class="stocktablogo">
+                <div onclick="goldbox()"> Gold</div>
+            </div>
+
+            <div id="stockstab">
+                <img class="stocktablogo">
+                <div onclick="usstocksbox()"> US Stocks</div>
+            </div>
+
+            <div id="stockstab">
+                <img class="stocktablogo">
+                <div onclick="fdbox()"> FDs</div>
+            </div>
+
+
+        </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        let loginRegisterBtn = document.getElementById('reg_login')
+        let getStartedBtn = document.getElementById('getStarted');
+        // let stocksBox = document.getElementById('stocksBox');
+
+        function loginregister() {
+            console.log("hai");
+        }
+
+       function boxb() {
+           console.log("yes");
+       }
+        loginRegisterBtn.addEventListener("click", loginregister);
+        getStartedBtn.addEventListener("click", loginregister);
+    </script>
 </body>
 </html>

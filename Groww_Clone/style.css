@@ -65,7 +65,6 @@
     align-items: center;
     background: rgb(0,208,156);
     color: white;
-    /* padding: 0 25px; */
     height: 55px;
     width: 200px;
     border-radius: 5px;
@@ -114,7 +113,6 @@
     margin-left: 15px;
 }
 .stockdiv  p {
-    /* color: red; */
     font-size: 20px;
     margin: 15px 15px;
     font-family: 'Roboto';
@@ -134,7 +132,7 @@
                     'leftcont futures USstocks'
                     'leftcont golds fd'                
     ;
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 .stockdiv {
     width: 205px;
@@ -182,4 +180,38 @@
 }
 .fd {
     grid-area: fd;
+}
+
+.our-products {
+    width: 1100px; 
+    height: 25px;
+    margin:  auto;
+    margin-top: 5rem;
+
+    
+}
+.ophead {
+    width: 116px;
+    height: 25px;
+    color: #7C7E8C;
+    padding: 2px 10px;
+    background: #ECEDEF;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    
+}
+.ophead > h3 {
+    margin-top: 5px;
+}
+.tabcontainer {
+    width: 1100px;
+    height: 616px;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+.tabcontainer > div:hover {
+    cursor: pointer;
+    /* color: red; */
 }
