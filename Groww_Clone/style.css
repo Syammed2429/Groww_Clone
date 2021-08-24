@@ -1,3 +1,7 @@
+*{
+    border: 1px solid green;
+}
+
 .head-container {
     margin: 10px;
 }
@@ -49,6 +53,58 @@
 }
 
 .features {
-    /* width:  */
-    display: flex;
+    width: 1100px; 
+    height: 616px;
+    margin:  auto;
+    display: grid;
+    grid-template: 'leftcont mutual stocks'
+                    'leftcont futures USstocks'
+                    'leftcont golds fd'                
+    ;
+    margin-top: 6rem;
+}
+.stocks  {
+    display: grid;
+    grid-gap: 20px;
+
+    /* margin: 20px; */
+    grid-template: ' mutual stocks'
+                    ' futures USstocks'
+                    ' golds fd'                
+    ;
+    
+    /* flex-direction: row; */
+} 
+.stocks > div {
+    width: 205px;
+    height: 155px;
+
+
+
+}
+.left-container {
+    width: 500px;
+    margin-top: 10rem;
+    grid-area: leftcont;
+
+}
+
+.mutual-funds {
+    grid-area: mutual;
+}
+
+.stocks {
+    grid-area: stocks;
+}
+.futures {
+    grid-area: futures;
+}
+.USstocks {
+    grid-area: USstocks;
+}
+.gold {
+    grid-area: golds;
+}
+.fd {
+    grid-area: fd;
 }
