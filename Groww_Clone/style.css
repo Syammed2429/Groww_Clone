@@ -31,14 +31,24 @@
 }
 
 #reg_login {
-    width: 175px;
-    height: 40px;
+    margin-left: -13.5rem;
+}
+
+.btn-color {
+    display: flex;
+    align-items: center;
     background: rgb(0,208,156);
     color: white;
     padding: 8px 30px;
-    border: none;
+    height: 40px;
+    width: 175px;
     border-radius: 5px;
+    border: none;
     font-size: 17px;
-    margin-left: -13.5rem;
-    display: flex;align-items: center
+    
+}
+
+.features {
+    /* width:  */
+    display: flex;
 }
