@@ -100,47 +100,145 @@
         <h2 class="motto">Your money. Your choice.</h2>
         <div class="tabcontainer">
 
-            <div id="stockstab">
-                <img class="stocktablogo">
-                <div onclick="stocksbox()"> Stocks</div>
+            <div onclick="stocksbox()" id="stockstab">
+                <img class="stocktablogo" src="//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/stock_product.d051478a.svg">
+                <div > Stocks</div>
                 <div id="stockboxdata"></div>
             </div>
 
-            <div id="stockstab">
-                <img class="stocktablogo">
-                <div onclick="mfbox()"> Mutual Funds</div>
+            <div onclick="mfbox()" id="stockstab">
+                <img class="stocktablogo" src="//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/mf_product.ac8adcdd.svg">
+                <div > Mutual Funds</div>
                 <div id="mfboxdata"></div>
 
             </div>
 
-            <div id="stockstab">
-                <img class="stocktablogo">
-                <div onclick="goldbox()"> Gold</div>
+            <div onclick="goldbox()" id="stockstab">
+                <img class="stocktablogo" src="//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/gold_product.14cb26a3.svg">
+                <div > Gold</div>
                 <div id="golddata"></div>
 
             </div>
 
-            <div id="stockstab">
+            <div onclick="usstocksbox()" id="stockstab">
                 <img class="stocktablogo">
-                <div onclick="usstocksbox()"> US Stocks</div>
+                <div > US Stocks</div>
                 <div id="usstocksdata"></div>
 
             </div>
 
-            <div id="stockstab">
+            <div onclick="fdbox()" id="stockstab">
                 <img class="stocktablogo">
-                <div onclick="fdbox()"> FDs</div>
+                <div > FDs</div>
                 <div id="fddata"></div>
 
             </div>
-
 
 
         </div>
         </div>
 
     </div>
+<!-- canavs -->
+<section class="canvasArt">
+    <div class="canvasText">
+        <div class="canvasHeading">Trusted by</div>
+        <div class="canvasUsers">10 Million+ users</div>
+        <div class="canvasPara">
+            We’ve got the ISO 27001:2013 certification to show for it! Our cutting-edge technology ensure that all your information remains fully encrypted and secure.
+        </div>
+    </div>
+    <div class="sheildDiv">
+        <img class="sheildImg" src="//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/shield-groww.0d0cc15e.png">
+    </div>
+</section>>
 
+    <!-- Footer -->
+    
+    <div class="footerDiv">
+        <div class="footer">
+            <div id="footer1">
+                <div id="footer11">
+                    <img src="images/logo.svg" alt="">
+                </div>
+                <div id="footer12">No.11, 2nd floor, 80 FT Road 4th Block, S.T Bed, Koramangala Bengaluru - 560034</div>
+                <div id="footer13"><a href="#">ContactUs</a></div>
+                <div id="footer14icons">
+                    <div>
+                        <a href="#"><img src="images/fb_icon.svg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/twitter_icon.svg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/mk.svg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/instagram_icon.svg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/linkedin_icon.svg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/telegram_icon.svg" alt=""></a>
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer2">
+                <div id="footer21">PRODUCTS</div>
+                <div id="footer22">
+                    <a href="#">Stocks</a>
+                    <a href="#">Futures & Options</a>
+                    <a href="#">Mutual Funds</a>
+                    <a href="#">Fixed Deposit</a>
+                    <a href="#">Gold</a>
+                    <a href="#">US Stocks</a>
+                </div>
+            </div>
+            <div id="footer3">
+                <div id="footer31">GROWW</div>
+                <div id="footer32">
+                    <a href="#">About Us</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Media & Press</a>
+                    <a href="#">Help and Support</a>
+                </div>
+            </div>
+            <div id="footer4">
+                <div id="footer41">QUICK LINKS</div>
+                <div id="footer42">
+                    <a href="#">AMC Mutual Funds</a>
+                    <a href="#">Calculators</a>
+                    <a href="#">Glossary</a>
+                    <a href="#">Open Demat Account</a>
+                    <a href="#">Groww Digest</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div id="footer5">
+            <hr>
+        </div>
+
+        <div id="footer6">
+            <div id="footer61">ⓒ&nbsp;2016-2021 Groww,   All rights reserved, Build with Love in India</div>
+            <div id="footer62">
+                <div id="footer62img">
+                    <img src="images/google-play-logo.svg" alt="">
+                </div>
+                <div >
+                    <img src="images/app-store-logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+     </div>
+
+</div>
+ 
 
     <script>
         //declaring login and register variables
@@ -158,50 +256,108 @@
         let goldData = document.getElementById('golddata');
         let usStocksData = document.getElementById('usstocksdata');
         let fdData = document.getElementById('fddata');
+        let button =  document.createElement('button');
+        
+        button.setAttribute('class', 'btn-color')
+        button.innerHTML = `Create Account For Free`;
+
 
 
 
         //all stcoks data functions
        function stocksbox() {
-        mfData.innerHTML ="";
-           console.log("stocksbox");
+           stockData.innerHTML = "";
+           mfData.innerHTML = "";
+           goldData.innerHTML = "";
+           usStocksData.innerHTML = "";
+           fdData.innerHTML = "";
+                      
            let zero = document.createElement("p");
-           zero.innerHTML ="Zero";
-           stockData.append(zero);
+           let p = document.createElement("div");
+           let img = document.createElement('img');
+           img.src = "//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/stocks.74948e96.png";
+           p.innerHTML = `You don’t have to pay a single rupee for opening a stocks account or account maintenance.`;
+           p.setAttribute('class', 'fsize')
+           zero.innerHTML = `<strong><span class="bigfont">Zero</span>account charges</strong>`;
+          
+           stockData.append(img,zero,p,button);
        }
 
        function mfbox() {
-        stockData.innerHTML = "";
-        let mfData = document.getElementById('mfboxdata')
-        let head = document.createElement("p");
-        head.innerHTML = `<strong><span class="bigfont">Zero</span>account charges</strong>`;
-            mfData.append(head);
+           stockData.innerHTML = "";
+           mfData.innerHTML = "";
+           goldData.innerHTML = "";
+           usStocksData.innerHTML = "";
+           fdData.innerHTML = "";
+           
+           let p = document.createElement("div");
+           let img = document.createElement("img");
+           img.src = `//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/mf.6c2cde91.png`;
+           let head = document.createElement("p");
+           
+           p.innerHTML = `Select from 5000+ direct mutual funds and get higher return than regular funds.`;
+           head.innerHTML = `<strong><span class="bigfont">0%</span>commission</strong>`;
+           
+           mfData.append(img,head,p,button);
        }
 
        function goldbox() {
-           mfData.innerHTML ="";
-           console.log("Gold Box Data");
+           stockData.innerHTML = "";
+           mfData.innerHTML = "";
+           goldData.innerHTML = "";
+           usStocksData.innerHTML = "";
+           fdData.innerHTML = "";
+           
            let zero = document.createElement("p");
-           zero.innerHTML = `<strong><span class="bigfont">99.9%</span> purity</strong>`;
-           stockData.append(zero);
-       }
-       function usstocksbox() {
-        mfData.innerHTML ="";
+           let p = document.createElement("div");
+           let img = document.createElement("img");
 
-           let p = document.createElement("p");
-           p.innerHTML = `<strong><span class="bigfont">Free</span> account opening</strong>`;
-           usStocksData.append(p);
+           img.src = `//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/gold.4b4ed1a9.png`;
+           zero.innerHTML = `<strong><span class="bigfont">99.9%</span> purity</strong>`;
+           p.innerHTML = `Invest in digital gold as low as ₹10 without any extra commission or making charges.`;
+           goldData.append(img,zero,p,button)
+        }
+       function usstocksbox() {
+        stockData.innerHTML = "";
+           mfData.innerHTML = "";
+           goldData.innerHTML = "";
+           usStocksData.innerHTML = "";
+           fdData.innerHTML = "";
+
+           const p = document.createElement("div");
+           const img = document.createElement("img");
+           const pHead = document.createElement("p");
+
+           img.src = `//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/us.fc57ceac.png`;
+           p.innerHTML = `Invest in Apple, Google, Netflix and many more US companies that you love without any brokerage fee.`;
+           pHead.innerHTML = `<strong><span class="bigfont">Free</span> account opening</strong>`;
+           usStocksData.append(img,pHead,p,button);
 
 
 
        }
        function fdbox() {
-        //    console.log("Fixed Deposit");
-        alert("Fixed Deposit")
+           stockData.innerHTML = "";
+           mfData.innerHTML = "";
+           goldData.innerHTML = "";
+           usStocksData.innerHTML = "";
+           fdData.innerHTML = "";
+
+           const p = document.createElement("div");
+           const img = document.createElement("img");
+           const pHead = document.createElement("p");
+
+
+           img.src = `//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/fd.16c65ccc.png`;
+           pHead.innerHTML = `<strong><span class="bigfont">Free</span> account opening</strong>`;
+           p.innerHTML = `Open fixed deposits in any bank with higher interest rates without opening a bank account.`;
+           fdData.append(img,pHead,p,button)
+
         
        }
         loginRegisterBtn.addEventListener("click", loginregister);
         getStartedBtn.addEventListener("click", loginregister);
+        stocksbox();
     </script>
 </body>
 </html>

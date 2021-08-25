@@ -2,226 +2,574 @@
     border: 1px solid green;
 } */
 body {
-    
-        -webkit-touch-callout: none; /* iOS Safari */
-          -webkit-user-select: none; /* Safari */
-           -khtml-user-select: none; /* Konqueror HTML */
-             -moz-user-select: none; /* Old versions of Firefox */
-              -ms-user-select: none; /* Internet Explorer/Edge */
-                  user-select: none; /* Non-prefixed version, currently
-                                        supported by Chrome, Edge, Opera and Firefox */
-      
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  font-family: Roboto,system-ui;
+  color: #44475b;
+  overflow: auto;
+  scroll-behavior: smooth;
+
 }
 .head-container {
-    margin: 10px;
+  margin: 10px;
 }
 .header {
-    width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 18rem;
-    clear: both;
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 18rem;
 }
 .image > img {
-    width: 148px;
-    height: 48px;
+  width: 148px;
+  height: 48px;
 }
 .left-container > h2 {
-    font-size: 38px;
-    margin-bottom: 50px;
+  font-size: 38px;
+  margin-bottom: 50px;
 }
 .left-container {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
-.left-container > p{
-    color: #7C7E8C;
-    font-size: 19px;
-    margin: 25px 0;
-    width: 362px;
-    height: 34px;
-    line-height: 35px;
-} 
-.left-container > button{
-    margin-top: 65px;
+.left-container > p {
+  color: #7c7e8c;
+  font-size: 19px;
+  margin: 25px 0;
+  width: 362px;
+  height: 34px;
+  line-height: 35px;
+}
+.left-container > button {
+  margin-top: 65px;
 }
 
-
- 
 #searchbar > input {
-    width: 380px;
-    height: 38px;
-    padding: 2px 2px 1px 13px;
-    border: white;
-    box-shadow: 2px 2px 4px  silver, -1px -1px 4px silver;
+  width: 380px;
+  height: 38px;
+  padding: 2px 2px 1px 13px;
+  border: white;
+  box-shadow: 2px 2px 4px silver, -1px -1px 4px silver;
 }
 .searchIcon {
-    width: 19px;
-    height: 19px;
-    position: relative;
-    right: 2rem;
-    top: 0.3rem;
-    /* bottom: 1.8rem; */
+  width: 19px;
+  height: 19px;
+  position: relative;
+  right: 2rem;
+  top: 0.3rem;
+  /* bottom: 1.8rem; */
 }
 
 #reg_login {
-    margin-left: -13.5rem;
+  margin-left: -13.5rem;
 }
 
 .btn-color {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(0,208,156);
-    color: white;
-    height: 55px;
-    width: 200px;
-    border-radius: 5px;
-    border: none;
-    font-size: 17px;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 208, 156);
+  color: white;
+  height: 55px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
 }
 .text-change:before {
-    content: '';
-    animation-name: animate;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-
+  content: "";
+  animation-name: animate;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
 }
 @keyframes animate {
-    0% {
-        content: 'Gold';
-        color: yellow;
-    }
-    20% {
-        content: 'Mutual Funds';
-        color: green;
-        position: absolute;
-        top: 50;
-
-    }
-    40% {
-        content: 'Stocks';
-        color: orange;
-    }
-    60% {
-        content: 'US Stocks';
-        color: green;
-    }
-    80% {
-        content: 'Mutual Funds';
-        color: green;
-    }
-    100% {
-        content: 'Baby';
-        color: red;
-    }
+  0% {
+    content: "Gold";
+    color: yellow;
+  }
+  20% {
+    content: "Mutual Funds";
+    color: green;
+    position: absolute;
+    top: 50;
+  }
+  40% {
+    content: "Stocks";
+    color: orange;
+  }
+  60% {
+    content: "US Stocks";
+    color: green;
+  }
+  80% {
+    content: "Mutual Funds";
+    color: green;
+  }
+  100% {
+    content: "Baby";
+    color: red;
+  }
 }
 .stocklogo {
-    margin-top: 15px;
-    margin-left: 15px;
+  margin-top: 15px;
+  margin-left: 15px;
 }
-.stockdiv  p {
-    font-size: 20px;
-    margin: 15px 15px;
-    font-family: 'Roboto';
-    color: #44475B;
-    font-weight: 800;
+.stockdiv p {
+  font-size: 20px;
+  margin: 15px 15px;
+  color: #44475b;
+  font-weight: 600;
 }
 .stockslst > a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .features {
-    width: 1100px; 
-    height: 616px;
-    margin:  auto;
-    display: grid;
-    grid-template: 'leftcont mutual stocks'
-                    'leftcont futures USstocks'
-                    'leftcont golds fd'                
-    ;
-    margin-top: 5rem;
+  width: 1100px;
+  height: 616px;
+  margin: auto;
+  display: grid;
+  grid-template:
+    "leftcont mutual stocks"
+    "leftcont futures USstocks"
+    "leftcont golds fd";
+  margin-top: 5rem;
 }
 .stockdiv {
-    width: 205px;
-    height: 155px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 50px;
-    /* border: 1px solid black; */
-    border-radius: 20px;
-    box-shadow: 3px 6px 24px rgba(0,0,0,0.1); 
+  width: 205px;
+  height: 155px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 50px;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  box-shadow: 3px 6px 24px rgba(0, 0, 0, 0.1);
 }
-.stockslst  {
-    display: grid;
-    width: 510px;
-    grid-gap: 30px;
-    grid-template: ' mutual stocks'
-                    ' futures USstocks'
-                    ' golds fd'                
-    ;
-    
-} 
+.stockslst {
+  display: grid;
+  width: 510px;
+  grid-gap: 30px;
+  grid-template:
+    " mutual stocks"
+    " futures USstocks"
+    " golds fd";
+}
 .left-container {
-    width: 400px;
-    height: 215px;
-    margin-top: 10rem;
-    grid-area: leftcont;
-
+  width: 400px;
+  height: 215px;
+  margin-top: 10rem;
+  grid-area: leftcont;
 }
 
 .mutual-funds {
-    grid-area: mutual;
+  grid-area: mutual;
 }
 
 .stocks {
-    grid-area: stocks;
+  grid-area: stocks;
 }
 .futures {
-    grid-area: futures;
+  grid-area: futures;
 }
 .USstocks {
-    grid-area: USstocks;
+  grid-area: USstocks;
 }
 .gold {
-    grid-area: golds;
+  grid-area: golds;
 }
 .fd {
-    grid-area: fd;
+  grid-area: fd;
 }
 
 .our-products {
-    width: 1100px; 
-    height: 25px;
-    margin:  auto;
-    margin-top: 5rem;
+  width: 1100px;
+  height: 25px;
+  margin: auto;
+  margin-top: 5rem;
+}
+.ophead {
+  width: 116px;
+  height: 25px;
+  color: #7c7e8c;
+  padding: 2px 10px;
+  background: #ecedef;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 40px;
+}
+.ophead > h3 {
+  margin-top: 5px;
+}
+.tabcontainer {
+  width: 1100px;
+  height: 616px;
+  /* top: 0; */
+  /* left: 0; */
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+.tabcontainer > div {
+  position: absolute;
+  top: 8rem;
+}
+.tabcontainer > div:hover {
+  cursor: pointer;
+  /* color: red; */
+}
+#stockboxdata {
+  margin-top: 50px;
+  clear: both;
+}
+#stockboxdata > p
+ {
+  position: relative;
+  left: 36rem;
+  bottom: 22rem;
+}
+#mfboxdata > p {
+  position: relative;
+  left: 22rem;
+  bottom: 22rem;
+}
+
+#golddata > p {
+    position: relative;
+    left: 8rem;
+    bottom: 22rem;
+  }
+#usstocksdata > p {
+    position: relative;
+    left: -5rem;
+    bottom: 22rem;
+    
+}
+#fddata > p {
+    position: relative;
+    left: -18.2rem;
+    bottom: 22rem;
+}
+
+#stockboxdata > div,
+#mfboxdata > div,
+#golddata > div ,
+#usstocksdata > div ,
+#fddata > div  
+ {
+  position: relative;
+  left: 38rem;
+  bottom: 22rem;
+  color: #44475b;
+  width: 458px;
+  height: 52px;
+  font-size: 18px;
+  line-height: 29.124px;
+}
+#mfboxdata > div {
+  left: 24rem;
+  bottom: 22rem;
+}
+#golddata > div {
+    left: 9rem;
+    bottom: 22rem;
+  }
+#usstocksdata > div
+
+{
+    
+    left: -3rem;
+    bottom: 22rem;
+  }
+#fddata > div {
+    left: -17rem;
+    bottom: 22rem;
+  }
+
+#stockstab {
+  position: relative;
+   top: 5rem;
+  clear: both;
+}
+
+#stockboxdata > img,
+#mfboxdata > img,
+#golddata > img,
+#usstocksdata > img,
+#fddata > img 
+{
+  width: 562px;
+  height: 355px;
+  margin-left: -2rem;
+}
+#mfboxdata > img {
+  margin-left: -15rem;
+  margin-top: 2rem;
+}
+#golddata > img {
+    margin-left: -32rem;
+  margin-top: 2rem;
+}
+#usstocksdata > img {
+    margin-left: -44rem;
+  margin-top: 2rem;
+
+}
+
+#fddata > img {
+    margin-left: -59rem;
+    margin-top: 2rem;
+  
+}
+
+#stockboxdata,
+#mfboxdata,
+#golddata,
+#usstocksdata,
+#fddata {
+  position: absolute;
+  top: 5rem;
+  clear: both;
+
+}
+#stockboxdata > button,
+#mfboxdata > button,
+ #golddata > button,
+ #usstocksdata > button,
+ #fddata > button  {
+    width: 223.23px;
+    height: 50px;
+  position: relative;
+  left: 38rem;
+  bottom: 20rem;
+  padding-right: 10px;;
+  font-size: 16px;
+  clear: both;
+}
+#mfboxdata > button {
+    position: relative;
+  left: 24rem;
+  bottom: 20rem;
+}
+#golddata > button {
+    left: 9rem;
+  bottom: 20rem;
+
+}
+#usstocksdata > button {
+    left: -3rem;
+  bottom: 20rem;
+
+}
+#fddata > button {
+    left: -17rem;
+  bottom: 20rem;
+}
+.bigfont {
+  /* color: aqua; */
+  font-size: 80px;
+  margin: -35px 20px 0;
+  color: #44475b;
+  clear: both;
+
+}
+#stockboxdata > p,
+#mfboxdata > p{
+  /* color: greenyellow; */
+  color: #44475b;
+  font-size: 34px;
+  clear: both;
+}
+
+
+.newww {
+    display: flex;
+        align-self:end;
+        align-items: flex-end;
+
+}
+ 
+/* Canvas Section */
+.canvasArt {
+    width: 100%;
+    height: 725px;
+    margin-top: 40%;
+    display: flex;
+    background: rgba(83,103,255);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.canvasText {
+    position: relative;
+    left: 25rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
 
     
 }
-.ophead {
-    width: 116px;
-    height: 25px;
-    color: #7C7E8C;
-    padding: 2px 10px;
-    background: #ECEDEF;
-    font-size: 12px;
-    text-transform: uppercase;
-    border-radius: 40px;
-    
+.canvasHeading , .canvasUsers {
+    width: 570px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 84px;
+    letter-spacing: .3px;
+    font-weight: bolder;
+
 }
-.ophead > h3 {
-    margin-top: 5px;
+
+/* .canvasUsers {
+    width : 470px;
+    height: 72px;
+} */
+
+.canvasPara {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 20px;
+
 }
-.tabcontainer {
-    width: 1100px;
-    height: 616px;
+
+.sheildDiv {
+    position: relative;
+    right: 3rem;
+}
+
+
+
+
+/* footer */
+
+.footerDiv {
+    width: auto;
+    height: auto;
+    border: 1px solid #1e2232;
+    background-color: #1e2232;
+    margin-top: 50%;
+    position: relative;
+    top: 100vh;
+    right: 0;
+  }
+  .footer {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
-    flex-direction: row;
-    gap: 10rem;
-}
-.tabcontainer > div:hover {
-    cursor: pointer;
-    /* color: red; */
-}
+  }
+  .footer > div {
+    width: 22%;
+    margin: 1%;
+    /* border: 1px solid yellow; */
+  }
+  #footer11 img {
+    width: 120px;
+  }
+  #footer12 {
+    color: white;
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  #footer13 a {
+    color: white;
+    margin-top: 3px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  #footer14icons {
+    display: flex;
+    margin-top: 15px;
+  }
+  #footer14icons > div {
+    width: 20px;
+    height: 25px;
+    /* border: 1px solid red; */
+    margin: 19px;
+    margin-left: 1px;
+  }
+  #footer14icons > div a img {
+    width: 23px;
+    align-items: center;
+  }
+  #footer2 {
+    margin-left: 50px;
+  }
+  #footer21 {
+    color: white;
+    font-size: 18px;
+  }
+  #footer22 > a {
+    margin-top: 11px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+  }
+  #footer31 {
+    color: white;
+    font-size: 18px;
+  }
+  #footer32 > a {
+    margin-top: 11px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+  }
+  #footer41 {
+    color: white;
+    font-size: 18px;
+  }
+  #footer42 > a {
+    margin-top: 11px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+  }
+  #footer5 {
+    width: 80%;
+    margin: auto;
+  }
+  #footer6 {
+    width: 80%;
+    display: flex;
+    margin: auto;
+  
+    height: 25px;
+    margin-bottom: 80px;
+  }
+  #footer6 > div {
+    width: 45%;
+    margin: 2%;
+    /* border:1px solid red;  */
+    /* height: 50px; */
+  }
+  #footer61 {
+    color: white;
+    font-size: 16px;
+  }
+  #footer62 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #footer62 > div {
+    /* border: 1px solid white; */
+    margin: 5px 8px;
+    width: 120px;
+    border-radius: 8px;
+  }
+  #footer62 > div > img {
+    width: 120px;
+    height: 46px;
+  }
+  
