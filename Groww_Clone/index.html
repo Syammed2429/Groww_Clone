@@ -103,27 +103,37 @@
             <div id="stockstab">
                 <img class="stocktablogo">
                 <div onclick="stocksbox()"> Stocks</div>
+                <div id="stockboxdata"></div>
             </div>
 
             <div id="stockstab">
                 <img class="stocktablogo">
                 <div onclick="mfbox()"> Mutual Funds</div>
+                <div id="mfboxdata"></div>
+
             </div>
 
             <div id="stockstab">
                 <img class="stocktablogo">
                 <div onclick="goldbox()"> Gold</div>
+                <div id="golddata"></div>
+
             </div>
 
             <div id="stockstab">
                 <img class="stocktablogo">
                 <div onclick="usstocksbox()"> US Stocks</div>
+                <div id="usstocksdata"></div>
+
             </div>
 
             <div id="stockstab">
                 <img class="stocktablogo">
                 <div onclick="fdbox()"> FDs</div>
+                <div id="fddata"></div>
+
             </div>
+
 
 
         </div>
@@ -133,30 +143,57 @@
 
 
     <script>
+        //declaring login and register variables
         let loginRegisterBtn = document.getElementById('reg_login')
         let getStartedBtn = document.getElementById('getStarted');
         // let stocksBox = document.getElementById('stocksBox');
 
+        //login and register function
         function loginregister() {
             console.log("hai");
         }
+        //stocks box data variables
+        let stockData = document.getElementById('stockboxdata');;
+        let mfData = document.getElementById('mfboxdata');
+        let goldData = document.getElementById('golddata');
+        let usStocksData = document.getElementById('usstocksdata');
+        let fdData = document.getElementById('fddata');
 
+
+
+        //all stcoks data functions
        function stocksbox() {
-        //    console.log("stocksbox");
-        alert("Stocks")
+        mfData.innerHTML ="";
+           console.log("stocksbox");
+           let zero = document.createElement("p");
+           zero.innerHTML ="Zero";
+           stockData.append(zero);
        }
 
        function mfbox() {
-        //    console.log("Mutual Funds");
-        alert('Mutual Funds')
+        stockData.innerHTML = "";
+        let mfData = document.getElementById('mfboxdata')
+        let head = document.createElement("p");
+        head.innerHTML = `<strong><span class="bigfont">Zero</span>account charges</strong>`;
+            mfData.append(head);
        }
+
        function goldbox() {
-        //    console.log("Gold");
-        alert("Gold")
+           mfData.innerHTML ="";
+           console.log("Gold Box Data");
+           let zero = document.createElement("p");
+           zero.innerHTML = `<strong><span class="bigfont">99.9%</span> purity</strong>`;
+           stockData.append(zero);
        }
        function usstocksbox() {
-        //    console.log("usstocksbox");
-        alert("US Stocks")
+        mfData.innerHTML ="";
+
+           let p = document.createElement("p");
+           p.innerHTML = `<strong><span class="bigfont">Free</span> account opening</strong>`;
+           usStocksData.append(p);
+
+
+
        }
        function fdbox() {
         //    console.log("Fixed Deposit");
