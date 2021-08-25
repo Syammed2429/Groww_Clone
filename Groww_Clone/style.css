@@ -1,5 +1,5 @@
-/* *{
-    border: 1px solid green;
+ /* *{
+    border: 1px solid green; 
 } */
 body {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -12,6 +12,12 @@ body {
   color: #44475b;
   overflow: auto;
   scroll-behavior: smooth;
+
+  /* static
+relative
+fixed
+absolute
+sticky */
 
 }
 .head-container {
@@ -80,40 +86,110 @@ body {
   border: none;
   font-size: 17px;
 }
-.text-change:before {
-  content: "";
-  animation-name: animate;
-  animation-iteration-count: infinite;
-  animation-duration: 10s;
+
+.text-change {
+    position: absolute;
+    left: 53rem;
+    top: 22.9rem;
+    transform: translate(-50%,-50%);
+    padding: 0 40px;
+    height: 70px;
+    overflow: hidden;
+
 }
+
+.slide:nth-child(1) {
+    color: #7f8dff;
+}
+.slide:nth-child(2) {
+    color: #00d09c;
+}
+.slide:nth-child(3) {
+    color: #ffb61b;
+}
+.slide:nth-child(4) {
+    color: #ff585d;
+}
+.slide:nth-child(5) {
+    color: #e0c189;
+}
+.slide:nth-child(6) {
+    color: #1da1f2;
+}
+
+
+.slide:first-child{
+    animation: slide 15s infinite;
+}
+@keyframes slide {
+    0% {
+        margin-top: -380px;
+    }
+    16% {
+        margin-top: -300px;
+    }
+    33% {
+        margin-top: -250px
+    }
+    50% {
+        margin-top: -200px;
+    } 
+     66% {
+        margin-top: -150px;
+    }
+    82% {
+        margin-top: -80px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
 @keyframes animate {
   0% {
     content: "Gold";
-    color: yellow;
+    color: gold;
+  
+  margin-top: 0;
+
+
   }
   20% {
     content: "Mutual Funds";
     color: green;
-    position: absolute;
-    top: 50;
+    margin-top: 60px;
+    overflow: hidden;
+    
   }
   40% {
     content: "Stocks";
-    color: orange;
+    color: blue;
+    margin-top: 120px;
+    overflow: hidden;
+
+
   }
   60% {
     content: "US Stocks";
-    color: green;
+    color: red;
+    margin-top: 180px;
+    overflow: hidden;
+
   }
   80% {
     content: "Mutual Funds";
     color: green;
+    margin-top: 80px;
+
   }
   100% {
-    content: "Baby";
+    content: "FDs";
     color: red;
+    margin-top: 100px;
+    overflow: hidden;
+
   }
-}
+} */
 .stocklogo {
   margin-top: 15px;
   margin-left: 15px;
@@ -395,7 +471,7 @@ body {
 /* Canvas Section */
 .canvasArt {
     width: 100%;
-    height: 725px;
+    height: 805px;
     margin-top: 40%;
     display: flex;
     background: rgba(83,103,255);
@@ -425,10 +501,6 @@ body {
 
 }
 
-/* .canvasUsers {
-    width : 470px;
-    height: 72px;
-} */
 
 .canvasPara {
     font-weight: 400;
@@ -441,7 +513,100 @@ body {
 .sheildDiv {
     position: relative;
     right: 3rem;
+    top: 3.5rem;
 }
+
+/* Keep Learning Div Style Start */
+.keepLearningDiv {
+    width : 1110px;
+    height : 939 px;
+    margin: auto;
+    position: relative;
+    top: 108rem;
+    text-align: center;
+
+}
+
+.keepLearningHeading {
+    text-align: center;
+    width : 474px;
+    height : 25px;
+    margin: auto;
+    font-size : 36px;
+    margin-bottom : 5rem;
+    line-height: 25px;
+    /* letter-spacing: .2px; */
+    font-weight: 500;
+
+}
+
+
+.keepLearningBoxes  {
+    /* width: 500px; */
+    height: 275px;
+    margin: auto;
+    display: flex;
+    gap: 5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* bottom: 500rem; */
+
+    
+    
+}
+.keepLearningBoxes > div {
+    width: 300px;
+    height: 275px;
+    margin-bottom: 5rem;
+
+}
+.keepLearningText {
+    width: 360px;
+    height: 72;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    bottom: 100rem;
+
+
+
+}
+
+.keepLearningImage > img {
+    width: 350px;
+    height: 275px;
+    margin-bottom: 2rem;
+}
+
+.viewDiv {
+    color:rgb(0, 208, 156);
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 30rem;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 19px;
+    cursor: pointer;
+    align-self: auto;
+    margin-top: 30px;
+    margin-bottom: 10rem;
+
+}
+
+.viewDiv > span {
+    position: relative;
+
+    top : .5rem;
+}
+
+.material-icons  {
+   
+    top: -2rem;
+}
+
+
 
 
 
