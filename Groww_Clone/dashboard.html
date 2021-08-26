@@ -96,6 +96,70 @@
         </div>
     </div>
 
+<!-- RIght Box Container Start -->
+
+    <div class="right-box">
+        <div class="fando">
+            <div class="right-box-image">
+                <img src="//assets-netstorage.groww.in/website-assets/prod/1.8.3/build/client/images/fno_icon.2067f0e1.svg" alt="F&O Logo">
+            </div>
+            <div class="right-box__option1">
+                F&O - Futures & Options
+            </div>
+        </div>
+
+        <div class="etf">
+            <div class="right-box-image">
+                <img src="//assets-netstorage.groww.in/website-assets/prod/1.8.3/build/client/images/etf_icon.400ca2ff.svg" alt="ETF Image">
+            </div>
+            <div class="right-box__option2">
+                ETF - Exchange Traded Funds
+            </div>
+        </div>
+
+        <div class="ipo">
+            <div class="right-box-image">
+                <img src="//assets-netstorage.groww.in/website-assets/prod/1.8.3/build/client/images/ipo_icon.45b3f2d8.svg" alt="IPO Image">
+            </div>
+            <div class="right-box__option1">
+                IPO - Initial Public Offerings
+            </div>
+            <div class="sub-text">
+                <div class="round-dot-green"></div>
+                <div class="open">
+                    0 Open
+                </div>
+                <div class="round-dot-orange"></div>
+                <div class="upcoming">
+                    1 Upcoming
+                </div>
+            </div>
+        </div>
+
+        <div class="sgb">
+            <div class="right-box-image">
+                <img src="//assets-netstorage.groww.in/website-assets/prod/1.8.3/build/client/images/sgb_icon.18c76fd7.svg" alt="SGB">
+            </div>
+            <div class="right-box__option1">
+                SGB - Sovereign Gold Bond
+            </div>
+            <div class="sub-text">
+                <div class="round-dot-green"></div>
+                <div class="open">
+                    0 Open
+                </div>
+                <div class="round-dot-orange"></div>
+                <div class="upcoming">
+                    1 Upcoming
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!-- RIght Box Container End -->
+
+
+<!-- Stock in News Start -->
     <div class="market-heading__box2">
 
         <div class="market-box1__heading">
@@ -104,7 +168,6 @@
                 <div class="news">News</div></div>
         </div>
 
-        <!-- Stock in News Start -->
         <div class="stock-box__data">
             <div class="stocks-data__box1">
                 <a class="stock-link" href="#">
@@ -287,45 +350,7 @@
 
 
 
-<script>
-
-    let userMenu = document.querySelector('.userIcon');
-    const menuDiv = document.createElement('div');
+<script type="text/javascript" src="dashboard.js"></script> 
     
-    function dropDownMenu() {
-        const name = document.createElement('div');
-        const email = document.createElement('div');
-        const importFunds = document.createElement('div');
-        const watchList = document.createElement('div');
-        const orders = document.createElement('div');
-        const help = document.createElement('div');
-        const logOut = document.createElement('div');
-        let count = 0;
-
-        importFunds.innerHTML = "Import Funds";
-        watchList.innerHTML = "Watch List";
-        orders.innerHTML = "Order";
-        logOut.innerHTML = "Log Out";
-        menuDiv.append(importFunds,watchList,orders,logOut);
-        menuDiv.classList.add('content')
-        userMenu.append(menuDiv);
-        count++;
-
-        if (count >= 1) {
-            userMenu.removeEventListener('click', dropDownMenu);
-        }
-    }
-
-    function dropMenuDissaper () {
-        console.log(userMenu);
-        menuDiv.innerHTML = '';
-    }
-
-    
-
-
-    userMenu.addEventListener('dblclick', dropMenuDissaper);
-    userMenu.addEventListener('click', dropDownMenu);
-</script>
 </body>
 </html>

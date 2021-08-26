@@ -299,3 +299,83 @@ height: 40px;
     color:#44475B;
     font-weight: 600;
 }
+
+.right-box {
+    width: 335px;
+    height: 309px;
+    position: absolute;
+    left: 50rem;
+    top: -1.5rem;
+    margin-left: 2rem;
+    padding: 9px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 1px 3px 0px;
+
+
+
+}
+.fando ,
+.etf
+{
+    width: 313px;
+    height: 48px;
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 2rem;
+}
+.right-box-image img {
+    width: 28px; 
+    height: 28px;
+    background: white;
+    box-shadow: 0 0 1px 0;
+    transition: all .1s ease;
+    border-radius: 5px;
+}
+.right-box__option1,
+.right-box__option2
+{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: .16px;
+}
+.ipo ,
+.sgb
+{
+    width: 313px;
+    height: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+.sub-text {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: row;
+    position: relative;
+    bottom: 2rem;
+    left: 3.5rem;
+    margin-top: 5px;
+
+    
+}
+.round-dot-green {
+    /* margin-bottom: 5rem; */
+    height: 10px;
+    width: 10px;
+    background: green;
+    border-radius: 50%;
+    margin-top: 5px;
+
+}
+.round-dot-orange {
+    height: 10px;
+    width: 10px;
+    background: orange;
+    border-radius: 50%;
+    margin-top: 5px;
+
+}
