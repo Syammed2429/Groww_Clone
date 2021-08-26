@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashstyle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- header -->
+    <div class="head-container">
+        <div class="header">
+        
+        <div class="image">
+            <img src="//assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/logo-dark-groww.83f43714.svg" alt="Groww Logo">
+        </div>
+        <div class="navbarOptions">
+            <p>Explore</p>
+            <p>Investments</p>
+        </div>
+        <!-- search bar and search icon  -->
+        <div id="searchbar">
+            <input type="search" id="search" placeholder="What are you looking for today?">
+            <img class="searchIcon" src="https://assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/search.494f6987.svg">
+        </div>
+        <div class="icons">
+            <img class="bell-icon" src="images/bell.png">
+            <img class="wallet-icon" src="images/wallet.png">
+            <img class="cart-icon" src="images/cart.png">
+        </div>
+        <div class="userIcon">
+            User
+            
+        </div>
+    </div>
+</div>
+<div class="main-options">
+    <div class="dash-board-options">Stocks</div>
+    <div class="dash-board__options">Mutual Funds</div>
+    <div class="dash-board__options">Fixed Deposits</div>
+    <div class="dash-board__options">Gold</div>
+    <div class="dash-board__options">US Stocks</div>
+</div>
+
+<div class="market-container">
+    <div class="market__time">
+        MARKET CLOSES AT 03:30 PM
+    </div>
+    <div class="market-heading__box1">
+        <div class="market-box1__heading">
+            <div class="market-heading1">Index</div>
+            <div class="market-rounded__text">
+                <div class="screener">Screener</div></div>
+        </div>
+        <div class="market-box1__items">
+            <div class="market-box1__item1">
+                <div class="market-box-heading">
+                    <div class="market-name">
+                        <div>NIFTY</div>
+                        <div>NSE</div>
+
+                    </div>
+                    <div class="market-graph">
+                        <span class="material-icons">
+                            trending_down
+                            </span>
+
+                    </div>
+                    <div class="market-points">
+                        <div class="neutral-text">16,636.90</div>
+                        <div class="profit-text">2.25(0.01%)</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="market-box1__item2">
+                <div class="market-box-heading">
+                    <div class="market-name">
+                        <div>SENSEX</div>
+                        <div>BSE</div>
+                    </div>
+                    <div class="market-graph">
+                        <span class="material-icons">
+                            trending_up
+                            </span>
+                    </div>
+                    <div class="market-points">
+                        <div class="neutral-text">55,949.10</div>
+                        <div class="profit-text">4.89(0.01%)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="market-heading__box2">
+
+        <div class="market-box1__heading">
+            <div class="market-heading1">Stocks in News</div>
+            <div class="market-rounded__text">
+                <div class="news">News</div></div>
+        </div>
+
+        <div>
+            
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<script>
+    let userMenu = document.querySelector('.userIcon');
+    const menuDiv = document.createElement('div');
+    // userMenu.innerHTML = "User"
+    // console.log("Hai");
+    function dropDownMenu() {
+        const name = document.createElement('div');
+        const email = document.createElement('div');
+        const importFunds = document.createElement('div');
+        const watchList = document.createElement('div');
+        const orders = document.createElement('div');
+        const help = document.createElement('div');
+        const logOut = document.createElement('div');
+        let count = 0;
+
+        // name.innerHTML = "name";
+        // email.innerHTML = "email";
+        importFunds.innerHTML = "Import Funds";
+        watchList.innerHTML = "Watch List";
+        orders.innerHTML = "Order";
+        logOut.innerHTML = "Log Out";
+        menuDiv.append(importFunds,watchList,orders,logOut);
+        menuDiv.classList.add('content')
+        userMenu.append(menuDiv);
+        count++;
+        if (count >= 1) {
+            // console.log("Hai");
+            userMenu.removeEventListener('click', dropDownMenu)
+            
+            
+            
+        }
+
+    }
+
+    function dropMenuDissaper () {
+        console.log(userMenu);
+        menuDiv.innerHTML = '';
+
+    }
+
+    
+
+
+    userMenu.addEventListener('dblclick', dropMenuDissaper)
+    userMenu.addEventListener('click', dropDownMenu)
+</script>
+</body>
+</html>

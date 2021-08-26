@@ -19,6 +19,8 @@ fixed
 absolute
 sticky */
 
+/* Header Style Start */
+
 }
 .head-container {
   margin: 10px;
@@ -75,18 +77,19 @@ sticky */
 }
 
 .btn-color {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(0, 208, 156);
-  color: white;
-  height: 55px;
-  width: 200px;
-  border-radius: 5px;
-  border: none;
-  font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 208, 156);
+    color: white;
+    height: 55px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
 }
 
+/* Header and Nav bar style End  */
 .text-change {
     position: absolute;
     left: 53rem;
