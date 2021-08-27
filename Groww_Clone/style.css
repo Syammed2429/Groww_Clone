@@ -286,12 +286,16 @@ sticky */
 .tabcontainer {
   width: 1100px;
   height: 616px;
-  /* top: 0; */
-  /* left: 0; */
   display: flex;
   flex-direction: row;
   gap: 10rem;
 }
+.active, .red:hover {
+  /* background-color: green; */
+  border-bottom: 1px solid green;
+  /* color: white; */
+}
+
 .tabcontainer > div {
   position: absolute;
   top: 8rem;

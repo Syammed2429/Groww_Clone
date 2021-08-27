@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wallet.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Wallet</title>
+</head>
+<body>
+    <!-- header -->
+    <div class="head-container">
+        <div class="header">
+        
+        <div class="logo-image">
+            <img src="//assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/logo-dark-groww.83f43714.svg" alt="Groww Logo">
+        </div>
+        <div class="navbarOptions">
+            <p>Explore</p>
+            <p>Investments</p>
+        </div>
+        <!-- search bar and search icon  -->
+        <div id="searchbar">
+            <input type="search" id="search" placeholder="What are you looking for today?">
+            <img class="searchIcon" src="https://assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/search.494f6987.svg">
+        </div>
+        <div class="icons">
+            <img class="bell-icon" src="images/bell.png">
+            <img class="wallet-icon" src="images/wallet.png">
+            <img class="cart-icon" src="images/cart.png">
+        </div>
+        <div class="userIcon">
+            User
+            
+        </div>
+    </div>
+</div>
+
+<!-- Header End -->
+
+<!-- Currency Options Start -->
+<div class="currency-box">
+    <div class="inr">
+        INR Balance
+    </div>
+    <div class="usd">
+        USD Balance
+    </div>
+</div>
+
+<!-- Currency Options End -->
+
+<!-- Balance Display Start -->
+
+<div class="balance-cont">
+
+    <div class="balance-box">
+        <div class="balance-text">
+            Balance Available
+            <div class="available-balance">0</div>
+        </div>
+    </div>
+    <div class="balance-details">
+        <div class="details-box">
+            Details
+        </div>
+    </div>
+</div>
+
+<div class="add-money-container">
+    <div class="deposit">
+        <div class="option">
+            Deposit
+        </div>
+        <label for="money">Enter Amount
+            <input type="number" id="money" placeholder="0" required>
+        </label>
+        <div class="money-options">
+            <div class="1thousand"></div>
+            <div class="5thousand"></div>
+        </div>
+        <button onclick="deposit()">DEPSOIT MONEY</button>
+    </div>
+</div>
+
+<script>
+    
+    
+    function deposit() {
+        let amount = document.getElementById('money').value;
+        // console.log('amount:', Number(amount));
+        let amountJson = JSON.stringify(amount);
+        localStorage.setItem('newAmount',amountJson);
+        let newAmount = JSON.parse(localStorage.getItem('newAmount'))
+        // console.log('newAmount:', Number(newAmount))
+        availableBalance(newAmount);
+
+
+
+    }
+    // if(localStorage.getItem(''))
+
+    function availableBalance (amt) {
+        // console.log(amt);
+        let newAmount = Number(amt) //coverting a number that taken from the input box
+        // console.log('newAmount:', newAmount)
+        let balanceAmount = document.querySelector('.available-balance');
+        let first = 0;
+        balanceAmount.innerHTML = first;
+        console.log('balanceAmount:', balanceAmount)
+        // let b =
+        let total = balanceAmount + newAmount;
+        console.log('total:', total)
+
+        // console.log(first + newAmount);
+        // console.log('balanceAmount:', balanceAmount)
+        
+
+        
+        // let newData = balanceAmount.inne
+        // console.log('balanceAmount:', balanceAmount)
+
+        let availableBalancejson = JSON.stringify(balanceAmount);
+        localStorage.setItem('balance', availableBalancejson)
+    }
+    // availableBalance();
+
+
+
+
+</script>
+</body>
+</html>
+
+

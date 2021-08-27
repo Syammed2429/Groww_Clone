@@ -112,38 +112,38 @@
         </div>
 
         <h2 class="motto">Your money. Your choice.</h2>
-        <div class="tabcontainer">
-
+        <div class="tabcontainer" id="tabs">
+            
             <div onclick="stocksbox()" id="stockstab">
                 <img class="stocktablogo" src="//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/stock_product.d051478a.svg">
-                <div > Stocks</div>
+                <div class="red"> Stocks</div>
                 <div id="stockboxdata"></div>
             </div>
 
             <div onclick="mfbox()" id="stockstab">
                 <img class="stocktablogo" src="//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/mf_product.ac8adcdd.svg">
-                <div > Mutual Funds</div>
+                <div class="red"> Mutual Funds</div>
                 <div id="mfboxdata"></div>
 
             </div>
 
             <div onclick="goldbox()" id="stockstab">
                 <img class="stocktablogo" src="//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/gold_product.14cb26a3.svg">
-                <div > Gold</div>
+                <div class="red"> Gold</div>
                 <div id="golddata"></div>
 
             </div>
 
             <div onclick="usstocksbox()" id="stockstab">
                 <img class="stocktablogo">
-                <div > US Stocks</div>
+                <div class="red" > US Stocks</div>
                 <div id="usstocksdata"></div>
 
             </div>
 
             <div onclick="fdbox()" id="stockstab">
                 <img class="stocktablogo">
-                <div > FDs</div>
+                <div class="red"> FDs</div>
                 <div id="fddata"></div>
 
             </div>
@@ -406,9 +406,26 @@
 
         
        }
+
+       
+
         loginRegisterBtn.addEventListener("click", loginregister);
         getStartedBtn.addEventListener("click", loginregister);
         stocksbox();
+
+
+
+        var header = document.getElementById("tabs");
+var btns = header.getElementsByClassName("red");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" active", "");
+  }
+  this.className += " active";
+  });
+}
     </script>
 </body>
 </html>

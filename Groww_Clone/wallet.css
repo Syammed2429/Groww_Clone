@@ -1,0 +1,166 @@
+body {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    font-family: Roboto,system-ui;
+    color: #44475b;
+    overflow: auto;
+    scroll-behavior: smooth;
+  
+  }
+
+  .head-container {
+    margin: 10px;
+  }
+  .header {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 18rem;
+  }
+  
+  
+  #searchbar > input {
+    width: 445px;
+    height: 38px;
+    padding: 2px 1px 1px 13px;
+    border: white;
+    box-shadow: 2px 2px 4px silver, -1px -1px 4px silver;
+    position: relative;
+    right: 28rem;
+  }
+  .searchIcon {
+    width: 19px;
+    height: 19px;
+    position: relative;
+    bottom: 1.7rem;
+    /* right: 26rem; */
+    right: 1.8rem;
+  }
+  
+  .logo-image img{
+  width: 146px;
+  height: 40px;
+  }
+  .navbarOptions {
+      display: flex;
+      gap: 2rem;
+      flex-direction: row;
+      align-items: flex-start;
+      position: relative;
+      /* left: 40rem; */
+      right: 15rem;
+  
+  }
+  
+  /* .navbarOptions > p {
+  
+  
+  } */
+  .btn-color {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 208, 156);
+      color: white;
+      height: 55px;
+      width: 200px;
+      border-radius: 5px;
+      border: none;
+      font-size: 17px;
+  }
+  
+  /* Nav Bar Icons style Start */
+  
+  .icons {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      /* left: 5rem; */
+      right: 32rem;
+      /* bottom: 5rem; */
+      top: 1rem;
+  }
+  .icons img {
+      width: 20px;
+      height: 20px;
+      margin-left: 1.5rem;
+  }
+  
+  /* User options */
+  .userIcon {
+      position: relative;
+      right: 33rem;
+  }
+  /* Nav Bar Icons style End */
+  
+  
+  /* DropdownMenu Style Start  */
+  
+  .content {
+      
+      z-index: 1;
+      background-color: white;
+  
+      position: absolute;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  
+  }
+  .content div {
+      padding: 12px 16px 16px;
+      display: block;
+  }
+  .content div:hover {
+      background-color: #ddd;
+  }
+  /* DropdownMenu Style SEnd  */
+  
+  /* Header and Nav bar style End  */
+  
+
+  /* Currency Box Style Start */
+
+  .currency-box  {
+      width: 1110px;
+      height: 60px;
+      margin: auto;
+      position: relative;
+      right: 2.5rem;
+      top: 2.5rem;
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+      
+  }
+  .balance-cont {
+      width: 678px;
+      height: 590px;
+      margin: auto;
+      position: relative;
+      right: 16rem;
+      top: 5rem;
+      box-shadow: 0 1px 7px 0;
+  }
+
+  .balance-box {
+    width: 678px;
+    height: 170px;
+    margin: auto;
+    box-shadow: 0 1px 7px 0;
+  }
+
+  .add-money-container {
+      width: 358px;
+      height: 480px;
+      box-shadow: 0 1px 7px 0;
+      position: relative;
+      bottom: 32.5rem;
+      /* left: 0; */
+      left: 75rem;
+
+  }
