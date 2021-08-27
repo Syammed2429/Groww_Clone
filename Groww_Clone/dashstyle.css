@@ -379,3 +379,7 @@ height: 40px;
     margin-top: 5px;
 
 }
+.dark-mode {
+    background: black;
+    color: white !important;
+}

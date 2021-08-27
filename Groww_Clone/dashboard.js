@@ -31,6 +31,12 @@ let userMenu = document.querySelector('.userIcon');
     }
 
     
+    function darkMode() {
+        let darkMode = document.body;
+        darkMode.classList.toggle('dark-mode')
+        
+
+    }
 
 
     userMenu.addEventListener('dblclick', dropMenuDissaper);
