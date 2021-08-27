@@ -164,3 +164,18 @@ body {
       left: 75rem;
 
   }
+
+  .add-money__box {
+      display: flex;
+      gap: 2rem;
+      cursor: pointer;
+      /* cursor: ; */
+  }
+  /* .withdraw-options {
+      position: absolute;
+      top: 1.5rem;
+  } */
+
+  /* #withdraw-money {
+      disablede
+  } */

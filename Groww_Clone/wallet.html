@@ -70,10 +70,16 @@
 </div>
 
 <div class="add-money-container">
-    <div class="deposit">
-        <div class="option">
+    <div class="add-money__box">
+        <div class="deposit" onclick="deposit()" >
             Deposit
         </div>
+        <div class="withdraw" onclick="withdraw()">
+            withdraw
+        </div>
+    </div>
+    <div class="deposit-options">
+
         <label for="money">Enter Amount
             <input type="number" id="money" placeholder="0" required>
         </label>
@@ -81,54 +87,151 @@
             <div class="1thousand"></div>
             <div class="5thousand"></div>
         </div>
-        <button onclick="deposit()">DEPSOIT MONEY</button>
+        <button onclick="depositmoney()">DEPSOIT MONEY</button>
+    </div>
+
+    <div class="withdraw-options">
+        <div class="withdrawable">
+            withdrawable <span class="faq"></span>
+            <div class="show-total__amount"> RS <span class="show-amount"></span></div>
+        </div>
+        <label class="withdraw-amount" for="withdraw-money">Enter Amount
+            <input type="number" id="withdraw-money" placeholder="0" required>
+        </label>
+        <div class="withdraw-all">
+            <label for="withdraw-all__checkbox">
+                <input type="checkbox" id="withdraw-all__checkbox">
+                Withdraw All
+
+            </label>
+        </div>
+        <div class="withdraw-to">
+            <div class="bank-name">
+                ICICI
+            </div>
+
+        </div>
+        <button class="withdraw-money__button" onclick="withdrawmoney()">Withdraw MONEY</button>
     </div>
 </div>
 
 <script>
+        function deposit() {
+            let options = document.querySelector('.deposit-options');
+            const withdrawOptions = document.querySelector('.withdraw-options')
+            options.style.visibility = 'visible';
+            // withdrawOptions.style.visibility = 'hidden';
+            console.log("Hai");
+        }
+        deposit()
     
-    
-    function deposit() {
+    function depositmoney() {
         let amount = document.getElementById('money').value;
-        // console.log('amount:', Number(amount));
-        let amountJson = JSON.stringify(amount);
-        localStorage.setItem('newAmount',amountJson);
-        let newAmount = JSON.parse(localStorage.getItem('newAmount'))
-        // console.log('newAmount:', Number(newAmount))
-        availableBalance(newAmount);
+        console.log('amount:', (amount));
+        const toNumber = Number(amount);
+        addBalance(toNumber);
+    }
 
 
+
+
+// model
+let newAmount = JSON.parse(localStorage.getItem('balance'));
+var balance = newAmount;
+
+// controller
+
+function addBalance(amount) {
+    balance += amount;
+    localStorage.setItem('balance', balance,toString());
+    
+    render();
+}
+
+// view
+const availableBalanceDiv = document.querySelector(".available-balance");
+
+function render() {
+  availableBalanceDiv.innerText = balance.toLocaleString();
+}
+render();
+
+//withdraw amount function
+
+// accessing the totalbalnce from the localstorage
+    let totalAmount = JSON.parse(localStorage.getItem('balance'));
+    console.log('totalAmount:', totalAmount)
+
+function withdraw() {
+    console.log("hai");
+
+    //creting all the variables and assing the values to it
+    const disapper = document.querySelector('.deposit-options');
+    const withdrawOptions = document.querySelector('.withdraw-options')
+    const displayTotalMoney = document.querySelector('.show-amount');
+    const enteredAmount = document.getElementById('withdraw-money')
+    const withdrawAll = document.getElementById('withdraw-all__checkbox');
+    const withdrawMoneyButton = document.querySelector('.withdraw-money__button');
+    // console.log('enteredAmount:', enteredAmount)
+
+    
+    displayTotalMoney.innerText = totalAmount;
+
+    //making eveyything to  be disable if wallet got 0
+    if(totalAmount <= 0) {
+        alert("You don't have sufficent amount to withdraw");
+        enteredAmount.style.cursor = 'not-allowed';
+        withdrawAll.style.cursor = 'not-allowed';
+        enteredAmount.disabled = true;
+        withdrawAll.disabled = true;
+        withdrawMoneyButton.disabled = true;
 
     }
-    // if(localStorage.getItem(''))
+    
+    // disapper.innerText = '';
+    disapper.style.visibility = 'hidden';
+    withdrawOptions.style.visibility = 'visible';
 
-    function availableBalance (amt) {
-        // console.log(amt);
-        let newAmount = Number(amt) //coverting a number that taken from the input box
-        // console.log('newAmount:', newAmount)
-        let balanceAmount = document.querySelector('.available-balance');
-        let first = 0;
-        balanceAmount.innerHTML = first;
-        console.log('balanceAmount:', balanceAmount)
-        // let b =
-        let total = balanceAmount + newAmount;
-        console.log('total:', total)
 
-        // console.log(first + newAmount);
-        // console.log('balanceAmount:', balanceAmount)
-        
+    
+}
 
-        
-        // let newData = balanceAmount.inne
-        // console.log('balanceAmount:', balanceAmount)
+function withdrawmoney() {
+    console.log('totalAmount:', totalAmount)
+    const enteredAmount = document.getElementById('withdraw-money').value;
+    console.log('enteredAmount:', enteredAmount)
+    
+    //checking wheter enteredAmount is greater then the wallet balance
+    let remainingBalance = 0 ;
+    // console.log('remainingBalance:', remainingBalance)
 
-        let availableBalancejson = JSON.stringify(balanceAmount);
-        localStorage.setItem('balance', availableBalancejson)
+    //if user enteredAmount is zero or null
+    if(enteredAmount == null || enteredAmount == 0) {
+        // console.log("enter");
+        alert('Please enter valid amount to withdraw');
     }
-    // availableBalance();
+    if(totalAmount < enteredAmount) {
+        // console.log("no ");
+        alert("You don't have enough funds to withdraw")
+    } else {
+        remainingBalance = totalAmount - enteredAmount
+    }
+    
+
+    //remainingBalance will gonna store in localStorage then it
+    //  will  be added to available balance need to do it on tomorrow
+    console.log('availableBalance:', remainingBalance)
+const availableBalanceDiv = document.querySelector(".available-balance");
+availableBalanceDiv.innerHTML = remainingBalance;
+console.log('availableBalanceDiv:', availableBalanceDiv)
 
 
 
+    
+
+
+
+}
 
 </script>
 </body>
