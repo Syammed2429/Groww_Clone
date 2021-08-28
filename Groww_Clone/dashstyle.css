@@ -232,6 +232,16 @@ height: 40px;
     right: 15px;
 
 }
+
+.stocks-data__box1:hover,
+.stocks-data__box2:hover,
+.stocks-data__box3:hover,
+.stocks-data__box4:hover
+{
+/* background: red; */
+box-shadow: 3px 5px 10px 3px rgb(218, 209, 209) ; 
+
+}
 .stocks-data__box1,
 .stocks-data__box2,
 .stocks-data__box3,

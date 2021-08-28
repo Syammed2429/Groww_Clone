@@ -25,7 +25,7 @@ sticky */
 .head-container {
   margin: 10px;
 }
-.header {
+.navbar {
   width: 1200px;
   margin: auto;
   display: flex;
@@ -90,9 +90,150 @@ sticky */
 }
 
 /* Header and Nav bar style End  */
+
+
+
+
+
+/* start login */
+#login {
+  border: 1px solid gray;
+  background-image: url("https://assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/patternImg.0edf5760.svg");
+  background-color: #ffffff;
+  background-size: 50%;
+  display: none;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  position: absolute;
+  position: fixed;
+  z-index: 10;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 450px;
+}
+
+#login .left {
+  width: 50%;
+}
+/* setpass start */
+.setPass {
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 60%;
+  height: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.setPass div {
+  width: 200px;
+  padding: 10px 20px;
+  background-color: gray;
+  margin: 0 auto;
+  color: white;
+}
+.setPass input {
+  margin-bottom: 20px;
+}
+/* setpass end */
+#login .close-btn {
+  cursor: pointer;
+  font-size: 30px;
+  padding-top: -12px;
+  margin-right: 14px;
+  margin-top: 12px;
+}
+#login .signup {
+  cursor: pointer;
+}
+#login .right {
+  display: flex;
+  justify-content: space-between;
+  width: 43%;
+}
+.right p {
+  text-align: center;
+}
+.right h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 38px;
+  opacity: 0.8;
+}
+#login .right a {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding: 12px 30px;
+  display: flex;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 0px 1px 0.1px gray;
+}
+#login .right a img {
+  padding-left: 40px;
+  padding-right: 10px;
+}
+.right .signup {
+  color: white;
+  margin-top: 40px;
+  border-radius: 5px;
+  background-color: #00d09c;
+  padding: 15px 50px;
+}
+.right input {
+  padding: 10px;
+  font-size: 18px;
+  width: 350px;
+}
+
+.right .otp {
+  display: none;
+}
+.right .pass {
+  display: none;
+}
+.right .otp p {
+  text-align: left;
+  color: #00d09c;
+}
+.right .pass p {
+  text-align: left;
+  color: #00d09c;
+}
+
+#login h1,
+h4 {
+  font-weight: 500;
+  color: white;
+  font-size: 32px;
+  margin: 70px 0px 0px 30px;
+}
+#login h4 {
+  padding-top: 170px;
+  font-size: 25px;
+}
+
+/* end login */
+
+
+
+
+
+
+
+
+
+
+
+
+
 .text-change {
     position: absolute;
-    left: 53rem;
+    left: 45.6rem;
     top: 22.9rem;
     transform: translate(-50%,-50%);
     padding: 0 40px;
@@ -745,3 +886,204 @@ sticky */
     height: 46px;
   }
   
+  /* Press COntainer Style Start */
+  .press-container {
+    width: 1110px;
+    height: 500px;
+    margin:  auto;
+    position: relative;
+    top: 125rem;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-self: space-around; */
+
+  }
+  .press-heading {
+    width: 202px;
+    height: 25px;
+    font-size: 36px;
+    margin: auto;
+    line-height: 25px;
+    letter-spacing: .2px;
+    font-weight: 500;
+  }
+
+  .press-titles {
+    width: 1110px;
+    height: 92px;
+    margin: 30px 0 0;
+    display: flex;
+    /* flex-direction: row */
+    justify-content: space-between;
+    /* color: grey; */
+
+  }
+
+  .press-titles img {
+    /* background-color: red ; */
+    /* color:white; */
+    filter: grayscale(1);
+    cursor: pointer;
+    transition: filter .3s ease-out;
+    
+  }
+
+  .press-titles img:hover {
+    /* background: green; */
+    filter:contrast(1)
+  }
+
+  /* Press Style End */
+
+  /* Rating Style Start */
+  
+  #rating {
+    position: relative;
+    top: 102rem;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    /* border: 1px solid black; */
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 243, 243);
+  }
+  #rating > div {
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #rating > div:last-child {
+    margin-bottom: 80px;
+  }
+  #rating1 {
+    display: flex;
+    flex-direction: row;
+  }
+  #rating1 > div:first-child {
+    width: 75%;
+    /* border: 1px solid green; */
+    margin: 1%;
+  }
+  #rating1 > div:last-child {
+    width: 15%;
+    /* border: 1px solid green; */
+    margin: 1%;
+    margin-top: 70px;
+    margin-left: 50px;
+  }
+  #rating1 > div > p:first-child {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  #ratingp1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 2px;
+    /* border: 1px solid black; */
+  }
+  #ratinga1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  #ratinga1 > div:first-child {
+    width: 65%;
+  }
+  #ratinga1 > div:last-child {
+    width: 35%;
+    /* border: 1px solid green; */
+    height: 25%;
+  }
+  #ratinga1 > div > a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    /* border: 1px solid black; */
+    color: #00d09c;
+  }
+  .icon1 {
+    color: #00d09c;
+    font-weight: 400;
+    margin-top: 1px;
+  }
+  #rating2 {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  #rating2 > div {
+    width: 22%;
+    margin: 1%;
+    line-height: 50px;
+    font-weight: 500;
+    border-radius: 5px;
+    position: relative;
+    left: 15%;
+      /* height: 100px; */
+    background-color: white;
+  }
+  #rating2 > div:hover {
+    box-shadow: 3px 5px 10px 3px rgb(218, 209, 209) ;
+  }
+  #rating21 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .rating211 {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  .rating211 > div:first-child {
+    /* border: 1px solid green; */
+    width: 18%;
+    margin: 1%;
+  }
+  .rating211 > div:last-child {
+    /* border: 1px solid green; */
+    margin-left: 55px;
+    width: 60%;
+    margin: 10%;
+    margin-top: 18px;
+    color: #ffb61b;
+  }
+  .rating211 > div > img {
+    width: 50px;
+  }
+  .rating212 {
+    width: 80%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .rating213 {
+    width: 80%;
+    /* border: 1px solid yellowgreen; */
+    margin: auto;
+  }
+  .rating213 > p:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 1px;
+    margin-bottom: 2px;
+  }
+  .rating213 > p:last-child {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 1px;
+    padding-top: 2px;
+  }

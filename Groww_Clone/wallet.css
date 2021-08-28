@@ -291,7 +291,12 @@ body {
 .withdraw-all {
     color: blue;
     margin: 1rem 0 0 13rem;
+    color: #00d09c;
 }
+#withdraw-all__checkbox {
+    border: 5px solid red;
+}
+
 .withdraw-money {
     width: 15px;
     padding-left: 10px;
@@ -309,7 +314,8 @@ body {
     color: white !important;
 }
 .bank-name span {
-    color: aqua;
+    font-size: 12px;
+    font-weight: bold
 }
 
   .darkModeOn {

@@ -79,3 +79,15 @@ importFunds.classList.add('importFunds')
     importFunds.addEventListener('click', addMoney)
     userMenu.addEventListener('click', dropDownMenu);
     darkMode.addEventListener('click',darkModeToggle)
+
+
+    function hover () {
+        console.log('hai from hover');
+        let plus = document.createElement('div');
+        let dataBox = document.querySelector('.stock-box__data');
+
+        plus.innerHTML = '+'
+        dataBox.append(plus)
+    }
+
+    hover ()

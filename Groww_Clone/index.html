@@ -14,20 +14,38 @@
 <body>
     <!-- header -->
     <div class="head-container">
-            <div class="header">
-            
-            <div class="image">
-                <img src="//assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/logo-dark-groww.83f43714.svg" alt="Groww Logo">
-            </div>
+        <div class="navbar">
+            <!-- <div class="navbar">    -->
+                <div class="image">
+                    <img src="//assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/logo-dark-groww.83f43714.svg" alt="Groww Logo">
+                </div>
+
             <!-- search bar and search icon  -->
-            <div id="searchbar">
-                <input type="search" id="search" placeholder="What are you looking for today?">
-                <img class="searchIcon" src="https://assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/search.494f6987.svg">
+                <div id="searchbar">
+                    <input type="search" id="search" placeholder="What are you looking for today?">
+                    <img class="searchIcon" src="https://assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/search.494f6987.svg">
+                </div>
+                <button onclick="loginRegForm()" id="reg_login" class="btn-color content_click">Login/Register</button>
             </div>
-            <button id="reg_login" class="btn-color">Login/Register</button>
         </div>
+
         
     </div>
+
+
+
+
+    <!-- popup start -->
+
+    <!-- <a class="content_click" href="#"><p>Start Investing</p></a> -->
+
+
+
+    
+
+
+
+
 
     <!-- Features Start -->
     <div class="features">
@@ -43,7 +61,9 @@
                 </span>
             </h2>
             <p>Trusted by <strong>Millions</strong> of Indians. Start investing today.</p>
-            <button id="getStarted" class="btn-color">Get Started</button>
+            <button onclick="loginRegForm2()" id="getStarted" class="btn-color content_click">Get Started</button>
+            <!-- <button onclick="loginRegForm()" id="reg_login" class="btn-color content_click">Login/Register</button> -->
+
         </div>
         <div class="stockslst">
             <a href="#">
@@ -168,6 +188,8 @@
         <img class="sheildImg" src="//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/shield-groww.0d0cc15e.png">
     </div>
 </section>>
+<!-- Canvas End -->
+<!-- KeepLearningDiv Start -->
 
 <div class="keepLearningDiv">
     <div class="keepLearningHeading">
@@ -202,7 +224,122 @@
             </span>
     </div>
 </div>
-<!-- Canvas End -->
+
+<!-- KeepLearningDiv End -->
+
+
+<!-- Press COntainer Start -->
+<div class="press-container">
+    <div class="press-heading">
+        In the Press
+    </div>
+    <div class="press-titles">
+        <div class="yourstory">
+            <img src = "//assets-netstorage.groww.in/website-assets/prod/1.8.3/build/client/images/ys.9166bd37.svg" alt="yourstory">
+        </div>
+
+        <div class="livemint">
+            <img src = "//assets-netstorage.groww.in/website-assets/prod/1.8.3/build/client/images/live.7edf8d7a.svg" alt="livemint">
+        </div>
+
+        <div class="businessline">
+            <img src = "//assets-netstorage.groww.in/website-assets/prod/1.8.3/build/client/images/business.dc402a84.svg" alt="businessline">
+        </div>
+
+        <div class="enterpreneur">
+            <img src = "//assets-netstorage.groww.in/website-assets/prod/1.8.3/build/client/images/enter.09e9d78c.svg" alt="enterpreneur">
+        </div>
+    </div>
+
+</div>
+
+<!-- Press COntainer End-->
+
+<!-- Rating Div Start -->
+<div id="rating">
+    <div id="rating1">
+       <div>
+         <p class="rating-tagline">Creating proud investors.</p>
+         <p id="ratingp1">You can feel the pride of being a Groww investor in their words.</p>
+       </div>
+        <div id="ratinga1">
+         <div><a href="#">View More</a> </div> 
+         <div><span class="material-icons icon1">
+             arrow_right_alt
+             </span> </div>
+        </div>
+    </div>
+    <div id="rating2">
+        <div id="rating21">
+             <div class="rating211">
+                 <div>
+                     <img src="https://assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/ankitImg.863e0afa.png" alt="">
+                 </div>
+                 <div>
+                     <span class="material-icons">grade</span>
+                     <span class="material-icons">grade</span>
+                     <span class="material-icons">grade</span>
+                     <span class="material-icons">grade</span>
+                     <span class="material-icons">grade</span>
+                 </div>
+             </div>
+             <div class="rating212">
+                 "Groww.in was the platform where I first got onboard to MF and I would have to say, even for a beginner like me it made things quite easier to explore and invest."
+             </div>
+             <div class="rating213">
+                 <p>Ankit Puri</p>
+                 <p>Product Specialist,Google</p>
+             </div>
+        </div>
+        <div id="rating21">
+         <div class="rating211">
+             <div>
+                 <img src="https://assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/ankitImg.863e0afa.png" alt="">
+             </div>
+             <div>
+                 <span class="material-icons">grade</span>
+                 <span class="material-icons">grade</span>
+                 <span class="material-icons">grade</span>
+                 <span class="material-icons">grade</span>
+                 <span class="material-icons">grade</span>
+             </div>
+         </div>
+         <div class="rating212">
+             "Groww.in was the platform where I first got onboard to MF and I would have to say, even for a beginner like me it made things quite easier to explore and invest."
+         </div>
+         <div class="rating213">
+             <p>Ankit Puri</p>
+             <p>Product Specialist,Google</p>
+         </div>
+    </div>
+    <div id="rating21">
+     <div class="rating211">
+         <div>
+             <img src="https://assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/ankitImg.863e0afa.png" alt="">
+         </div>
+         <div>
+             <span class="material-icons">grade</span>
+             <span class="material-icons">grade</span>
+             <span class="material-icons">grade</span>
+             <span class="material-icons">grade</span>
+             <span class="material-icons">grade</span>
+         </div>
+     </div>
+     <div class="rating212">
+         "Groww.in was the platform where I first got onboard to MF and I would have to say, even for a beginner like me it made things quite easier to explore and invest."
+     </div>
+     <div class="rating213">
+         <p>Ankit Puri</p>
+         <p>Product Specialist,Google</p>
+     </div>
+</div>
+        
+    </div>
+
+</div> 
+
+
+<!-- Rating Div End -->
 
     <!-- Footer Start-->
     
@@ -291,141 +428,6 @@
 </div>
  
 
-    <script>
-        //declaring login and register variables
-        let loginRegisterBtn = document.getElementById('reg_login')
-        let getStartedBtn = document.getElementById('getStarted');
-        // let stocksBox = document.getElementById('stocksBox');
-
-        //login and register function
-        function loginregister() {
-            console.log("hai");
-        }
-        //stocks box data variables
-        let stockData = document.getElementById('stockboxdata');;
-        let mfData = document.getElementById('mfboxdata');
-        let goldData = document.getElementById('golddata');
-        let usStocksData = document.getElementById('usstocksdata');
-        let fdData = document.getElementById('fddata');
-        let button =  document.createElement('button');
-        
-        button.setAttribute('class', 'btn-color')
-        button.innerHTML = `Create Account For Free`;
-
-
-
-
-        //all stcoks data functions
-       function stocksbox() {
-           stockData.innerHTML = "";
-           mfData.innerHTML = "";
-           goldData.innerHTML = "";
-           usStocksData.innerHTML = "";
-           fdData.innerHTML = "";
-                      
-           let zero = document.createElement("p");
-           let p = document.createElement("div");
-           let img = document.createElement('img');
-           img.src = "//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/stocks.74948e96.png";
-           p.innerHTML = `You don’t have to pay a single rupee for opening a stocks account or account maintenance.`;
-           p.setAttribute('class', 'fsize')
-           zero.innerHTML = `<strong><span class="bigfont">Zero</span>account charges</strong>`;
-          
-           stockData.append(img,zero,p,button);
-       }
-
-       function mfbox() {
-           stockData.innerHTML = "";
-           mfData.innerHTML = "";
-           goldData.innerHTML = "";
-           usStocksData.innerHTML = "";
-           fdData.innerHTML = "";
-           
-           let p = document.createElement("div");
-           let img = document.createElement("img");
-           img.src = `//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/mf.6c2cde91.png`;
-           let head = document.createElement("p");
-           
-           p.innerHTML = `Select from 5000+ direct mutual funds and get higher return than regular funds.`;
-           head.innerHTML = `<strong><span class="bigfont">0%</span>commission</strong>`;
-           
-           mfData.append(img,head,p,button);
-       }
-
-       function goldbox() {
-           stockData.innerHTML = "";
-           mfData.innerHTML = "";
-           goldData.innerHTML = "";
-           usStocksData.innerHTML = "";
-           fdData.innerHTML = "";
-           
-           let zero = document.createElement("p");
-           let p = document.createElement("div");
-           let img = document.createElement("img");
-
-           img.src = `//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/gold.4b4ed1a9.png`;
-           zero.innerHTML = `<strong><span class="bigfont">99.9%</span> purity</strong>`;
-           p.innerHTML = `Invest in digital gold as low as ₹10 without any extra commission or making charges.`;
-           goldData.append(img,zero,p,button)
-        }
-       function usstocksbox() {
-        stockData.innerHTML = "";
-           mfData.innerHTML = "";
-           goldData.innerHTML = "";
-           usStocksData.innerHTML = "";
-           fdData.innerHTML = "";
-
-           const p = document.createElement("div");
-           const img = document.createElement("img");
-           const pHead = document.createElement("p");
-
-           img.src = `//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/us.fc57ceac.png`;
-           p.innerHTML = `Invest in Apple, Google, Netflix and many more US companies that you love without any brokerage fee.`;
-           pHead.innerHTML = `<strong><span class="bigfont">Free</span> account opening</strong>`;
-           usStocksData.append(img,pHead,p,button);
-
-
-
-       }
-       function fdbox() {
-           stockData.innerHTML = "";
-           mfData.innerHTML = "";
-           goldData.innerHTML = "";
-           usStocksData.innerHTML = "";
-           fdData.innerHTML = "";
-
-           const p = document.createElement("div");
-           const img = document.createElement("img");
-           const pHead = document.createElement("p");
-
-
-           img.src = `//assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/fd.16c65ccc.png`;
-           pHead.innerHTML = `<strong><span class="bigfont">Free</span> account opening</strong>`;
-           p.innerHTML = `Open fixed deposits in any bank with higher interest rates without opening a bank account.`;
-           fdData.append(img,pHead,p,button)
-
-        
-       }
-
-       
-
-        loginRegisterBtn.addEventListener("click", loginregister);
-        getStartedBtn.addEventListener("click", loginregister);
-        stocksbox();
-
-
-
-        var header = document.getElementById("tabs");
-var btns = header.getElementsByClassName("red");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  if (current.length > 0) { 
-    current[0].className = current[0].className.replace(" active", "");
-  }
-  this.className += " active";
-  });
-}
-    </script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
