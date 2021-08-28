@@ -1,5 +1,5 @@
 
-//Declearing the variables
+//Declearing the variables for the dropDownMenu
 let userMenu = document.querySelector('.userIcon');
 const menuDiv = document.createElement('div');
 let darkMode = document.createElement('div');

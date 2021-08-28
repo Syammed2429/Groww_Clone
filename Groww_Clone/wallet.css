@@ -137,6 +137,8 @@ body {
       gap: 5rem;
       
   }
+
+  /* Balance Container Style Start  */
   .balance-cont {
       width: 678px;
       height: 590px;
@@ -147,35 +149,173 @@ body {
       box-shadow: 0 1px 7px 0;
   }
 
+  
+
   .balance-box {
     width: 678px;
     height: 170px;
     margin: auto;
-    box-shadow: 0 1px 7px 0;
-  }
+    background: #e5faf5;
+    box-shadow: 0 1px 2px 0;
 
+}
+
+.balance-text  {
+      padding-top: 2.5rem;
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-transform: uppercase;
+      width: 100%;
+}
+.balance-available {
+    color: red;
+    padding-top: 20px;
+}
+.available-balance {
+    font-weight: bold;
+    font-size: 34px;
+}
   .add-money-container {
       width: 358px;
-      height: 480px;
+      height: 378px;
       box-shadow: 0 1px 7px 0;
       position: relative;
       bottom: 32.5rem;
-      /* left: 0; */
+      /* left: 0; */    
       left: 75rem;
 
+  }
+  .details-box {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     padding: 2rem
+  }
+  .details-box span {
+      /* color: red; */
+      display: flex;
+      position: relative;
+      bottom: 1.4rem;
+      left: 15rem;
+      justify-content: space-around;
+      /* margin-bottom: 1px; */
+  }
+  .ot{
+    color: red;
+    margin-top: -3rem;
+    padding-bottom: -10rem;
+    padding-top: -10rem;
+
+  }
+  .ba {
+    margin-top: -3rem;
+
+  }
+  .ot-1{
+      /* color: red; */
+  }
+
+  .ot > p ,
+  .cb > p,
+  .ba > p   
+  {
+    display: flex;
+    justify-content: space-around;
+    color: blue;
+    position: relative;
+    bottom: 3.7rem;
+    left: 17rem;
   }
 
   .add-money__box {
       display: flex;
       gap: 2rem;
       cursor: pointer;
-      /* cursor: ; */
+      padding: 1rem;
+      text-transform: uppercase;
   }
-  /* .withdraw-options {
-      position: absolute;
-      top: 1.5rem;
-  } */
 
-  /* #withdraw-money {
-      disablede
-  } */
+  .deposit-options {
+      padding: 1rem;
+      /* margin-left: 1px;; */
+  }
+  #money, #withdraw-money {
+      margin-left: 6.2rem;
+      width: 100px;
+  }
+  .money-options {
+      /* color: red; */
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 2rem;
+      margin-top: 20px;;
+  }
+
+  .deposit-button   {
+      width: 315px;
+      height: 45px;
+      margin-top: 11rem;
+
+  }
+  /* Deposit Options Style End */
+
+  /* Withdraw Options Style Start  */
+.withdraw-options {
+    position: relative;
+    bottom: 20rem;
+    padding: 1rem;
+}
+.withdrawable {
+    display: flex;
+    justify-content: space-between;
+}
+.faq {
+    width: 15px;
+    height: 20px;
+    background: grey;
+    border-radius: 50%;
+    margin-right: 9rem;
+    margin-left: 1rem;
+}
+.show-total__amount {
+    margin-right: 3rem;
+    margin-left: 2rem;
+    display: flex;
+}
+#withdraw-money {
+    margin: 2rem  0 1rem 7.2rem;
+
+}
+.withdraw-all {
+    color: blue;
+    margin: 1rem 0 0 13rem;
+}
+.withdraw-money {
+    width: 15px;
+    padding-left: 10px;
+}
+.withdraw-money__button {
+    width: 315px;
+    height: 45px;
+    margin-top: 6rem;
+    margin-left: 8px;
+
+  }
+
+  .dark-mode {
+    background: black;
+    color: white !important;
+}
+.bank-name span {
+    color: aqua;
+}
+
+  .darkModeOn {
+    color: red;
+}
+
+.importFunds {
+    color: violet;;
+}
