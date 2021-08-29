@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bharat Petroleum Corporation</title>
+    <link rel="stylesheet" href="bharatpc.css" />
+    <link rel="stylesheet" href="groww.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <!-- header -->
+    <div class="head-container">
+      <div class="header">
+      
+      <div class="logo-image">
+          <a href="dashboard.html">
+              <img src="Images/logolanding.svg" alt="Groww Logo">
+          </a>
+      </div>
+      <div class="navbarOptions">
+          <p>Explore</p>
+          <p>Investments</p>
+      </div>
+      <!-- search bar and search icon  -->
+      <div id="searchbar">
+          <input type="search" id="search" placeholder="What are you looking for today?">
+          <img class="searchIcon" src="https://assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/search.494f6987.svg">
+      </div>
+      <div class="icons">
+          <img class="bell-icon" src="images/bell.png">
+          <a href="wallet.html">
+              <img class="wallet-icon" src="images/wallet.png">
+          </a>
+          <img class="cart-icon" src="images/cart.png">
+      </div>
+      <div class="userIcon">
+          <div class="username"></div>
+          
+      </div>
+  </div>
+</div>
+
+<!-- Header End -->
+    <div class="MainContainer11">
+      <div id="pages">
+        <!-- convert them into links -->
+        <div>Home > stocks > Bharat Petroleum Corporation Limited</div>
+      </div>
+      <div id="wholepage">
+        <div id="box1">
+          <div id="box11">
+            <div>
+              <img
+                src="https://assets-netstorage.groww.in/stock-assets/logos/INE029A01011.png"alt=""/>
+            </div>
+            <!-- <span class="material-icons" id="watchlist" onclick="watchlistadd()">
+                           bookmark_add
+                           </span> -->
+                           
+            
+            <div>
+              <div>
+                <span class="material-icons" onclick="watchlistadd()"> bookmark_add </span>
+              </div>
+              <div>
+                <span class="material-icons"> share </span>
+              </div>
+            </div>
+          </div>
+          <div id="name1">
+            <div>Bharat Petroleum Corporation</div>
+            <div id="name11"><button>Oil, Gas & fuels</button></div>
+          </div>
+          <div id="price">
+            <div>
+              <span class="material-icons"> attach_money </span>
+            </div>
+            <div id="num1">466</div>
+            <div>+6.05(1.31%)</div>
+            <div>1D</div>
+          </div>
+          <div id="graph">
+            <div>
+              <img src="images/nse1.png" id="img1" alt="" />
+            </div>
+          </div>
+          <div id="days">
+            <div id="days1">
+              <div>
+                <button
+                  onclick="graph1()"
+                  id="gp1"
+                  ondblclick="graph11()"
+                  id="nse1"
+                >
+                  NSE
+                </button>
+              </div>
+              <div class="reports" onclick="gpc1()" ondblclick="gpc11()">
+                <button>1D</button>
+              </div>
+              <div class="reports" onclick="gpc2()" ondblclick="gpc12()">
+                <button>1W</button>
+              </div>
+              <div class="reports" onclick="gpc3()" ondblclick="gpc13()">
+                <button>1M</button>
+              </div>
+              <div class="reports" onclick="gpc4()" ondblclick="gpc14()">
+                <button>1Y</button>
+              </div>
+              <div class="reports" onclick="gpc5()" ondblclick="gpc15()">
+                <button>3Y</button>
+              </div>
+              <div class="reports" onclick="gpc6()" ondblclick="gpc16()">
+                <button>5Y</button>
+              </div>
+            </div>
+            <div id="days2">
+              <div>
+                <!-- <img src="images/candle_stick_icon.svg" id="dotted1" alt="" onmouseover="dottedfun()"> -->
+              </div>
+              <div>Technical</div>
+            </div>
+          </div>
+          <div id="options">
+            <div id="options1"><u>Overview</u></div>
+            <div>Option chain</div>
+            <div>Events</div>
+            <div>News</div>
+          </div>
+          <div class="performance">
+            <div>performance</div>
+            <div>
+              <span class="material-icons"> error </span>
+            </div>
+          </div>
+          <div id="low">
+            <div class="low1">
+              <div>Today's Low</div>
+              <div>105.30</div>
+            </div>
+            <div>
+              <hr />
+            </div>
+            <div class="low1">
+              <div>Today's High</div>
+              <div>106.45</div>
+            </div>
+          </div>
+          <div id="low">
+            <div class="low1">
+              <div>52W Low</div>
+              <div>71.65</div>
+            </div>
+            <div>
+              <hr />
+            </div>
+            <div class="low1">
+              <div>52W High</div>
+              <div>117.85</div>
+            </div>
+          </div>
+          <div id="hrline">
+            <div></div>
+          </div>
+          <div id="volume">
+            <div>
+              <p>Open Price</p>
+              <p>105.75</p>
+            </div>
+            <div>
+              <p>Prev. Close</p>
+              <p>105.60</p>
+            </div>
+            <div>
+              <p>Volume</p>
+              <p>55,70,805</p>
+            </div>
+            <div>
+              <p>Value</p>
+              <p>59 Cr</p>
+            </div>
+          </div>
+          <div class="ana">
+            <div>Analyst Estimates</div>
+            <div>
+              <span class="material-icons"> error </span>
+            </div>
+          </div>
+          <div id="anapart">
+            <div>
+              <p>85%</p>
+            </div>
+            <div id="anapart1">
+              <div id="anapart12">
+                <div>Buy</div>
+                <div><hr /></div>
+                <div>85%</div>
+              </div>
+              <div id="anapart13">
+                <div>Hold</div>
+                <div><hr /></div>
+                <div>12%</div>
+              </div>
+              <div id="anapart14">
+                <div>Sell</div>
+                <div><hr /></div>
+                <div>3%</div>
+              </div>
+              <div>Aggregated by Refinitiv from Analysts</div>
+            </div>
+          </div>
+
+          <div id="fundamentals">
+            <div>Fundamentals</div>
+          </div>
+          <div id="funda1">
+            <div id="funda11">
+              <div>
+                <div>Market Cap</div>
+                <div>$99,414 Cr</div>
+              </div>
+              <div id="funda112">
+                <div>P/E Ratio</div>
+                <div>3.80</div>
+              </div>
+              <div id="funda113">
+                <div>P/B Ratio</div>
+                <div>0.87</div>
+              </div>
+              <div id="funda114">
+                <div>Industry P/E</div>
+                <div>13.19</div>
+              </div>
+              <div id="funda115">
+                <div>Understand Fundamentals</div>
+                <div>
+                  <span class="material-icons"> error </span>
+                </div>
+              </div>
+            </div>
+            <div id="funda12">
+              <div id="funda121">
+                <div>ROE</div>
+                <div>20.88%</div>
+              </div>
+              <div id="funda122">
+                <div>EPS(TTM)</div>
+                <div>27.78</div>
+              </div>
+              <div id="funda123">
+                <div>Dividend Yield</div>
+                <div>11.36%</div>
+              </div>
+              <div id="funda124">
+                <div>Book Value</div>
+                <div>121.81</div>
+              </div>
+            </div>
+          </div>
+          <div id="about">
+            <div>About Company</div>
+            <div>
+              Indian Oil Corporation Limited is engaged in refining business.
+              The Company's segments include Sale of Petroleum Products, Sale of
+              Petrochemicals and Other businesses. Its Other businesses segment
+              includes sale of gas, explosives and cryogenics, wind mill and
+              solar power generation, and oil and gas exploration activities.
+              Its business interests span the entire hydrocarbon value-chain
+              ranging from refining, pipeline transportation and marketing of
+              petroleum products to exploration and production of crude oil and
+              gas, marketing of natural gas and petrochemicals.
+            </div>
+          </div>
+
+          <div id="details">
+            <div>
+              <div class="rowwise">
+                <div>Parent</div>
+                <div>Indian Oil Corporation</div>
+              </div>
+              <div class="rowwise">
+                <div>Organisation</div>
+                <div>Limited</div>
+              </div>
+              <div class="rowwise">
+                <div>Founded</div>
+                <div>1959</div>
+              </div>
+            </div>
+            <div>
+              <div class="rowwise">
+                <div>Managing Director</div>
+                <div>NA</div>
+              </div>
+              <div class="rowwise">
+                <div>NSE Symbol</div>
+                <div>IOC</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="bpcimg">
+            <div>
+              <img
+                src="https://assets-netstorage.groww.in/stock-assets/brand_logo/INE242A01010/Indian%20Oil%20Petrol%20Pumps/2.%20indian-oil-corporation-ltd-bhandarkar-road-pune-petroleum-product-dealers-3faiirh.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://assets-netstorage.groww.in/stock-assets/brand_logo/INE242A01010/Servo%20Lubricants/5.%20ser2.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://assets-netstorage.groww.in/stock-assets/brand_logo/INE242A01010/IOCL%20Autogas/1.%201-500x500.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://assets-netstorage.groww.in/stock-assets/brand_logo/INE242A01010/Indane/4.%205dhbbh4-r1vhnzysis09nbzt2lwrzclq8o0di6ohb0jwgzmzfpc7n1dt6qrgw7_t4w.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://assets-netstorage.groww.in/stock-assets/brand_logo/INE242A01010/Indian_Oil.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!--I Have to complete this part-->
+          <div id="pattern">
+            <div id="pt1">Shareholding Pattern</div>
+            <div>
+              <div id="patt1">
+                <div><button onclick="pch1()">Jun'20</button></div>
+                <div><button onclick="pch2()">Sep'20</button></div>
+                <div><button onclick="pch3()">Dec'20</button></div>
+              </div>
+              <div class="patt2">
+                <div>Promoters</div>
+                <div></div>
+
+                <div id="p3">51.50%</div>
+              </div>
+              <div class="patt2">
+                <div>Retails And Others</div>
+                <div></div>
+
+                <div id="p4">46.50%</div>
+              </div>
+              <div class="patt2">
+                <div>Other Domestic Institutions</div>
+                <div></div>
+
+                <div id="p5">51.50%</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="invest">
+            <div>Top Mutual Funds Invested(4)</div>
+          </div>
+          <div id="invest1">
+            <div class="invest11">
+              <div>FUND NAME</div>
+              <div>AUM(%)</div>
+            </div>
+            <div class="invest11">
+              <div id="xx1" onmouseover="ch1()" onmouseout="ch12()">
+                Franklin Build India Direct Fund Growth
+              </div>
+              <div>4.70%</div>
+            </div>
+            <div class="invest11">
+              <div id="xx12" onmouseover="ch2()" onmouseout="ch22()">
+                Franklin India Focused Equity Fund Direct Growth
+              </div>
+              <div>3.66%</div>
+            </div>
+            <div class="invest11">
+              <div id="xx13" onmouseover="ch3()" onmouseout="ch32()">
+                DSP Natural Resources and New Energy Fund Direct Plan Growth
+              </div>
+              <div>2.86%</div>
+            </div>
+            <div class="invest11">
+              <div id="xx14" onmouseover="ch4()" onmouseout="ch42()">
+                ICICI Prudential Infrastructure Direct Growth
+              </div>
+              <div>2.24%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- start buy sell -->
+        <div id="box2">
+          <div>
+            <div class="buySellbtn">
+              <p class="clickbuybtn active">BUY</p>
+              <p class="clicksellbtn">SELL</p>
+            </div>
+            <div class="shareAvail">
+              <p>Type <span>Delivery</span></p>
+            </div>
+            <div>
+              <p>Shares <span>NSE</span></p>
+              <input type="text" class="box2" />
+            </div>
+            <div>
+              <p>Price <span>Limit</span></p>
+              <input type="text" class="box2" />
+            </div>
+            <div>
+              <p class="adv">Advanced Options</p>
+              <p>Balance</p>
+              <p class="availBal">Rs.0.00</p>
+            </div>
+            <div>
+              <p>
+                Order will execute at best price or will get<br />cancelled on
+                the next trading day
+              </p>
+              <!-- <p class="wallet">See your stock here</p> -->
+              <p class="buysellBtn">BUY</p>
+              <p>100% SAFE AND SECURE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end buy sell -->
+
+    <!--footer-->
+    <div class="footerDiv">
+      <div class="footer">
+        <div id="footer1">
+          <div id="footer11">
+            <img src="images/logo.svg" alt="" />
+          </div>
+          <div id="footer12">
+            No.11, 2nd floor, 80 FT Road 4th Block, S.T Bed, Koramangala
+            Bengaluru - 560034
+          </div>
+          <div id="footer13"><a href="#">ContactUs</a></div>
+          <div id="footer14icons">
+            <div>
+              <a href="#"><img src="images/fb_icon.svg" alt="" /></a>
+            </div>
+            <div>
+              <a href="#"><img src="images/twitter_icon.svg" alt="" /></a>
+            </div>
+            <div>
+              <a href="#"><img src="images/mk.svg" alt="" /></a>
+            </div>
+            <div>
+              <a href="#"><img src="images/instagram_icon.svg" alt="" /></a>
+            </div>
+            <div>
+              <a href="#"><img src="images/linkedin_icon.svg" alt="" /></a>
+            </div>
+            <div>
+              <a href="#"><img src="images/telegram_icon.svg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <div id="footer2">
+          <div id="footer21">PRODUCTS</div>
+          <div id="footer22">
+            <a href="#">Stocks</a>
+            <a href="#">Futures & Options</a>
+            <a href="#">Mutual Funds</a>
+            <a href="#">Fixed Deposit</a>
+            <a href="#">Gold</a>
+            <a href="#">US Stocks</a>
+          </div>
+        </div>
+        <div id="footer3">
+          <div id="footer31">GROWW</div>
+          <div id="footer32">
+            <a href="#">About Us</a>
+            <a href="#">Pricing</a>
+            <a href="#">Blog</a>
+            <a href="#">Media & Press</a>
+            <a href="#">Help and Support</a>
+          </div>
+        </div>
+        <div id="footer4">
+          <div id="footer41">QUICK LINKS</div>
+          <div id="footer42">
+            <a href="#">AMC Mutual Funds</a>
+            <a href="#">Calculators</a>
+            <a href="#">Glossary</a>
+            <a href="#">Open Demat Account</a>
+            <a href="#">Groww Digest</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer5">
+        <hr />
+      </div>
+
+      <div id="footer6">
+        <div id="footer61">
+          ⓒ&nbsp;2016-2021 Groww, All rights reserved, Build with Love in India
+        </div>
+        <div id="footer62">
+          <div id="footer62img">
+            <img src="images/google-play-logo.svg" alt="" />
+          </div>
+          <div>
+            <img src="images/app-store-logo.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="fakefooter">
+      <div><img src="images/footer.png" alt="" /></div>
+    </div>
+  </body>
+</html>
+<script>
+  var num = setInterval(changeNum, 3000);
+  var inputval = document.querySelectorAll("#box2 .box2");
+  function changeNum() {
+    document.getElementById("num1").innerHTML = Math.round(
+      Math.random() * 1000
+    );
+    var val = document.getElementById("num1").innerHTML;
+    //  random value into inputbox
+    inputval[1].value = Number(val) + 15;
+    if (value == false) {
+      inputval[1].value = Number(val) - 15;
+    }
+    //  document.getElementById("num1").style.color = "#00d09c";
+    if (val > 400) {
+      document.getElementById("num1").style.color = "#00d09c";
+    } else {
+      document.getElementById("num1").style.color = "red";
+    }
+  }
+
+  //  var fd1 = document.getElementById("xx1").style.color = "#00d09c";
+
+  function ch1() {
+    document.getElementById("xx1").style.color = "#00d09c";
+  }
+  function ch12() {
+    document.getElementById("xx1").style.color = "#44475b";
+  }
+  function ch2() {
+    document.getElementById("xx12").style.color = "#00d09c";
+  }
+  function ch22() {
+    document.getElementById("xx12").style.color = "#44475b";
+  }
+  function ch3() {
+    document.getElementById("xx13").style.color = "#00d09c";
+  }
+  function ch32() {
+    document.getElementById("xx13").style.color = "#44475b";
+  }
+  function ch4() {
+    document.getElementById("xx14").style.color = "#00d09c";
+  }
+  function ch42() {
+    document.getElementById("xx14").style.color = "#44475b";
+  }
+
+  //graph images
+  function graph1() {
+    document.getElementById("gp1").innerHTML = "BSE";
+    document.getElementById("img1").src = "images/year3.png";
+  }
+  function graph11() {
+    document.getElementById("gp1").innerHTML = "NSE";
+    document.getElementById("img1").src = "images/doyear3.png";
+  }
+
+  function gpc1() {
+    document.getElementById("img1").src = "images/day1.png";
+  }
+  function gpc2() {
+    document.getElementById("img1").src = "images/week1.png";
+  }
+  function gpc3() {
+    document.getElementById("img1").src = "images/month1.png";
+  }
+  function gpc4() {
+    document.getElementById("img1").src = "images/year1.png";
+  }
+  function gpc5() {
+    document.getElementById("img1").src = "images/year3.png";
+  }
+  function gpc6() {
+    document.getElementById("img1").src = "images/year4.png";
+  }
+
+  function gpc11() {
+    document.getElementById("img1").src = "images/doday1.png";
+  }
+  function gpc12() {
+    document.getElementById("img1").src = "images/doweek1.png";
+  }
+  function gpc13() {
+    document.getElementById("img1").src = "images/domon1.png";
+  }
+  function gpc14() {
+    document.getElementById("img1").src = "images/doyear1.png";
+  }
+  function gpc15() {
+    document.getElementById("img1").src = "images/doyear3.png";
+  }
+  function gpc16() {
+    document.getElementById("img1").src = "images/donse1.png";
+  }
+
+  function pch1() {
+    document.getElementById("p3").innerHTML = "50.00%";
+    document.getElementById("p4").innerHTML = "47.50%";
+    document.getElementById("p5").innerHTML = "39.50%";
+  }
+  function pch2() {
+    // document.getElementById("p4").innerHTML = 52.25;
+    document.getElementById("p3").innerHTML = "50.00%";
+    document.getElementById("p4").innerHTML = "49.50%";
+    document.getElementById("p5").innerHTML = "37.50%";
+  }
+
+  function pch3() {
+    document.getElementById("p3").innerHTML = "56.00%";
+    document.getElementById("p4").innerHTML = "37.20%";
+    document.getElementById("p5").innerHTML = "29.70%";
+  }
+  //   buy sell start
+  var value = true;
+  var values = false;
+  let amount = JSON.parse(localStorage.getItem("balance"));
+  console.log('amount:', amount)
+  var balance = document.querySelector(".availBal");
+  var buybtn = document.querySelector(".clickbuybtn");
+  var sellbtn = document.querySelector(".clicksellbtn");
+  var btnDiv = document.querySelector(".buysellBtn");
+  var buysellDiv = document.querySelector(".buysellBtn");
+  var shareAvail = document.querySelector(".shareAvail");
+  var sell_p = document.createElement("p");
+  sell_p.textContent = "Shares Available 0";
+  var clickbtn = document.querySelector(".buysellBtn");
+  var wallet = document.querySelector(".wallet");
+  balance.textContent = amount;
+
+  buybtn.addEventListener("click", function () {
+    value = true;
+    this.style.color = "#00d09c";
+    sellbtn.style.color = "black";
+    clickbtn.textContent = "BUY";
+    //  if (value == true) {
+    //    shareAvail.removeChild(sell_p);
+    //  }
+  });
+  sellbtn.addEventListener("click", function () {
+    value = false;
+    this.style.color = "#00d09c";
+    this.style.fontWeight = "bold";
+    buybtn.style.color = "black";
+    clickbtn.textContent = "SELL";
+    clickbtn.style.border = "1px solid #00d09c";
+    //  if (value == false) {
+    //    shareAvail.appendChild(sell_p);
+    //  }
+  });
+
+  btnDiv.addEventListener("click", function () {
+    if (inputval[0].value == "" || inputval[1].value == "") {
+      alert("Need input in both field");
+    } else {
+      if (inputval[0].value * inputval[1].value > amount) {
+        alert("You have Insufficient amount");
+      } else {
+        values = true;
+      }
+    }
+    if (values == true) {
+      alert("thanks to purchase");
+      var bal = amount - inputval[0].value * inputval[1].value;
+      localStorage.setItem("balance", JSON.stringify(bal));
+      var remamount = JSON.parse(localStorage.getItem("balance"));
+    }
+    balance.textContent = remamount;
+  });
+
+  //   buy sell end
+
+
+//dropdowm start
+//Declearing the variables for the dropDownMenu
+let userMenu = document.querySelector('.userIcon');
+const menuDiv = document.createElement('div');
+let darkMode = document.createElement('div');
+const name = document.createElement('div');
+const email = document.createElement('div');
+const importFunds = document.createElement('div');
+const watchList = document.createElement('div');
+const orders = document.createElement('div');
+const help = document.createElement('div');
+const logOut = document.createElement('div');
+const close = document.createElement('span');
+const userName = JSON.parse(localStorage.getItem('allMail'));
+var a ;
+userName.forEach(function(name) {
+    a = name.emails;
+})
+
+//creting classes for the above variables
+menuDiv.classList.add('menu')
+darkMode.classList.add('darkModeOn')
+importFunds.classList.add('importFunds')
+
+
+
+function dropDownMenu() {
+
+let count = 0;
+importFunds.innerHTML = "Import Funds";
+watchList.innerHTML = "Watch List";
+orders.innerHTML = "Order";
+darkMode.innerHTML = "Dark Mode";
+logOut.innerHTML = "Log Out";
+close.innerHTML = "close&times;";
+
+//Cretaing a class for menuDiv
+
+menuDiv.classList.add('content');
+
+//appending all the items to the menuDiv
+
+// menuDiv.append(close,importFunds,watchList,orders,darkMode,logOut);
+menuDiv.append(close,importFunds,a,watchList,orders,darkMode,logOut);
+
+
+//appending the items of the menuDiv to the userMenu
+userMenu.append(menuDiv);
+
+close.onclick = function() {
+    menuDiv.style.display = "none";
+  }
+
+count++;
+
+if (count >= 1) {
+    userMenu.removeEventListener('click', dropDownMenu);
+}
+
+}
+// c.classList.add('baby')
+
+
+
+function darkModeToggle() {
+    let balaceText = document.querySelector('.balance-box');
+    let darkModeButton = document.querySelector('.darkModeOn');
+    menuDiv.style.color = "black";
+    balaceText.style.color = "black";
+    darkModeButton = document.body;
+    darkModeButton.classList.toggle('dark-mode');
+
+}
+
+function logOutBtn () {
+    setTimeout(function () {
+        window.location = 'index.html';
+        alert("Sucessfully logged out")
+
+    },2000)
+};
+logOut.addEventListener('click', logOutBtn);
+
+
+function watchListOpen() {
+    window.location = 'watchlist.html'
+}
+watchList.addEventListener('click', watchListOpen)
+
+userMenu.addEventListener('click', dropDownMenu);
+darkMode.addEventListener('click',darkModeToggle);
+
+function watchlistadd(){
+         alert("This is added to Watchlist");
+      }
+
+</script>

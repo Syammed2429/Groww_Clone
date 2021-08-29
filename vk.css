@@ -1,0 +1,472 @@
+* {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .body {
+    position: relative;
+  }
+  /*start header styling */
+  #header-div {
+    position: relative;
+    height: 90vh;
+    background-color: #eafaf5;
+  }
+  .navbar {
+    padding: 20px 150px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .search {
+    position: absolute;
+    left: 57%;
+  }
+  .navbar img {
+    width: 150px;
+  }
+  .navbar input {
+    box-shadow: 0px 0.1px 1px 0.1px grey;
+    width: 460px;
+    font-size: 16px;
+    padding-left: 15px;
+    height: 40px;
+    border-radius: 5px 5px 0px 0px;
+    border: none;
+  }
+  .navbar p {
+    background-color: #00d09c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+  .navbar a {
+    text-decoration: none;
+  }
+  
+  /* start main .search box */
+  #searchLists {
+    display: none;
+    height: 450px;
+    overflow: scroll;
+    background-color: #fff;
+    z-index: 6;
+    padding: 5px 20px 20px 20px;
+    position: absolute;
+    margin-top: -8px;
+    width: 460px;
+    top: 70px;
+    left: 31.1%;
+    border-radius: 0px 0px 5px 5px;
+  }
+  #searchLists div:nth-child(1) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #searchLists div span {
+    opacity: 0.7;
+    border: 1px solid gray;
+    margin: 4px 4px 16px 4px;
+    padding: 2px 7px;
+    border-radius: 8px;
+  }
+  #searchLists > P {
+    padding: 9px;
+    opacity: 0.7;
+  }
+  .opacity {
+    opacity: 0;
+  }
+  #searchLists div span:hover {
+    cursor: pointer;
+    background-color: rgb(206, 200, 200);
+  }
+  #searchLists .searchlist .sList {
+    opacity: 0.7;
+    border-bottom: 0.1px solid gray;
+    padding-bottom: 10px;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+  }
+  #searchLists .searchlist .sList:hover {
+    background-color: rgb(238, 230, 230);
+  }
+  #searchLists .searchlist .sList a {
+    text-decoration: none;
+    color: #000;
+  }
+  /* end of main search box */
+  /* start login */
+  #login {
+    border: 1px solid gray;
+    background-image: url("https://assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/patternImg.0edf5760.svg");
+    background-color: #ffffff;
+    background-size: 50%;
+    display: none;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    position: absolute;
+    position: fixed;
+    z-index: 10;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    height: 450px;
+  }
+  
+  #login .left {
+    width: 50%;
+  }
+  /* setpass start */
+  .setPass {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 60%;
+    height: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .setPass div {
+    width: 200px;
+    padding: 10px 20px;
+    background-color: gray;
+    margin: 0 auto;
+    color: white;
+  }
+  .setPass input {
+    margin-bottom: 20px;
+  }
+  /* setpass end */
+  #login .close-btn {
+    cursor: pointer;
+    font-size: 30px;
+    padding-top: -12px;
+    margin-right: 14px;
+    margin-top: 12px;
+  }
+  #login .signup {
+    cursor: pointer;
+  }
+  #login .right {
+    display: flex;
+    justify-content: space-between;
+    width: 43%;
+  }
+  .right p {
+    text-align: center;
+  }
+  .right h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 38px;
+    opacity: 0.8;
+  }
+  #login .right a {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 12px 30px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 0px 1px 0.1px gray;
+  }
+  #login .right a img {
+    padding-left: 40px;
+    padding-right: 10px;
+  }
+  .right .signup {
+    color: white;
+    margin-top: 40px;
+    border-radius: 5px;
+    background-color: #00d09c;
+    padding: 15px 50px;
+  }
+  .right input {
+    padding: 10px;
+    font-size: 18px;
+    width: 350px;
+  }
+  
+  .right .otp {
+    display: none;
+  }
+  .right .pass {
+    display: none;
+  }
+  .right .otp p {
+    text-align: left;
+    color: #00d09c;
+  }
+  .right .pass p {
+    text-align: left;
+    color: #00d09c;
+  }
+  
+  #login h1,
+  h4 {
+    font-weight: 500;
+    color: white;
+    font-size: 32px;
+    margin: 70px 0px 0px 30px;
+  }
+  #login h4 {
+    padding-top: 170px;
+    font-size: 25px;
+  }
+  
+  /* end login */
+  #header-div .section {
+    padding-top: 100px;
+    padding-left: 140px;
+    overflow: hidden;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+  }
+  #header-div .section img {
+    width: 690px;
+    z-index: 5;
+  }
+  #header-div .content h1 {
+    margin: 150px 0px 25px 0px;
+    font-weight: 400;
+    opacity: 0.7;
+    width: 640px;
+    font-size: 60px;
+  }
+  #header-div .content p:nth-child(2) {
+    line-height: 30px;
+    opacity: 0.7;
+  }
+  
+  #header-div .content span {
+    color: #00d09c;
+  }
+  #header-div .content a {
+    text-decoration: none;
+    margin-top: 40px;
+    z-index: 8;
+    display: inline-block;
+    background-color: #00d09c;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 3px;
+  }
+  
+  /* end of header styling */
+  
+  /* :start .content-div */
+  
+  .content-div {
+    opacity: 0.7;
+    display: flex;
+    justify-content: space-evenly;
+  
+    font-weight: 300;
+  }
+  .content-div > div > div {
+    display: inline-block;
+  }
+  .content-div > div p {
+    line-height: 30px;
+  }
+  .content-div > div p:nth-child(1) {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .content-div img {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 3px;
+    margin-right: 50px;
+    margin-bottom: 76px;
+    border: 1px solid green;
+  }
+  /* end of .content-div */
+  
+  /* start of section-div style */
+  #mid-section-div {
+    opacity: 0.9;
+    margin-top: 80px;
+    background-color: #eafaf5;
+    text-align: center;
+  }
+  #mid-section-div .relatives {
+    position: relative;
+  }
+  .image {
+    right: 31%;
+    top: 210px;
+    position: absolute;
+  }
+  #mid-section-div h1 {
+    padding-top: 80px;
+    margin-bottom: 20px;
+  }
+  /* search box start*/
+  #mid-section-div .relatives .list {
+    display: none;
+    height: 180px;
+    overflow: scroll;
+    z-index: 10;
+    font-size: 20px;
+    padding: 4px;
+    background-color: white;
+    list-style: none;
+    text-align: left;
+    width: 500px;
+    margin: 0 auto;
+  }
+  .removelist {
+    cursor: pointer;
+  }
+  #mid-section-div input {
+    margin-bottom: 20px;
+    width: 500px;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+  
+  #mid-section-div a {
+    text-decoration: none;
+    color: black;
+  }
+  /* search box end */
+  #mid-section-div .sub-sections {
+    text-transform: uppercase;
+    display: grid;
+    padding-left: 100px;
+    padding-right: 100px;
+    grid-template-columns: auto auto auto;
+  }
+  #mid-section-div .sub-sections div {
+    margin-bottom: 70px;
+  }
+  #mid-section-div img {
+    width: 50px;
+  }
+  #mid-section-div .btn {
+    text-decoration: none;
+    margin-bottom: 80px;
+    display: inline-block;
+    background-color: #00d09c;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 3px;
+  }
+  /* end of section-div styling */
+  
+  /* start of .extra-section */
+  .extra-section {
+    display: flex;
+    margin-top: 80px;
+    justify-content: space-evenly;
+  }
+  
+  .extra-section h1 {
+    margin-top: 90px;
+    opacity: 0.8;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .extra-section div a {
+    text-decoration: none;
+    color: #00d09c;
+  }
+  .extra-section .MF {
+    display: grid;
+    gap: 70px;
+    grid-template-columns: auto auto auto;
+  }
+  .extra-section .MF div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 3px rgb(228, 222, 222);
+  }
+  .extra-section .kotakMF {
+    background-image: url("https://groww.in/images/partners/kotak_groww.svg");
+    background-size: 50px;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .extra-section .ltMF {
+    background-image: url("https://groww.in/images/partners/lnt_groww.png");
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .extra-section .iciciMF {
+    background-image: url("https://groww.in/images/partners/icici_groww.svg");
+    background-position: center;
+    background-size: 50px;
+    background-repeat: no-repeat;
+  }
+  .extra-section .axisMF {
+    background-image: url("https://groww.in/images/partners/axis_groww.svg");
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .extra-section .hdfcMF {
+    background-image: url("https://groww.in/images/partners/hdfc_groww.svg");
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .main-head {
+    font-size: 40px;
+    opacity: 0.7;
+    font-weight: 400;
+    margin-top: 180px;
+    text-align: center;
+  }
+  .freq {
+    width: 80%;
+    margin: 80px auto;
+  }
+  .display1 {
+    display: none;
+  }
+  .display2 {
+    display: none;
+  }
+  .display3 {
+    display: none;
+  }
+  .display4 {
+    display: none;
+  }
+  .display5 {
+    display: none;
+  }
+  .freq span {
+    cursor: pointer;
+  }
+  .freq > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    margin: 22px;
+    opacity: 0.7;
+    border-radius: 5px;
+    border: 1px solid rgb(192, 190, 190);
+  }
+  /* end of .extra-section */
+  
