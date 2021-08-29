@@ -172,13 +172,14 @@
   opacity: 0.8;
 }
 #login .right a {
+  width: 21.8rem;
   margin-top: 30px;
   margin-bottom: 40px;
   padding: 12px 30px;
   display: flex;
   text-decoration: none;
   color: black;
-  box-shadow: 0px 0px 1px 0.1px gray;
+  box-shadow: 2px 2px 2px 0.1px gray;
 }
 #login .right a img {
   padding-left: 40px;
@@ -312,6 +313,11 @@ h4 {
 #mid-section-div h1 {
   padding-top: 80px;
   margin-bottom: 20px;
+} 
+.d-image {
+  /* margin-left: 40px; */
+  position: relative;
+  right: 3rem;
 }
 /* search box start*/
 #mid-section-div .relatives .list {

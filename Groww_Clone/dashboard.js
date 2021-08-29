@@ -11,6 +11,12 @@ const orders = document.createElement('div');
 const help = document.createElement('div');
 const logOut = document.createElement('div');
 const close = document.createElement('span');
+const userName = JSON.parse(localStorage.getItem('allMail'));
+var a ;
+userName.forEach(function(name) {
+    a = name.emails;
+})
+
 
 //creting classes for the above variables
 menuDiv.classList.add('menu')
@@ -19,6 +25,7 @@ importFunds.classList.add('importFunds')
 
 
 
+//dropdown menu starr
     function dropDownMenu() {
         
         let count = 0;
@@ -33,9 +40,10 @@ importFunds.classList.add('importFunds')
         
         menuDiv.classList.add('content');
 
-        //appending all the items to the menuDiv
+        // logOut.window.replace
 
-        menuDiv.append(close,importFunds,watchList,orders,darkMode,logOut);
+        //appending all the items to the menuDiv
+        menuDiv.append(close,importFunds,a,watchList,orders,darkMode,logOut);
 
         //appending the items of the menuDiv to the userMenu
         userMenu.append(menuDiv);
@@ -66,16 +74,20 @@ importFunds.classList.add('importFunds')
 
         }
 
-        function addMoney () {
-            // let importFund = querySelector('.importFunds');
-            console.log('importFund:')
-            window.location = 'import-funds.html';
-            // console.log('importFund:')
+        function logOutBtn () {
+            setTimeout(function () {
+                window.location = 'index.html';
 
-            // window.location('import-funds.html')
+            },2000)
         }
 
-    // userMenu.addEventListener('dblclick', dropMenuDissaper);
+        function addMoney () {
+            console.log('importFund:')
+            window.location = 'import-funds.html';
+
+        }
+
+    logOut.addEventListener('click', logOutBtn)
     importFunds.addEventListener('click', addMoney)
     userMenu.addEventListener('click', dropDownMenu);
     darkMode.addEventListener('click',darkModeToggle)
@@ -90,4 +102,4 @@ importFunds.classList.add('importFunds')
         dataBox.append(plus)
     }
 
-    hover ()
+    // hover ()

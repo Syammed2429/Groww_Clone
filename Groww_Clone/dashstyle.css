@@ -101,6 +101,8 @@ height: 40px;
 .userIcon {
     position: relative;
     right: 33rem;
+    
+
 }
 /* Nav Bar Icons style End */
 
@@ -118,11 +120,26 @@ height: 40px;
 
 }
 .content div {
-    padding: 12px 16px 16px;
+    padding: 20px 16px 16px;
     display: block;
 }
 .content div:hover {
     background-color: #ddd;
+}
+
+.username {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: url("https://image.shutterstock.com/image-vector/user-icon-trendy-flat-style-260nw-418179856.jpg");
+    background-size: 220%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 3%;
+    /* background: #00D09c; */
+}
+.username {
 }
 /* DropdownMenu Style SEnd  */
 
@@ -162,7 +179,7 @@ height: 40px;
     position: relative;
     right: 2.6rem;
     top: 2.6rem;
-    height: 2280px;
+    height: 500px;
     margin: auto;
  }
  .market__time {
@@ -185,8 +202,27 @@ height: 40px;
         border-radius: 16px;
         cursor: pointer;
         text-transform: uppercase;
+        margin-left:3.7rem;
+
 
  }
+.rounded-text {
+    color: #00D09c;
+        font-size: 15px;
+        width: 61.89px;
+        height: 14px;
+        background: #E5FAF5;
+        padding: 6px 18px;
+        border-radius: 16px;
+        cursor: pointer;
+        text-transform: uppercase;
+        margin-left:3.7rem;
+}
+
+.market-rounded__text1 {
+    margin-right: 2rem;
+
+}
  .market-rounded__text > div {
         margin-top: -4px;
 
@@ -219,6 +255,7 @@ height: 40px;
 /* Stocks in News Style Start */
 .market-heading__box2 {
     margin-top: 4rem;
+    height: 100px;
 }
 .stock-box__data {
     width: 165px;
@@ -391,6 +428,7 @@ box-shadow: 3px 5px 10px 3px rgb(218, 209, 209) ;
     border-radius: 50%;
     margin-top: 5px;
 
+    
 }
 .dark-mode {
     background: black;
@@ -404,3 +442,136 @@ box-shadow: 3px 5px 10px 3px rgb(218, 209, 209) ;
 .importFunds {
     color: violet;;
 }
+
+/* footer STyle Start */
+
+
+.footerDiv {
+    width: 1897px;
+    height: auto;
+    position: relative;
+    right: 22rem;
+    top: 25rem;
+    border: 1px solid #1e2232;
+    background-color: #1e2232;
+    margin-top: 35px;
+    /* margin-right: 35; */
+  }
+  .footer {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border: 1px solid black; */
+    display: flex;
+  }
+  .footer > div {
+    width: 22%;
+    margin: 1%;
+    /* border: 1px solid yellow; */
+  }
+  #footer11 img {
+    width: 120px;
+  }
+  #footer12 {
+    color: white;
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  #footer13 a {
+    color: white;
+    margin-top: 3px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  #footer14icons {
+    display: flex;
+    margin-top: 15px;
+  }
+  #footer14icons > div {
+    width: 20px;
+    height: 25px;
+    /* border: 1px solid red; */
+    margin: 19px;
+    margin-left: 1px;
+  }
+  #footer14icons > div a img {
+    width: 23px;
+    align-items: center;
+  }
+  #footer2 {
+    margin-left: 50px;
+  }
+  #footer21 {
+    color: white;
+    font-size: 18px;
+  }
+  #footer22 > a {
+    margin-top: 11px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+  }
+  #footer31 {
+    color: white;
+    font-size: 18px;
+  }
+  #footer32 > a {
+    margin-top: 11px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+  }
+  #footer41 {
+    color: white;
+    font-size: 18px;
+  }
+  #footer42 > a {
+    margin-top: 11px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+  }
+  #footer5 {
+    width: 80%;
+    margin: auto;
+  }
+  #footer6 {
+    width: 80%;
+    display: flex;
+    margin: auto;
+  
+    height: 25px;
+    margin-bottom: 80px;
+  }
+  #footer6 > div {
+    width: 45%;
+    margin: 2%;
+    /* border:1px solid red;  */
+    /* height: 50px; */
+  }
+  #footer61 {
+    color: white;
+    font-size: 16px;
+  }
+  #footer62 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #footer62 > div {
+    /* border: 1px solid white; */
+    margin: 5px 8px;
+    width: 120px;
+    border-radius: 8px;
+  }
+  #footer62 > div > img {
+    width: 120px;
+    height: 46px;
+  }
+
+
+  /* Footer Style End */

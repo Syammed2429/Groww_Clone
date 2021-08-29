@@ -12,8 +12,12 @@ body {
   
   }
 
-  .head-container {
+    /* Header Style Start */
+
+
+.head-container {
     margin: 10px;
+
   }
   .header {
     width: 1200px;
@@ -21,6 +25,8 @@ body {
     display: flex;
     flex-direction: row;
     gap: 18rem;
+
+    
   }
   
   
@@ -52,7 +58,6 @@ body {
       flex-direction: row;
       align-items: flex-start;
       position: relative;
-      /* left: 40rem; */
       right: 15rem;
   
   }
@@ -80,10 +85,10 @@ body {
       display: flex;
       flex-direction: row;
       position: absolute;
-      /* left: 5rem; */
       right: 32rem;
-      /* bottom: 5rem; */
       top: 1rem;
+      /* cursor: pointer; */
+
   }
   .icons img {
       width: 20px;
@@ -95,6 +100,8 @@ body {
   .userIcon {
       position: relative;
       right: 33rem;
+      
+  
   }
   /* Nav Bar Icons style End */
   
@@ -112,16 +119,29 @@ body {
   
   }
   .content div {
-      padding: 12px 16px 16px;
+      padding: 20px 16px 16px;
       display: block;
   }
   .content div:hover {
       background-color: #ddd;
   }
+  
+  .username {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      background: url("https://image.shutterstock.com/image-vector/user-icon-trendy-flat-style-260nw-418179856.jpg");
+      background-size: 220%;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 3%;
+      /* background: #00D09c; */
+  }
+
   /* DropdownMenu Style SEnd  */
   
-  /* Header and Nav bar style End  */
-  
+  /* Header and Nav bar style End  */  
 
   /* Currency Box Style Start */
 
@@ -173,9 +193,16 @@ body {
     color: red;
     padding-top: 20px;
 }
-.available-balance {
+.available-balance,.currency-symbol {
     font-weight: bold;
     font-size: 34px;
+}
+.available-balance {
+    position: relative;
+    bottom: 3.9rem;
+    left: 2rem;
+    
+
 }
   .add-money-container {
       width: 358px;
@@ -183,7 +210,6 @@ body {
       box-shadow: 0 1px 7px 0;
       position: relative;
       bottom: 32.5rem;
-      /* left: 0; */    
       left: 75rem;
 
   }
@@ -194,16 +220,13 @@ body {
      padding: 2rem
   }
   .details-box span {
-      /* color: red; */
       display: flex;
       position: relative;
       bottom: 1.4rem;
       left: 15rem;
       justify-content: space-around;
-      /* margin-bottom: 1px; */
   }
   .ot{
-    color: red;
     margin-top: -3rem;
     padding-bottom: -10rem;
     padding-top: -10rem;
@@ -213,9 +236,7 @@ body {
     margin-top: -3rem;
 
   }
-  .ot-1{
-      /* color: red; */
-  }
+  
 
   .ot > p ,
   .cb > p,
@@ -223,7 +244,7 @@ body {
   {
     display: flex;
     justify-content: space-around;
-    color: blue;
+    /* color: blue; */
     position: relative;
     bottom: 3.7rem;
     left: 17rem;
@@ -259,6 +280,37 @@ body {
       margin-top: 11rem;
 
   }
+
+  .pay-options {
+    margin-top: 3rem;
+
+  }
+  .pay-options__image {
+      display: flex;
+      /* flex-direction: row; */
+      margin-right: 6rem;
+      justify-content: space-evenly;
+  }
+  .pay-input-field input {
+      width: 120%;
+      height: 21px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid #00d09c;
+      margin-left: 2rem;
+      margin-bottom: 0.5rem;
+      
+  }
+  .pay-input-field input:focus {
+    outline: none;
+  }
+  .pay-input-field  div {
+      margin-left: 2rem;
+      font-size: 12px;
+
+  }
+
   /* Deposit Options Style End */
 
   /* Withdraw Options Style Start  */
@@ -313,15 +365,8 @@ body {
     background: black;
     color: white !important;
 }
-.bank-name span {
-    font-size: 12px;
-    font-weight: bold
-}
 
-  .darkModeOn {
+.darkModeOn {
     color: red;
 }
 
-.importFunds {
-    color: violet;;
-}

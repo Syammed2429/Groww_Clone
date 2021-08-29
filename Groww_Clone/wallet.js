@@ -1,4 +1,7 @@
 function deposit() {
+    let newAmount = JSON.parse(localStorage.getItem('balance'));
+    let balanceAvilable = document.querySelector('.showBA');
+    balanceAvilable.innerHTML = newAmount;
     let options = document.querySelector('.deposit-options');
     const withdrawOptions = document.querySelector('.withdraw-options')
     options.style.visibility = 'visible';
@@ -8,11 +11,13 @@ function deposit() {
 deposit()
 
 function depositmoney() {
-let amount = document.getElementById('money').value;
-console.log('amount:', (amount));
-const toNumber = Number(amount);
-addBalance(toNumber);
-}
+    let ongoingTransactions = document.querySelector('.showot');
+    let amount = document.getElementById('money').value;
+    const toNumber = Number(amount);
+    ongoingTransactions.innerHTML = toNumber;
+    console.log('ongoingTransactions:', ongoingTransactions)
+    addBalance(toNumber);
+    }
 
 
 let newAmount = JSON.parse(localStorage.getItem('balance'));
@@ -80,42 +85,36 @@ withdrawOptions.style.visibility = 'visible';
 }
 
 function withdrawmoney() {
-const withdrawMoneyButton = document.querySelector('.withdraw-money__button');
+    let closingBalance = document.querySelector('.showCB');
+    let ongoingTransactions = document.querySelector('.showot');
+    const withdrawMoneyButton = document.querySelector('.withdraw-money__button');
+    console.log('totalAmount:', totalAmount)
+    const enteredAmount = document.getElementById('withdraw-money').value;
+    console.log('enteredAmount:', enteredAmount)
+    
+    ongoingTransactions.innerHTML = enteredAmount;
+    //checking wheter enteredAmount is greater then the wallet balance
+    let remainingBalance = 0 ;
 
-console.log('totalAmount:', totalAmount)
-const enteredAmount = document.getElementById('withdraw-money').value;
+    if (!enteredAmount) return alert('Please enter valid amount to withdraw'); // checking for falsy
 
-console.log('enteredAmount:', enteredAmount)
+    // now from here, the enteredAmount should exists
+    if (enteredAmount >  totalAmount) return alert('you dont have enought funds');
 
-//checking wheter enteredAmount is greater then the wallet balance
-let remainingBalance = 0 ;
-
-
-
-// let remainingBalance =  0;
-// let totalAmount = 500;
-
-if (!enteredAmount) return alert('Please enter valid amount to withdraw'); // checking for falsy
-
-// now from here, the enteredAmount should exists
-if (enteredAmount >  totalAmount) return alert('you dont have enought funds');
-
-// when everything just find we substract and reassign
-remainingBalance = totalAmount - enteredAmount
+    // when everything just find we substract and reassign
+    remainingBalance = totalAmount - enteredAmount
 
 
+    let remainingBalanceJson = JSON.stringify(remainingBalance);
+    localStorage.setItem('balance',remainingBalanceJson);
+
+    closingBalance.innerHTML = remainingBalanceJson;
 
 
-
-
-let remainingBalanceJson = JSON.stringify(remainingBalance);
-localStorage.setItem('balance',remainingBalanceJson);
-
-
-
-let availableBalanceDiv = document.querySelector(".available-balance")
-availableBalanceDiv.innerHTML = remainingBalanceJson;
-console.log('availableBalanceDiv:', availableBalanceDiv);
+    let availableBalanceDiv = document.querySelector(".available-balance")
+    availableBalanceDiv.innerHTML = remainingBalanceJson;
+    console.log('closingBalance:', closingBalance)
+    console.log('availableBalanceDiv:', availableBalanceDiv);
 }
 
 
@@ -132,6 +131,11 @@ const orders = document.createElement('div');
 const help = document.createElement('div');
 const logOut = document.createElement('div');
 const close = document.createElement('span');
+const userName = JSON.parse(localStorage.getItem('allMail'));
+var a ;
+userName.forEach(function(name) {
+    a = name.emails;
+})
 
 //creting classes for the above variables
 menuDiv.classList.add('menu')
@@ -156,7 +160,9 @@ menuDiv.classList.add('content');
 
 //appending all the items to the menuDiv
 
-menuDiv.append(close,importFunds,watchList,orders,darkMode,logOut);
+// menuDiv.append(close,importFunds,watchList,orders,darkMode,logOut);
+menuDiv.append(close,importFunds,a,watchList,orders,darkMode,logOut);
+
 
 //appending the items of the menuDiv to the userMenu
 userMenu.append(menuDiv);
@@ -177,13 +183,12 @@ if (count >= 1) {
 
 
 function darkModeToggle() {
-let darkModeButton = document.querySelector('.darkModeOn');
-// let a = document.querySelector('.stock-name')
-// let b = document.querySelector('.menu')
-// a.style.color = 'white'
-// b.style.color = 'black'
-darkModeButton = document.body;
- darkModeButton.classList.toggle('dark-mode');
+    let balaceText = document.querySelector('.balance-box');
+    let darkModeButton = document.querySelector('.darkModeOn');
+    menuDiv.style.color = "black";
+    balaceText.style.color = "black";
+    darkModeButton = document.body;
+    darkModeButton.classList.toggle('dark-mode');
 
 }
 

@@ -29,7 +29,7 @@
               href="#"><img
                 src="https://assets-netstorage.groww.in/website-assets/prod/1.8.2/build/client/images/google-icon.5c764c55.svg"
               />
-              <p>continue with Google</p></a
+              <p class="cwg">continue with Google</p></a
             >
             <p class="or">Or</p>
           </div>
@@ -267,11 +267,11 @@
             ><li>britanni Industries</li></a
           >
         </div>
-        <img
+        <img class="d-image"
           width="19px"
           height="19px"
           class="image"
-          src="file:///C:/Users/vikas/Downloads/search.494f6987.svg"
+          src="https://assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/search.494f6987.svg"
         />
       </div>
       <div class="sub-sections">
@@ -468,7 +468,7 @@
       function refresh_window() {
         setTimeout(() => {
           popup.style.display = "flex";
-        }, 1000);
+        }, 2000);
         email.value == "";
       }
       close.addEventListener("click", function () {
@@ -543,7 +543,7 @@
                 alert("Now you are part of Groww");
                 setTimeout(() => {
                   window.location.href =
-                    "https://groww.in/dashboard/explore/stocks";
+                    "dashboard.html";
                 }, 2000);
               } else {
                 alert("Password doesn't match");
@@ -560,7 +560,7 @@
             ) {
               setTimeout(() => {
                 window.location.href =
-                  "https://groww.in/dashboard/explore/stocks";
+                  "dashboard.html";
               });
               values = 1;
               break;
