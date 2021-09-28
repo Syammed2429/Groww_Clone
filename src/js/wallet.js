@@ -6,23 +6,19 @@ function deposit() {
     const withdrawOptions = document.querySelector('.withdraw-options')
     options.style.visibility = 'visible';
     withdrawOptions.style.visibility = 'hidden';
-    console.log("Hai");
 }
 deposit()
 
 function depositmoney() {
     let ongoingTransactions = document.querySelector('.showot');
     let amount = document.getElementById('money').value;
-    console.log('amount:', amount)
     const upiId = document.querySelector('.upi-id').value;
     if (amount == 0 && upiId == 0) return alert("Please enter a valid amount & UPI ID to deposit ");
     if(amount  && upiId == 0) return alert("Please enter UPI ID to deposit");
 
-    console.log('upiId:', upiId)
 
     const toNumber = Number(amount);
     ongoingTransactions.innerHTML = toNumber;
-    console.log('ongoingTransactions:', ongoingTransactions);
 
     setTimeout(function(){
         alert("Succesfully Deposited")
@@ -58,10 +54,8 @@ render();
 
 // accessing the totalbalnce from the localstorage
 let totalAmount = JSON.parse(localStorage.getItem('balance'));
-console.log('totalAmount:', totalAmount)
 
 function withdraw() {
-console.log("hai");
 
 //creating all the variables and assing the values to it
 const disapper = document.querySelector('.deposit-options');
@@ -70,7 +64,6 @@ const displayTotalMoney = document.querySelector('.show-amount');
 const enteredAmount = document.getElementById('withdraw-money')
 const withdrawAll = document.getElementById('withdraw-all__checkbox');
 const withdrawMoneyButton = document.querySelector('.withdraw-money__button');
-// console.log('enteredAmount:', enteredAmount)
 
 
 displayTotalMoney.innerText = totalAmount;
@@ -100,9 +93,7 @@ function withdrawmoney() {
     let closingBalance = document.querySelector('.showCB');
     let ongoingTransactions = document.querySelector('.showot');
     const withdrawMoneyButton = document.querySelector('.withdraw-money__button');
-    console.log('totalAmount:', totalAmount)
     const enteredAmount = document.getElementById('withdraw-money').value;
-    console.log('enteredAmount:', enteredAmount)
     
     ongoingTransactions.innerHTML = enteredAmount;
     //checking wheter enteredAmount is greater then the wallet balance
@@ -125,8 +116,6 @@ function withdrawmoney() {
 
     let availableBalanceDiv = document.querySelector(".available-balance")
     availableBalanceDiv.innerHTML = remainingBalanceJson;
-    console.log('closingBalance:', closingBalance)
-    console.log('availableBalanceDiv:', availableBalanceDiv);
 }
 
 
@@ -206,8 +195,8 @@ function darkModeToggle() {
 
 function logOutBtn () {
     setTimeout(function () {
-        window.location = 'index.html';
-        alert("Sucessfully logged out")
+        window.location = '/Groww/Groww_Clone/index.html';
+        alert("Successfully logged out")
 
     },2000)
 };
@@ -215,7 +204,7 @@ logOut.addEventListener('click', logOutBtn);
 
 
 function watchListOpen() {
-    window.location = 'watchlist.html'
+    window.location = '/Groww/Groww_Clone/watchlist.html'
 }
 watchList.addEventListener('click', watchListOpen)
 

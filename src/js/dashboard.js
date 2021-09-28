@@ -76,7 +76,7 @@ importFunds.classList.add('importFunds')
 
         function logOutBtn () {
             setTimeout(function () {
-                window.location = 'index.html';
+                window.location = '/Groww/Groww_Clone/index.html';
                 alert("Sucessfully logged out")
         
             },2000)
@@ -85,7 +85,7 @@ importFunds.classList.add('importFunds')
         
         
         function watchListOpen() {
-            window.location = 'watchlist.html'
+            window.location = '/Groww/Groww_Clone/watchlist.html'
         }
         watchList.addEventListener('click', watchListOpen)
         
