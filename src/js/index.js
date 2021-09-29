@@ -238,8 +238,8 @@ function submitForm(e) {
 
           alert("Now you are part of Groww");
           setTimeout(() => {
-            window.location.href =
-              "dashboard.html";
+            window.location =
+              "/Groww/Groww_Clone/dashboard/dashboard.html";
           }, 2000);
         } else {
           alert("Password doesn't match");
@@ -255,8 +255,8 @@ function submitForm(e) {
         allDatas[i].newPass == passorotp.value
       ) {
         setTimeout(() => {
-          window.location.href =
-            "dashboard.html";
+          window.location =
+            "/Groww/Groww_Clone/dashboard/dashboard.html";
         });
         values = 1;
         break;
