@@ -195,7 +195,7 @@ function darkModeToggle() {
 
 function logOutBtn () {
     setTimeout(function () {
-        window.location.href = '/Groww/Groww_Clone/index.html';
+        window.location.href = '../index.html';
         alert("Successfully logged out")
 
     },2000)
@@ -204,7 +204,7 @@ logOut.addEventListener('click', logOutBtn);
 
 
 function watchListOpen() {
-    window.location = '/Groww/Groww_Clone/watchlist.html'
+    window.location = '../watchlist.html'
 }
 watchList.addEventListener('click', watchListOpen)
 
