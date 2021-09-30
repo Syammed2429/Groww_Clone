@@ -85,9 +85,27 @@ withdrawMoneyButton.style.backgroundColor = 'grey'
 disapper.style.visibility = 'hidden';
 withdrawOptions.style.visibility = 'visible';
 
-
+withdrawAll.addEventListener("click", () => {
+    enteredAmount.value = totalAmount;
+});
 
 }
+
+let thousand = document.querySelector('.onethousand');
+let fiveThousand = document.querySelector('.fiveThousand');
+let moneyInput = document.getElementById('money');
+
+thousand.addEventListener('click', () => {
+    thousand = 1000;
+    moneyInput.value = thousand
+
+});
+
+fiveThousand.addEventListener('click', () => {
+    fiveThousand = 5000;
+    moneyInput.value = fiveThousand
+
+});
 
 function withdrawmoney() {
     let closingBalance = document.querySelector('.showCB');

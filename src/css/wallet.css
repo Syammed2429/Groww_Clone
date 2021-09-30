@@ -271,13 +271,15 @@ body {
       display: flex;
       justify-content: flex-end;
       margin-right: 2rem;
-      margin-top: 20px;;
+      margin-top: 20px;
+      cursor: pointer;
   }
 
   .deposit-button   {
       width: 315px;
       height: 45px;
       margin-top: 2rem;
+      cursor: pointer;
 
   }
 
@@ -347,6 +349,7 @@ body {
 }
 #withdraw-all__checkbox {
     border: 5px solid red;
+    cursor: pointer;
 }
 
 .withdraw-money {
@@ -358,6 +361,7 @@ body {
     height: 45px;
     margin-top: 6rem;
     margin-left: 8px;
+    cursor: pointer;
 
   }
 

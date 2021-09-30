@@ -108,6 +108,9 @@ var value = false;
               obj.newPass = newPass.value;
               arr.push(obj);
               localStorage.setItem("allMail", JSON.stringify(arr));
+              let amount = 0;
+              let balance = JSON.stringify(localStorage.setItem("balance", amount))
+//           
 
               alert("Now you are part of Groww");
               setTimeout(() => {
