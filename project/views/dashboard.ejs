@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dashstyle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <!-- header -->
+    <%- include("../partials/navbar.partial.ejs") %>
+
+        <!-- RIght Box Container Start -->
+
+        <div class="right-box">
+            <div class="fando">
+                <div class="right-box-image">
+                    <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/fno_icon.2067f0e1.svg"
+                        alt="F&O Logo">
+                </div>
+                <div class="right-box__option1">
+                    F&O - Futures & Options
+                </div>
+            </div>
+
+            <div class="etf">
+                <div class="right-box-image">
+                    <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/etf_icon.400ca2ff.svg"
+                        alt="ETF Image">
+                </div>
+                <div class="right-box__option2">
+                    ETF - Exchange Traded Funds
+                </div>
+            </div>
+
+            <div class="ipo">
+                <div class="right-box-image">
+                    <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/ipo_icon.45b3f2d8.svg"
+                        alt="IPO Image">
+                </div>
+                <div class="right-box__option1">
+                    IPO - Initial Public Offerings
+                </div>
+                <div class="sub-text">
+                    <div class="round-dot-green"></div>
+                    <div class="open">
+                        0 Open
+                    </div>
+                    <div class="round-dot-orange"></div>
+                    <div class="upcoming">
+                        1 Upcoming
+                    </div>
+                </div>
+            </div>
+
+            <div class="sgb">
+                <div class="right-box-image">
+                    <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/sgb_icon.18c76fd7.svg"
+                        alt="SGB">
+                </div>
+                <div class="right-box__option1">
+                    SGB - Sovereign Gold Bond
+                </div>
+                <div class="sub-text">
+                    <div class="round-dot-green"></div>
+                    <div class="open">
+                        0 Open
+                    </div>
+                    <div class="round-dot-orange"></div>
+                    <div class="upcoming">
+                        1 Upcoming
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- RIght Box Container End -->
+
+
+        <!-- Stock in News Start -->
+        <div class="market-heading__box2">
+
+            <div class="market-box1__heading">
+                <div class="market-heading1">Stocks in News</div>
+                <div class="market-rounded__text1">
+                    <div class="news rounded-text">News</div>
+                </div>
+            </div>
+
+            <div class="stock-box__data">
+
+                <%for( i=0;i<=3;i++){ %>
+                    <a href="companies/stocksdetails/<%=company[i]._id %>">
+                        <div class="stocks-data__box1">
+
+                            <div class="stock-image">
+                                <img alt="BPC" src="<%=company[i].logo_image%>" />
+                            </div>
+                            <div class="stock-name">
+                                <%=company[i].name%>
+                            </div>
+                            <div class="stock-price">
+                                <%=company[i].sharePrice[0]%>
+                            </div>
+                            <div class="stock-points">
+                                <%=company[i].pb_ratio%> (<%=company[i].sale%>)
+                            </div>
+
+                        </div>
+                    </a>
+                    <% } %>
+
+            </div>
+
+            <!-- STock in News End -->
+
+
+            <!-- Top Gainers Start -->
+
+            <div class="market-heading__box2">
+
+                <div class="market-box1__heading">
+                    <div class="market-heading1">Top Gainers<span>Nifty100</span></div>
+                    <div class="market-rounded__text">
+                        <div class="news">see more</div>
+                    </div>
+                </div>
+
+                <div class="stock-box__data">
+
+                    <%for( i=4;i<=7;i++){ %>
+                        <a href="companies/stocksdetails/<%=company[i]._id %>">
+                            <div class="stocks-data__box1">
+
+                                <div class="stock-image">
+                                    <img alt="BPC" src="<%=company[i].logo_image%>" />
+                                </div>
+                                <div class="stock-name">
+                                    <%=company[i].name%>
+                                </div>
+                                <div class="stock-price">
+                                    <%=company[i].sharePrice[0]%>
+                                </div>
+                                <div class="stock-points">
+                                    <%=company[i].pb_ratio%> (<%=company[i].sale%>)
+                                </div>
+
+                            </div>
+                        </a>
+                        <% } %>
+
+                </div>
+
+                <div>
+
+                    <!-- Top Gainers End -->
+
+
+                    <!-- Top Losers Start  -->
+
+                    <div class="market-heading__box2">
+
+                        <div class="market-box1__heading">
+                            <div class="market-heading1">Top Losers <span>Nifty100</span></div>
+                            <div class="market-rounded__text">
+                                <div class="news">see more</div>
+                            </div>
+                        </div>
+
+
+                        <div class="stock-box__data">
+
+                            <%for( i=8;i<=11;i++){ %>
+                                <div class="stocks-data__box1">
+                                    <a href="companies/stocksdetails/<%=company[i]._id %>">
+                                        <div class="stock-image">
+                                            <img alt="BPC" src="<%=company[i].logo_image%>" />
+                                        </div>
+                                        <div class="stock-name">
+                                            <%=company[i].name%>
+                                        </div>
+                                        <div class="stock-price">
+                                            <%=company[i].sharePrice[0]%>
+                                        </div>
+                                        <div class="stock-points">
+                                            <%=company[i].pb_ratio%> (<%=company[i].sale%>)
+                                        </div>
+                                    </a>
+                                </div>
+                                <% } %>
+
+                        </div>
+                        <div>
+
+                            <!-- Top Losers End -->
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Footer Start-->
+
+                <%- include("../partials/footer.partial.ejs") %>
+
+            </div>
+        </div>
+
+
+</body>
+
+</html>
