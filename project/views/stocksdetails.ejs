@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%=company.name%>
+    </title>
+    <link rel="stylesheet" href="../css/stockdetails.css" />
+    <link rel="stylesheet" href="../public/css/dashstyle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <div class="head-container">
+        <div class="header">
+
+            <div class="logo-image">
+                <a href="dashboard.ejs">
+                    <img src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/groww-logo-3.9b4012c4.svg"
+                        alt="Groww Logo">
+                </a>
+            </div>
+            <div class="navbarOptions">
+                <p>Explore</p>
+                <p>Investments</p>
+            </div>
+            <!-- search bar and search icon  -->
+            <div id="searchbar">
+                <input type="search" id="search" placeholder="What are you looking for today?">
+                <img class="searchIcon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png">
+                <div class="icons">
+                    <img class="bell-icon"
+                        src="https://www.pngarts.com/files/11/Youtube-Bell-Icon-PNG-Download-Image.png">
+                    <a href="../wallet/wallet.html">
+                        <img class="wallet-icon"
+                            src="https://cdn2.iconfinder.com/data/icons/30px-bank/30/17_wallet-money-cashback-transfer-account-balance-1024.png">
+                    </a>
+                    <img class="cart-icon" src="https://cdn-icons-png.flaticon.com/512/263/263142.png">
+                </div>
+            </div>
+
+            <div class="userIcon">
+                <div class="username"></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    <div class="MainContainer11">
+        <div id="pages">
+            <!-- convert them into links -->
+            <div>Home > stocks > <%=company.name%>
+            </div>
+        </div>
+        <div id="wholepage">
+            <div id="box1">
+                <div id="box11">
+                    <div>
+                        <img src="<%=company.logo_image%>" alt="" />
+                    </div>
+                    <!-- <span class="material-icons" id="watchlist" onclick="watchlistadd()">
+                           bookmark_add
+                           </span> -->
+
+
+                    <div>
+                        <div>
+                            <span class="material-icons" onclick="watchlistadd()"> bookmark_add </span>
+                        </div>
+                        <div>
+                            <span class="material-icons"> share </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="name1">
+                    <div>
+                        <%=company.name%>
+                    </div>
+
+                </div>
+                <div id="price">
+                    <div>
+                        <span class="material-icons"> attach_money </span>
+                    </div>
+                    <div id="num1">
+                        <%=company.sharePrice[0]%>
+                    </div>
+                    <div>+6.05(1.31%)</div>
+                    <div>1D</div>
+                </div>
+                <div id="graph">
+                    <div>
+                        <img src="https://learn.stash.com/wp-content/uploads/2018/11/CandestickChart_graph.png"
+                            id="img1" alt="" />
+                    </div>
+                </div>
+                <div id="days">
+                    <div id="days1">
+                        <div>
+                            <button onclick="graph1()" id="gp1" ondblclick="graph11()" id="nse1">
+                                NSE
+                            </button>
+                        </div>
+                        <div class="reports" onclick="gpc1()" ondblclick="gpc11()">
+                            <button>1D</button>
+                        </div>
+                        <div class="reports" onclick="gpc2()" ondblclick="gpc12()">
+                            <button>1W</button>
+                        </div>
+                        <div class="reports" onclick="gpc3()" ondblclick="gpc13()">
+                            <button>1M</button>
+                        </div>
+                        <div class="reports" onclick="gpc4()" ondblclick="gpc14()">
+                            <button>1Y</button>
+                        </div>
+                        <div class="reports" onclick="gpc5()" ondblclick="gpc15()">
+                            <button>3Y</button>
+                        </div>
+                        <div class="reports" onclick="gpc6()" ondblclick="gpc16()">
+                            <button>5Y</button>
+                        </div>
+                    </div>
+                    <div id="days2">
+                        <div>
+                            <!-- <img src="../images/candle_stick_icon.svg" id="dotted1" alt="" onmouseover="dottedfun()"> -->
+                        </div>
+                        <div>Technical</div>
+                    </div>
+                </div>
+                <div id="options">
+                    <div id="options1"><u>Overview</u></div>
+                    <div>Option chain</div>
+                    <div>Events</div>
+                    <div>News</div>
+                </div>
+                <div class="performance">
+                    <div>performance</div>
+                    <div>
+                        <span class="material-icons"> error </span>
+                    </div>
+                </div>
+                <div id="low">
+                    <div class="low1">
+                        <div>Today's Low</div>
+                        <div>
+                            <%=company.today_low%>
+                        </div>
+                    </div>
+                    <div>
+                        <hr />
+                    </div>
+                    <div class="low1">
+                        <div>Today's High</div>
+                        <div>
+                            <%=company.today_high%>
+                        </div>
+                    </div>
+                </div>
+                <div id="low">
+                    <div class="low1">
+                        <div>52W Low</div>
+                        <div>
+                            <%=company.week_52_low%>
+                        </div>
+                    </div>
+                    <div>
+                        <hr />
+                    </div>
+                    <div class="low1">
+                        <div>52W High</div>
+                        <div>
+                            <%=company.week_52_high%>
+                        </div>
+                    </div>
+                </div>
+                <div id="hrline">
+                    <div></div>
+                </div>
+                <div id="volume">
+                    <div>
+                        <p>Open Price</p>
+                        <p>
+                            <%=company.open_price%>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Prev. Close</p>
+                        <p>
+                            <%=company.prev_close%>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Volume</p>
+                        <p>
+                            <%=company.volume%>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Value</p>
+                        <p>
+                            <%=company.value%>
+                        </p>
+                    </div>
+                </div>
+                <div class="ana">
+                    <div>Analyst Estimates</div>
+                    <div>
+                        <span class="material-icons"> error </span>
+                    </div>
+                </div>
+                <div id="anapart">
+                    <div>
+                        <p>
+                            <%=company.analyst_estimate%>
+                        </p>
+                    </div>
+                    <div id="anapart1">
+                        <div id="anapart12">
+                            <div>
+                                <%=company.buy%>
+                            </div>
+                            <div>
+                                <hr />
+                            </div>
+                            <div>
+                                <%=company.hold%>
+                            </div>
+                        </div>
+                        <div id="anapart13">
+                            <div>Hold</div>
+                            <div>
+                                <hr />
+                            </div>
+                            <div>
+                                <%=company.hold%>
+                            </div>
+                        </div>
+                        <div id="anapart14">
+                            <div>Sell</div>
+                            <div>
+                                <hr />
+                            </div>
+                            <div>
+                                <%=company.sale%>
+                            </div>
+                        </div>
+                        <div>Aggregated by Refinitiv from Analysts</div>
+                    </div>
+                </div>
+
+                <div id="fundamentals">
+                    <div>Fundamentals</div>
+                </div>
+                <div id="funda1">
+                    <div id="funda11">
+                        <div>
+                            <div>Market Cap</div>
+                            <div>
+                                <%=company.marketcap%>
+                            </div>
+                        </div>
+                        <div id="funda112">
+                            <div>P/E Ratio</div>
+                            <div>
+                                <%=company.pe_ratio%>
+                            </div>
+                        </div>
+                        <div id="funda113">
+                            <div>P/B Ratio</div>
+                            <div>
+                                <%=company.pb_ratio%>
+                            </div>
+                        </div>
+                        <div id="funda114">
+                            <div>Industry P/E</div>
+                            <div>
+                                <%=company.industry_pe%>
+                            </div>
+                        </div>
+                        <div id="funda115">
+                            <div>Understand Fundamentals</div>
+                            <div>
+                                <span class="material-icons"> error </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="funda12">
+                        <div id="funda121">
+                            <div>ROE</div>
+                            <div>
+                                <%=company.roe%>
+                            </div>
+                        </div>
+                        <div id="funda122">
+                            <div>EPS(TTM)</div>
+                            <div>
+                                <%=company.eps_ttm%>
+                            </div>
+                        </div>
+                        <div id="funda123">
+                            <div>Dividend Yield</div>
+                            <div>
+                                <%=company.dividend_yield%>
+                            </div>
+                        </div>
+                        <div id="funda124">
+                            <div>Book Value</div>
+                            <div>
+                                <%=company.book_value%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="about">
+                    <div>About Company</div>
+                    <div>
+                        <%=company.about%>
+                    </div>
+                </div>
+
+                <div id="details">
+                    <div>
+                        <div class="rowwise">
+                            <div>Parent</div>
+                            <div>
+                                <%=company.parent_organisation%>
+                            </div>
+                        </div>
+                        <div class="rowwise">
+                            <div>Organisation</div>
+                            <div>Limited</div>
+                        </div>
+                        <div class="rowwise">
+                            <div>Founded</div>
+                            <div>
+                                <%=company.founded%>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="rowwise">
+                            <div>Managing Director</div>
+                            <div>
+                                <%=company.managing_director%>
+                            </div>
+                        </div>
+                        <div class="rowwise">
+                            <div>NSE Symbol</div>
+                            <div>
+                                <%=company.nse_symbol%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!--I Have to complete this part-->
+                <div id="pattern">
+                    <div id="pt1">Shareholding Pattern</div>
+                    <div>
+                        <div id="patt1">
+                            <div><button onclick="pch1()">Jun'20</button></div>
+                            <div><button onclick="pch2()">Sep'20</button></div>
+                            <div><button onclick="pch3()">Dec'20</button></div>
+                        </div>
+                        <div class="patt2">
+                            <div>Promoters</div>
+                            <div></div>
+
+                            <div id="p3">
+                                <%=company.promoters%>
+                            </div>
+                        </div>
+                        <div class="patt2">
+                            <div>Retails And Others</div>
+                            <div></div>
+
+                            <div id="p4">
+                                <%=company.retail_other%>
+                            </div>
+                        </div>
+                        <div class="patt2">
+                            <div>Other Domestic Institutions</div>
+                            <div></div>
+
+                            <div id="p5">
+                                <%=company.other_domestic_institution%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="invest">
+                    <div>Top Mutual Funds Invested(4)</div>
+                </div>
+                <div id="invest1">
+                    <div class="invest11">
+                        <div>FUND NAME</div>
+                        <div>AUM(%)</div>
+                    </div>
+                    <div class="invest11">
+                        <div id="xx1" onmouseover="ch1()" onmouseout="ch12()">
+                            Franklin Build India Direct Fund Growth
+                        </div>
+                        <div>4.70%</div>
+                    </div>
+                    <div class="invest11">
+                        <div id="xx12" onmouseover="ch2()" onmouseout="ch22()">
+                            Franklin India Focused Equity Fund Direct Growth
+                        </div>
+                        <div>3.66%</div>
+                    </div>
+                    <div class="invest11">
+                        <div id="xx13" onmouseover="ch3()" onmouseout="ch32()">
+                            DSP Natural Resources and New Energy Fund Direct Plan Growth
+                        </div>
+                        <div>2.86%</div>
+                    </div>
+                    <div class="invest11">
+                        <div id="xx14" onmouseover="ch4()" onmouseout="ch42()">
+                            ICICI Prudential Infrastructure Direct Growth
+                        </div>
+                        <div>2.24%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- start buy sell -->
+            <div id="box2">
+                <div>
+                    <div class="buySellbtn">
+                        <p class="clickbuybtn active">BUY</p>
+                        <p class="clicksellbtn">SELL</p>
+                    </div>
+                    <div class="shareAvail">
+                        <p>Type <span>Delivery</span></p>
+                    </div>
+                    <div>
+                        <p>Shares <span>NSE</span></p>
+                        <input type="text" class="box2" />
+                    </div>
+                    <div>
+                        <p>Price <span>Limit</span></p>
+                        <input type="text" class="box2" />
+                    </div>
+                    <div>
+                        <p class="adv">Advanced Options</p>
+                        <p>Balance</p>
+                        <p class="availBal">Rs.0.00</p>
+                    </div>
+                    <div>
+                        <p>
+                            Order will execute at best price or will get<br />cancelled on
+                            the next trading day
+                        </p>
+                        <!-- <p class="wallet">See your stock here</p> -->
+                        <p class="buysellBtn">BUY</p>
+                        <p>100% SAFE AND SECURE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end buy sell -->
+    <%- include("../partials/footer.partial.ejs") %>
+        <style>
+            body {
+                -webkit-touch-callout: none;
+                /* iOS Safari */
+                -webkit-user-select: none;
+                /* Safari */
+                -khtml-user-select: none;
+                /* Konqueror HTML */
+                -moz-user-select: none;
+                /* Old versions of Firefox */
+                -ms-user-select: none;
+                /* Internet Explorer/Edge */
+                user-select: none;
+                /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+                font-family: Roboto, system-ui;
+                color: #44475b;
+            }
+
+            /* Header Style Start */
+
+            .head-container {
+                margin: 10px;
+            }
+
+            .header {
+                width: 1200px;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                gap: 18rem;
+            }
+
+            #searchbar>input {
+                width: 445px;
+                height: 38px;
+                padding: 2px 1px 1px 13px;
+                border: white;
+                box-shadow: 2px 2px 4px silver, -1px -1px 4px silver;
+                position: relative;
+                right: 28rem;
+            }
+
+            .searchIcon {
+                width: 19px;
+                height: 19px;
+                position: relative;
+                bottom: 1.7rem;
+                /* right: 26rem; */
+                right: 1.8rem;
+            }
+
+            .logo-image img {
+                width: 146px;
+                height: 40px;
+            }
+
+            .navbarOptions {
+                display: flex;
+                gap: 2rem;
+                flex-direction: row;
+                align-items: flex-start;
+                position: relative;
+                right: 15rem;
+            }
+
+            /* .navbarOptions > p {
+
+
+} */
+            .btn-color {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(0, 208, 156);
+                color: white;
+                height: 55px;
+                width: 200px;
+                border-radius: 5px;
+                border: none;
+                font-size: 17px;
+            }
+
+            /* Nav Bar Icons style Start */
+
+            .icons {
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                right: 32rem;
+                top: 1rem;
+                /* cursor: pointer; */
+            }
+
+            .icons img {
+                width: 20px;
+                height: 20px;
+                margin-left: 1.5rem;
+            }
+
+            /* User options */
+            .userIcon {
+                position: relative;
+                right: 33rem;
+            }
+
+            /* Nav Bar Icons style End */
+
+            /* DropdownMenu Style Start  */
+
+            .content {
+                z-index: 1;
+                background-color: white;
+
+                position: absolute;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            }
+
+            .content div {
+                padding: 20px 16px 16px;
+                display: block;
+            }
+
+            .content div:hover {
+                background-color: #ddd;
+            }
+
+            .username {
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                background: url("https://image.shutterstock.com/image-vector/user-icon-trendy-flat-style-260nw-418179856.jpg");
+                background-size: 220%;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+                top: 3%;
+                /* background: #00D09c; */
+            }
+
+            /* DropdownMenu Style SEnd  */
+
+            /* Header and Nav bar style End  */
+
+            .MainContainer11 {
+                width: 80%;
+                margin: auto;
+            }
+
+            #pages {
+                display: flex;
+                width: 80%;
+            }
+
+            #pages>div {
+                font-size: 10px;
+                margin-left: 13px;
+            }
+
+            #wholepage {
+                display: flex;
+                flex-direction: row;
+                margin: auto;
+                /* border: 1px solid red; */
+                height: auto;
+                /* margin: 1%; */
+            }
+
+            #wholepage>div {
+                margin: auto;
+                margin-top: 5px;
+            }
+
+            #wholepage>div:first-child {
+                width: 70%;
+                height: auto;
+            }
+
+            /* start buy sell */
+            #wholepage>div:last-child {
+                padding-left: 10px;
+                padding-right: 0px;
+                position: sticky;
+                box-shadow: 0px 0px 0.1px 1px black;
+                border-radius: 8px;
+            }
+
+            #box2>div>div {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .active {
+                font-weight: bold;
+                color: #00d09c;
+            }
+
+            #box2>div {
+                width: 90%;
+            }
+
+            #box2>div div:nth-child(1) {
+                border-bottom: 1px solid black;
+                padding-bottom: -12px;
+            }
+
+            #box2>div div:nth-child(3) p {
+                margin: 0;
+            }
+
+            #box2>div div:nth-child(4) p {
+                margin: 0;
+            }
+
+            #box2>div div:nth-child(4) {
+                border-bottom: 1px dotted gray;
+            }
+
+            #box2>div div:nth-child(6) {
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            #box2 #box2>div div:nth-child(6) p:nth-child(1) {
+                font-size: 14px;
+            }
+
+            #box2 .buysellBtn {
+                margin: 0;
+                padding: 10px 40px;
+                background-color: #00d09c;
+                color: white;
+                font-weight: bold;
+            }
+
+            .adv {
+                color: #00d09c;
+            }
+
+            #box2 span {
+                font-weight: bold;
+            }
+
+            .wallet {
+                margin: 3px;
+                background-color: grey;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 4px;
+            }
+
+            #box2 input {
+                width: 90px;
+                height: 20px;
+                padding: 5px;
+                margin-bottom: 4px;
+            }
+
+            /* end buy sell */
+            #box22 {
+                margin: auto;
+                margin-left: 35px;
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            #box23 {
+                margin: auto;
+                font-size: 10px;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            #box24 {
+                margin: auto;
+                margin-top: 5%;
+                /* border: 1px solid green; */
+                margin-bottom: 5%;
+            }
+
+            #box24>button {
+                width: 90%;
+                padding: 10px;
+                font-size: 12px;
+                font-weight: 600;
+                background-color: #00d09c;
+                color: white;
+                margin-left: 3%;
+                border-radius: 5px;
+            }
+
+            #box11 {
+                width: 93%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            #box11>div:first-child {
+                width: 6%;
+                border: 2px solid #bee2d9;
+                margin: 4px;
+                padding: 4px;
+                border-radius: 5px;
+            }
+
+            #box11>div:first-child>img {
+                width: 30px;
+                margin-left: 4px;
+            }
+
+            #box11>div:last-child {
+                display: flex;
+                flex-direction: row;
+                /* margin-left: 150px; */
+            }
+
+            #box11>div:last-child>div {
+                margin: 10px;
+            }
+
+            #name1 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                margin: auto;
+                margin-top: 14px;
+            }
+
+            #name1>div {
+                width: 50%;
+                /* border: 1px solid green; */
+            }
+
+            #name1>div:first-child {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            #name11>button {
+                margin-left: 60%;
+                padding: 2px;
+                border-radius: 8px;
+                background-color: white;
+                font-weight: 100;
+                color: grey;
+                border: 1px solid grey;
+            }
+
+            #price {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                margin-top: 14px;
+            }
+
+            #price>div {
+                width: auto;
+                /* border: 1px solid yellow; */
+            }
+
+            #price>div:nth-child(1) {
+                margin-top: 3px;
+            }
+
+            #price>div:nth-child(2) {
+                font-weight: 600;
+                font-size: 20px;
+                padding-top: 0%;
+            }
+
+            #price>div:nth-child(3) {
+                font-weight: 500;
+                font-size: 14px;
+                padding-top: 1%;
+                color: #00d09c;
+            }
+
+            #price>div:nth-child(4) {
+                font-weight: 500;
+                font-size: 14px;
+                padding-top: 1%;
+            }
+
+            #graph {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                height: 350px;
+            }
+
+            #graph>div {
+                width: 100%;
+                /* border: 1px solid blueviolet; */
+                height: 350px;
+                /* border: 1px solid yellow; */
+            }
+
+            #graph>div>img {
+                width: 100%;
+                margin-bottom: 15px;
+                height: 350px;
+            }
+
+            #days {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                margin-top: 45px;
+            }
+
+            #days>div:first-child {
+                /* display: inline; */
+                margin: 2%;
+                width: 70%;
+                /* border: 1px solid yellow; */
+            }
+
+            #days>div:last-child {
+                /* display: inline; */
+                margin: 2%;
+                width: 30%;
+                /* border: 1px solid yellow; */
+            }
+
+            #days1 {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #days1>div {
+                width: 10%;
+                margin: 1%;
+                /* border: 1px solid red; */
+            }
+
+            #days2 {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #days2>div:first-child {
+                width: 20%;
+                min-height: 30px;
+                margin: 2%;
+                margin-right: 10px;
+                /* border: 1px solid red; */
+            }
+
+            #days2>div:first-child>img {
+                width: 100%;
+                height: 20px;
+                margin: auto;
+                /* height: auto; */
+            }
+
+            #days2>div:last-child {
+                width: 70%;
+                margin: 2%;
+                /* border: 1px solid red; */
+            }
+
+            #days1>div:nth-child(1)>button {
+                padding: 7px;
+                font-size: 14px;
+                background-color: white;
+                border: 1px solid #bee2d9;
+                border-radius: 4px;
+            }
+
+            .reports>button {
+                padding: 2px;
+                background-color: white;
+                width: 30px;
+                border: 1px solid #bee2d9;
+                border-radius: 3px;
+            }
+
+            .reports>button:hover {
+                background-color: #bee2d9;
+            }
+
+            .reports {
+                font-size: 14px;
+                padding: 7px;
+                font-weight: 500;
+            }
+
+            /* #days2 > div {
+  margin: 2px;
+} */
+            #days2>div:first-child>img {
+                width: 20px;
+                margin-left: 2px;
+                border: 2px solid #bee2d9;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            #days2>div:last-child {
+                border: 2px solid #bee2d9;
+                padding: 10px;
+                width: 70px;
+                height: 20px;
+                font-size: 16px;
+                font-weight: 500;
+                color: #00d09c;
+                border-radius: 5px;
+            }
+
+            #options {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                margin: auto;
+            }
+
+            #options>div {
+                display: inline;
+                width: 10%;
+                /* border: 1px solid black; */
+                margin: 2%;
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            #options>div:nth-child(2) {
+                width: 16%;
+            }
+
+            #options>div:nth-child(1) {
+                color: #00d09c;
+            }
+
+            .performance {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .performance>div:first-child {
+                display: inline;
+                width: 19%;
+                font-size: 22px;
+                font-weight: 600;
+                margin: 1%;
+                /* border: 1px solid rgb(25, 48, 25); */
+            }
+
+            .performance>div:last-child {
+                display: inline;
+                width: 25px;
+                margin-top: 12px;
+                /* border: 1px solid yellow; */
+            }
+
+            #low {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                margin-top: 25px;
+            }
+
+            #low>div:first-child {
+                width: 13%;
+                /* border: 1px solid blue; */
+                margin: 1%;
+            }
+
+            #low>div:last-child {
+                width: 13%;
+                /* border: 1px solid blue; */
+                margin: 1%;
+            }
+
+            #low>div:nth-child(2) {
+                width: 70%;
+                /* border: 1px solid green; */
+                margin: 1%;
+            }
+
+            .low1 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .low1>div {
+                width: 100%;
+                margin: auto;
+                margin-top: 3%;
+                /* border: 1px solid red; */
+                font-weight: 500;
+            }
+
+            #low>div:nth-child(2)>hr {
+                height: 5px;
+                margin-top: 22px;
+                background-color: #00d09c;
+                border-radius: 5px;
+            }
+
+            #hrline {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            #hrline>div {
+                border-top: 1px dotted grey;
+                margin: auto;
+                width: 100%;
+            }
+
+            #volume {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                margin-top: 25px;
+                /* border: 1px solid pink; */
+            }
+
+            #volume>div {
+                width: 20%;
+                /* border: 1px solid yellow; */
+                margin: 2%;
+            }
+
+            #volume>div>p {
+                font-size: 16px;
+                font-weight: 500;
+                padding-top: 0%;
+            }
+
+            .ana {
+                display: flex;
+                flex-direction: row;
+                margin-top: 40px;
+            }
+
+            .ana>div:first-child {
+                display: inline;
+                width: 26%;
+                font-size: 22px;
+                font-weight: 600;
+                margin: 1%;
+                /* border: 1px solid rgb(25, 48, 25); */
+            }
+
+            .ana>div:last-child {
+                display: inline;
+                width: 25px;
+                margin-top: 12px;
+                /* border: 1px solid yellow; */
+            }
+
+            #anapart {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+
+            #anapart>div:first-child {
+                margin-top: 20px;
+                width: 23%;
+                height: 140px;
+                border: 1px solid #d1ece5;
+                border-radius: 50%;
+                background-color: #d1ece5;
+            }
+
+            #anapart>div:first-child>p {
+                font-size: 40px;
+                margin-left: 35px;
+                color: #00d09c;
+                font-weight: 700;
+            }
+
+            #anapart>div:last-child {
+                width: 80%;
+                /* border: 1px solid pink; */
+                margin-left: 50px;
+            }
+
+            #anapart1>div {
+                margin: 2%;
+                /* border: 1px solid black; */
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #anapart12 {
+                width: 90%;
+                /* border: 1px solid pink !important; */
+                display: flex !important;
+                flex-direction: row !important;
+            }
+
+            #anapart12>div {
+                width: 8%;
+                margin: 1%;
+                font-size: 18px;
+                font-weight: 500;
+                /* border: 1px solid red; */
+            }
+
+            #anapart12>div:nth-child(2) {
+                width: 80%;
+                color: #00d09c;
+            }
+
+            #anapart12>div:nth-child(2)>hr {
+                width: 100%;
+                background-color: #00d09c;
+                height: 5px;
+                border-radius: 5px;
+            }
+
+            #anapart13 {
+                width: 90%;
+                /* border: 1px solid pink !important; */
+                display: flex !important;
+                flex-direction: row !important;
+            }
+
+            #anapart13>div {
+                width: 8%;
+                margin: 1%;
+                font-size: 18px;
+                font-weight: 500;
+                /* border: 1px solid red; */
+            }
+
+            #anapart13>div:nth-child(2) {
+                width: 20%;
+            }
+
+            #anapart13>div:nth-child(2)>hr {
+                width: 100%;
+                background-color: grey;
+                height: 5px;
+                border-radius: 5px;
+            }
+
+            #anapart14 {
+                width: 90%;
+                /* border: 1px solid pink !important; */
+                display: flex !important;
+                flex-direction: row !important;
+            }
+
+            #anapart14>div {
+                width: 8%;
+                margin: 1%;
+                font-size: 18px;
+                font-weight: 500;
+                /* border: 1px solid red; */
+            }
+
+            #anapart14>div:nth-child(2) {
+                width: 8%;
+            }
+
+            #anapart14>div:nth-child(2)>hr {
+                width: 100%;
+                background-color: grey;
+                height: 5px;
+                border-radius: 5px;
+            }
+
+            #anapart>div:last-child {
+                font-weight: 500;
+            }
+
+            #fundamentals {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #fundamentals>div {
+                margin-top: 60px;
+                width: 40%;
+                /* border: 1px solid rgb(161, 83, 83); */
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            #funda1 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            #funda1>div {
+                width: 48%;
+                margin-top: 30px;
+                /* border: 2px solid yellowgreen; */
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            #funda11 {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #funda11>div {
+                margin: 1%;
+            }
+
+            #funda11>div:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #funda11>div:nth-child(1)>div {
+                width: 45%;
+                /* border: 1px solid yellow; */
+                margin: 1%;
+            }
+
+            #funda112 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            #funda112>div {
+                margin: 1%;
+            }
+
+            #funda112>div {
+                width: 45%;
+                /* border: 1px solid yellow; */
+                margin: 1%;
+            }
+
+            #funda113 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            #funda113>div {
+                margin: 1%;
+            }
+
+            #funda113>div {
+                width: 45%;
+                /* border: 1px solid yellow; */
+                margin: 1%;
+            }
+
+            #funda114 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            #funda114>div {
+                margin: 1%;
+            }
+
+            #funda114>div {
+                width: 45%;
+                /* border: 1px solid rgb(155, 155, 71); */
+                margin: 1%;
+            }
+
+            #funda115 {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #funda115>div:nth-child(1) {
+                font-size: 14px;
+                margin-left: 5px;
+            }
+
+            #funda121 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            #funda121>div {
+                margin: 1%;
+            }
+
+            #funda121>div {
+                width: 45%;
+                /* border: 1px solid yellow; */
+                margin: 1%;
+            }
+
+            #funda122 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            #funda122>div {
+                margin: 1%;
+            }
+
+            #funda122>div {
+                width: 45%;
+                /* border: 1px solid yellow; */
+                margin: 1%;
+            }
+
+            #funda123 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            #funda123>div {
+                margin: 1%;
+            }
+
+            #funda123>div {
+                width: 45%;
+                /* border: 1px solid rgb(34, 34, 14); */
+                margin: 1%;
+            }
+
+            #funda124 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            #funda124>div {
+                margin: 1%;
+            }
+
+            #funda124>div {
+                width: 45%;
+                /* border: 1px solid yellow; */
+                margin: 1%;
+            }
+
+            #about {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #about>div {
+                width: 96%;
+                margin: 1%;
+                /* border: 1px solid yellow; */
+            }
+
+            #about>div:first-child {
+                font-size: 18px;
+                font-weight: 500;
+                margin-top: 50px;
+            }
+
+            #details {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #details>div {
+                width: 40%;
+                margin: 5%;
+                /* border: 1px solid pink; */
+                margin-top: 30px;
+            }
+
+            #details>div:first-child {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #details>div:first-child>div {
+                width: 100%;
+                /* border: 1px solid yellow; */
+                margin-top: 10px;
+                /* justify-content: space-between; */
+            }
+
+            .rowwise {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .rowwise>div {
+                font-size: 14px;
+            }
+
+            .rowwise>div {
+                margin-top: 10px;
+            }
+
+            #details>div:last-child {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #details>div:last-child>div {
+                width: 98%;
+                /* border: 1px solid red; */
+                margin-top: 30px;
+            }
+
+            .rowwise>div:last-child {
+                font-weight: 500;
+            }
+
+            #bpcimg {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #bpcimg>div {
+                margin: 5%;
+                width: 20%;
+                height: auto;
+                border: 1px solid #bee2d9;
+                border-radius: 5px;
+            }
+
+            #bpcimg>div>img {
+                width: 50px;
+                margin-left: 5px;
+                margin-top: 15px;
+            }
+
+            #bpcimg>div:nth-child(1)>img {
+                margin-top: 18px;
+                margin-left: 10px;
+            }
+
+            #bpcimg>div:nth-child(2)>img {
+                margin-top: 18px;
+            }
+
+            #bpcimg>div:nth-child(3)>img {
+                margin-top: 28px;
+                margin-left: 10px;
+            }
+
+            #bpcimg>div:nth-child(4)>img {
+                margin-top: 20px;
+                margin-left: 10px;
+            }
+
+            #bpcimg>div:nth-child(5)>img {
+                margin-top: 14px;
+                margin-left: 11px;
+            }
+
+            #invest {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #invest>div {
+                width: 100%;
+                /* border: 1px solid green; */
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            #invest1 {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            #invest1>div {
+                width: 100%;
+                border: 1px solid grey;
+                height: 60px;
+            }
+
+            #invest1>div:nth-child(1) {
+                height: 50px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+
+            .invest11 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            #invest1>div:nth-child(1) {
+                border-bottom: none;
+                padding-top: 15px;
+                font-size: 14px;
+            }
+
+            #invest1>div:nth-child(1)>div:last-child {
+                margin-right: 15px;
+                opacity: 0.5;
+            }
+
+            #invest1>div:nth-child(1)>div:first-child {
+                margin-left: 15px;
+                opacity: 0.5;
+            }
+
+            #invest1>div:nth-child(2) {
+                border-top: 1px dotted grey;
+            }
+
+            .invest11>div:first-child {
+                margin-left: 15px;
+                opacity: 1;
+                margin-top: 15px;
+            }
+
+            .invest11>div:last-child {
+                margin-right: 15px;
+                opacity: 1;
+                margin-top: 15px;
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            #invest1>div:last-child {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            #pattern {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #pattern>div {
+                width: 100%;
+                border: 1px solid grey;
+                border-radius: 5px;
+                /* height: 60px; */
+                margin: 1%;
+            }
+
+            #pt1 {
+                border: none !important;
+            }
+
+            #pattern>div:first-child {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            #pattern>div:last-child {
+                display: flex;
+                flex-direction: column;
+                width: 99%;
+                margin: auto;
+                margin-bottom: 50px;
+            }
+
+            #pattern>div:last-child>div {
+                width: 99%;
+                /* border: 1px solid grey; */
+                height: 50px;
+                margin: auto;
+            }
+
+            #patt1 {
+                display: flex;
+                flex-direction: row;
+                margin: 2%;
+            }
+
+            #patt1>div {
+                margin: 2%;
+            }
+
+            #patt1>div>button {
+                border: none;
+                padding: 6px;
+                border-radius: 5px;
+                background-color: white;
+                font-weight: 550;
+            }
+
+            #patt1>div>button:hover {
+                background-color: #e6f3f0;
+                color: #00d09c;
+            }
+
+            .patt2 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .patt2>div:nth-child(1) {
+                width: 30%;
+                /* border: 1px solid pink; */
+                margin-top: 15px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .patt2>div:nth-child(2) {
+                width: 50%;
+
+                margin-top: 20px;
+                font-size: 14px;
+                font-weight: 600;
+                height: 5px;
+                background-color: #00d09c;
+                border: 1px solid #00d09c;
+                border-radius: 5px;
+            }
+
+            .patt2>div:nth-child(3) {
+                margin-top: 10px;
+                margin-left: 20px;
+            }
+
+            #fakefooter {
+                width: 100%;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+            }
+
+            #fakefooter>div {
+                width: 100%;
+            }
+
+            #fakefooter>div>img {
+                width: 100%;
+            }
+
+            /* Dark Mode Style Style Start  */
+            .dark-mode {
+                background: black;
+                color: white !important;
+            }
+
+            .darkModeOn {
+                color: red;
+            }
+
+            .head-container {
+                margin: 10px;
+            }
+
+            .header {
+                width: 1200px;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                gap: 18rem;
+            }
+
+            #searchbar>input {
+                width: 445px;
+                height: 38px;
+                padding: 2px 1px 1px 13px;
+                border: white;
+                box-shadow: 2px 2px 4px silver, -1px -1px 4px silver;
+                position: relative;
+                right: 28rem;
+            }
+
+            .searchIcon {
+                width: 19px;
+                height: 19px;
+                position: relative;
+                bottom: 1.7rem;
+                /* right: 26rem; */
+                right: 1.8rem;
+            }
+
+            .logo-image img {
+                width: 146px;
+                height: 40px;
+            }
+
+            .navbarOptions {
+                display: flex;
+                gap: 2rem;
+                flex-direction: row;
+                align-items: flex-start;
+                position: relative;
+                /* left: 40rem; */
+                right: 15rem;
+            }
+
+            /* .navbarOptions > p {
+
+
+} */
+            .btn-color {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(0, 208, 156);
+                color: white;
+                height: 55px;
+                width: 200px;
+                border-radius: 5px;
+                border: none;
+                font-size: 17px;
+            }
+
+            /* Nav Bar Icons style Start */
+
+            .icons {
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                /* left: 5rem; */
+                right: 20rem;
+                /* bottom: 5rem; */
+                top: 1rem;
+            }
+
+            .icons img {
+                width: 20px;
+                height: 20px;
+                margin-left: 1.5rem;
+            }
+
+            /* User options */
+            .userIcon {
+                position: relative;
+                right: 33rem;
+            }
+
+            /* Nav Bar Icons style End */
+
+            /* DropdownMenu Style Start  */
+
+            .content {
+                z-index: 1;
+                background-color: white;
+
+                position: absolute;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            }
+
+            .content div {
+                padding: 20px 16px 16px;
+                display: block;
+            }
+
+            .content div:hover {
+                background-color: #ddd;
+            }
+
+            .username {
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                background: url("https://image.shutterstock.com/image-vector/user-icon-trendy-flat-style-260nw-418179856.jpg");
+                background-size: 220%;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+                top: 3%;
+                /* background: #00D09c; */
+            }
+
+            .footerDiv {
+                width: 1897px;
+                height: auto;
+                /* position: relative; */
+                right: 22rem;
+                top: 25rem;
+                border: 1px solid #1e2232;
+                background-color: #1e2232;
+                margin-top: 100px;
+                /* margin-right: 35; */
+            }
+
+            .footer {
+                width: 80%;
+                margin: auto;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                /* border: 1px solid black; */
+                display: flex;
+            }
+
+            .footer>div {
+                width: 22%;
+                margin: 1%;
+                /* border: 1px solid yellow; */
+            }
+
+            #footer11 img {
+                width: 120px;
+            }
+
+            #footer12 {
+                color: white;
+                margin-top: 18px;
+                font-size: 16px;
+                line-height: 25px;
+            }
+
+            #footer13 a {
+                color: white;
+                margin-top: 3px;
+                font-size: 16px;
+                line-height: 25px;
+            }
+
+            #footer14icons {
+                display: flex;
+                margin-top: 15px;
+            }
+
+            #footer14icons>div {
+                width: 20px;
+                height: 25px;
+                /* border: 1px solid red; */
+                margin: 19px;
+                margin-left: 1px;
+            }
+
+            #footer14icons>div a img {
+                width: 23px;
+                align-items: center;
+            }
+
+            #footer2 {
+                margin-left: 50px;
+            }
+
+            #footer21 {
+                color: white;
+                font-size: 18px;
+            }
+
+            #footer22>a {
+                margin-top: 11px;
+                display: block;
+                color: white;
+                text-decoration: none;
+                font-weight: 100;
+            }
+
+            #footer31 {
+                color: white;
+                font-size: 18px;
+            }
+
+            #footer32>a {
+                margin-top: 11px;
+                display: block;
+                color: white;
+                text-decoration: none;
+                font-weight: 100;
+            }
+
+            #footer41 {
+                color: white;
+                font-size: 18px;
+            }
+
+            #footer42>a {
+                margin-top: 11px;
+                display: block;
+                color: white;
+                text-decoration: none;
+                font-weight: 100;
+            }
+
+            #footer5 {
+                width: 80%;
+                margin: auto;
+            }
+
+            #footer6 {
+                width: 80%;
+                display: flex;
+                margin: auto;
+
+                height: 25px;
+                margin-bottom: 80px;
+            }
+
+            #footer6>div {
+                width: 45%;
+                margin: 2%;
+                /* border:1px solid red;  */
+                /* height: 50px; */
+            }
+
+            #footer61 {
+                color: white;
+                font-size: 16px;
+            }
+
+            #footer62 {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+            #footer62>div {
+                /* border: 1px solid white; */
+                margin: 5px 8px;
+                width: 120px;
+                border-radius: 8px;
+            }
+
+            #footer62>div>img {
+                width: 120px;
+                height: 46px;
+            }
+
+            /* Footer Style End */
+
+            /* Dark Mode Style Style End  */
+        </style>
+
+        <script>
+            var num = setInterval(changeNum, 3000);
+            var inputval = document.querySelectorAll("#box2 .box2");
+            function changeNum() {
+                document.getElementById("num1").innerHTML = Math.round(
+                    Math.random() * 1000
+                );
+                var val = document.getElementById("num1").innerHTML;
+                //  random value into inputbox
+                inputval[1].value = Number(val) + 15;
+                if (value == false) {
+                    inputval[1].value = Number(val) - 15;
+                }
+                //  document.getElementById("num1").style.color = "#00d09c";
+                if (val > 400) {
+                    document.getElementById("num1").style.color = "#00d09c";
+                } else {
+                    document.getElementById("num1").style.color = "red";
+                }
+            }
+
+            //  var fd1 = document.getElementById("xx1").style.color = "#00d09c";
+
+
+            //   buy sell start
+            var value = true;
+            var values = false;
+            let amount = JSON.parse(localStorage.getItem("balance"));
+            //   console.log('amount:', amount)
+            var balance = document.querySelector(".availBal");
+            var buybtn = document.querySelector(".clickbuybtn");
+            var sellbtn = document.querySelector(".clicksellbtn");
+            var btnDiv = document.querySelector(".buysellBtn");
+            var buysellDiv = document.querySelector(".buysellBtn");
+            var shareAvail = document.querySelector(".shareAvail");
+            var sell_p = document.createElement("p");
+            sell_p.textContent = "Shares Available 0";
+            var clickbtn = document.querySelector(".buysellBtn");
+            var wallet = document.querySelector(".wallet");
+            balance.textContent = amount;
+
+            buybtn.addEventListener("click", function () {
+                value = true;
+                this.style.color = "#00d09c";
+                sellbtn.style.color = "black";
+                clickbtn.textContent = "BUY";
+                //  if (value == true) {
+                //    shareAvail.removeChild(sell_p);
+                //  }
+            });
+            sellbtn.addEventListener("click", function () {
+                value = false;
+                this.style.color = "#00d09c";
+                this.style.fontWeight = "bold";
+                buybtn.style.color = "black";
+                clickbtn.textContent = "SELL";
+                clickbtn.style.border = "1px solid #00d09c";
+                //  if (value == false) {
+                //    shareAvail.appendChild(sell_p);
+                //  }
+            });
+
+
+            btnDiv.addEventListener("click", function () {
+                if (inputval[0].value == "" || inputval[1].value == "") {
+                    alert("Need input in both field");
+                } else {
+                    if (inputval[0].value * inputval[1].value > amount) {
+                        alert("thanks to purchase");
+                    } else {
+                        values = true;
+                    }
+                }
+                if (values == true) {
+                    alert("thanks to purchase");
+                    var bal = amount - inputval[0].value * inputval[1].value;
+                    localStorage.setItem("balance", JSON.stringify(bal));
+                    var remamount = JSON.parse(localStorage.getItem("balance"));
+                }
+                balance.textContent = remamount;
+            });
+
+  //   buy sell end
+
+        </script>
