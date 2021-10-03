@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/funds.css"/>
+    <!-- <link rel="stylesheet" href="/css/groww.css"/> -->
+    <link rel="stylesheet" href="/css/dashstyle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>All Company</title>
+</head>
+<body>
+    <!-- fetching data from mongo atlas -->
+
+
+    <!-- header -->
+    
+    <div class="head-container">
+        <div class="header">
+        
+        <div class="logo-image">
+            <a href="dashboard.html">
+                <img src="Images/logolanding.svg" alt="Groww Logo">
+            </a>
+        </div>
+        <div class="navbarOptions">
+            <p>Explore</p>
+            <p>Investments</p>
+        </div>
+        <!-- search bar and search icon  -->
+        <div id="searchbar">
+            <input type="search" id="search" placeholder="What are you looking for today?">
+            <img class="searchIcon" src="Images/searchlogo.svg">
+        </div>
+        <div class="icons">
+            <img class="bell-icon" src="images/bell.png">
+            <a href="wallet.ejs">
+                <img class="wallet-icon" src="images/wallet.png">
+            </a>
+            <img class="cart-icon" src="images/cart.png">
+        </div>
+        <div class="userIcon">
+            <div class="username"></div>
+            
+        </div>
+    </div>
+</div>
+<div class="main-options">
+    <div class="dash-board-options">Stocks</div>
+    <div class="dash-board__options">Mutual Funds</div>
+    <div class="dash-board__options">Fixed Deposits</div>
+    <div class="dash-board__options">Gold</div>
+    <div class="dash-board__options">US Stocks</div>
+</div>
+<hr style="width: 69%; margin-top: 8px;">
+    <!-- endheader -->
+    <div id="company_box">
+   
+  
+       <div id="left_side">
+          <div>
+            <div><p id="pf">Popular Funds</p></div>
+            <div><a href="http://localhost:2524/mutuals"><button >SEE ALL MUTUAL FUND</button></a></div>
+          </div>
+         
+             <div>
+                <% funds.forEach(function(data){ %>
+                 <div id="second_div">
+                    <div><img src="<%=data.imageurl %>" alt="" id="logoimg"></div>
+                    <div><%=data.body %></div>
+                    <div id="year_div">
+                        <div><%=data.increase %></div>
+                        <div><%=data.year %></div>
+                    </div>
+                 </div>
+                 <% }) %>
+             </div>
+
+        <div id="hp"><p>HandPicked Collections</p></div>
+
+        <div id="hand_div">
+            <div>
+                <img src="/images/mfhigh.svg" alt="">
+                <p>HIGH RETURN</p>
+            </div>
+            <div>
+                <img src="/images/mftax.svg" alt="">
+                <P>TAX SAVING</P>
+            </div>
+            <div>
+                <img src="/images/mflow.svg" alt="">
+                <P>BETTER THAN FD</P>
+            </div>
+            <div>
+                <img src="/images/mflarge.svg" alt="">
+                <P>TOP COMPANIES</P>
+            </div>
+            <div>
+                <img src="/images/mfsmall.svg" alt="">
+                <P>SIP With Rs.500 </P>
+            </div>
+            <div>
+                <img src="/images/mfreturns.svg" alt="">
+                <p>SECTOR BETS</p>
+            </div>
+
+        </div>
+
+        <div id="moreinfo">
+            <div>
+                <img src="/images/importfund.svg" alt="">
+                <p>IMPORT FUNDS</p>
+            </div>
+            <div>
+                <img src="/images/smartsave.svg" alt="">
+                <P>SMART SAVE</P>
+            </div>
+            <div>
+                <img src="/images/switchToDirect.svg" alt="">
+                <P>SWITCH TO DIRECT</P>
+            </div>
+            <div>
+                <img src="/images/nfo.svg" alt="">
+                <P>LIVE NFO</P>
+            </div>
+            <div>
+                <img src="/images/compare.svg" alt="">
+                <P>COMPARE FUNDS</P>
+            </div>
+        </div>
+         
+       </div>
+       <div id="right_side">
+           <div>
+               <img src="https://assets-netstorage.groww.in/mf-assets/logos/Group-1384.svg" alt="" id="boy_img">
+           </div>
+           <div>
+               <p>Attention required!</p>
+           </div>
+           <div><p>Complete setting up your account to start investing on Groww</p></div>
+           <div>
+               <p>Complete Setup</p>
+           </div>
+       </div>
+
+       
+ 
+       
+      
+ 
+</div>
+    <!--footer-->
+    <div class="footerDiv">
+        <div class="footer">
+          <div id="footer1">
+            <div id="footer11">
+              <img src="images/logo.svg" alt="" />
+            </div>
+            <div id="footer12">
+              No.11, 2nd floor, 80 FT Road 4th Block, S.T Bed, Koramangala
+              Bengaluru - 560034
+            </div>
+            <div id="footer13"><a href="#">ContactUs</a></div>
+            <div id="footer14icons">
+              <div>
+                <a href="#"><img src="images/fb_icon.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/twitter_icon.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/mk.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/instagram_icon.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/linkedin_icon.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/telegram_icon.svg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div id="footer2">
+            <div id="footer21">PRODUCTS</div>
+            <div id="footer22">
+              <a href="#">Stocks</a>
+              <a href="#">Futures & Options</a>
+              <a href="#">Mutual Funds</a>
+              <a href="#">Fixed Deposit</a>
+              <a href="#">Gold</a>
+              <a href="#">US Stocks</a>
+            </div>
+          </div>
+          <div id="footer3">
+            <div id="footer31">GROWW</div>
+            <div id="footer32">
+              <a href="#">About Us</a>
+              <a href="#">Pricing</a>
+              <a href="#">Blog</a>
+              <a href="#">Media & Press</a>
+              <a href="#">Help and Support</a>
+            </div>
+          </div>
+          <div id="footer4">
+            <div id="footer41">QUICK LINKS</div>
+            <div id="footer42">
+              <a href="#">AMC Mutual Funds</a>
+              <a href="#">Calculators</a>
+              <a href="#">Glossary</a>
+              <a href="#">Open Demat Account</a>
+              <a href="#">Groww Digest</a>
+            </div>
+          </div>
+        </div>
+  
+        <div id="footer5">
+          <hr />
+        </div>
+  
+        <div id="footer6">
+          <div id="footer61">
+            ⓒ&nbsp;2016-2021 Groww, All rights reserved, Build with Love in India
+          </div>
+          <div id="footer62">
+            <div id="footer62img">
+              <img src="images/google-play-logo.svg" alt="" />
+            </div>
+            <div>
+              <img src="images/app-store-logo.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fakefooter">
+        <div><img src="images/footer.png" alt="" /></div>
+      </div>
+    
+</body>
+</html>

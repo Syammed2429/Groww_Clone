@@ -117,7 +117,7 @@ function submitForm(e) {
 
           alert("Now you are part of Groww");
           setTimeout(() => {
-            window.location.assign('http://localhost:6334/companies');
+            window.location.assign('dashboard.html');
           }, 2000);
         } else {
           alert("Password doesn't match");
@@ -134,7 +134,7 @@ function submitForm(e) {
       ) {
         setTimeout(() => {
           // window.location.href = "../../dashboard.html";
-          window.location.assign('http://localhost:6334/companies');
+          window.location.assign('dashboard.html');
 
         });
         values = 1;
