@@ -1,6 +1,6 @@
 # Building the clone of the Groww Website.
 
-### - Description
+###  Description
 
 This project involves around trading platform, Where a user can find details about various companies which are enlisited on national
 
