@@ -241,7 +241,7 @@ function submitForm(e) {
 
           alert("Now you are part of Groww");
           setTimeout(() => {
-            window.locassign('./../../dashboard.html');
+            window.location.assign('dashboard.html');
           }, 2000);
         } else {
           alert("Password doesn't match");
