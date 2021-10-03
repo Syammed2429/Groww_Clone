@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/wallet.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Wallet</title>
+</head>
+<body>
+
+   <!-- header -->
+    <div class="head-container">
+        <div class="header">
+        
+        <div class="logo-image">
+            <a href="../dashboard.html">
+                <img src="../Images/logolanding.svg" alt="Groww Logo">
+            </a>
+        </div>
+        <div class="navbarOptions">
+            <p>Explore</p>
+            <p>Investments</p>
+        </div>
+        <!-- search bar and search icon  -->
+        <div id="searchbar">
+            <input type="search" id="search" placeholder="What are you looking for today?">
+            <img class="searchIcon" src="https://assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/search.494f6987.svg">
+        </div>
+        <div class="icons">
+            <img class="bell-icon" src="../images/bell.png">
+            <a href="wallet.html">
+                <img class="wallet-icon" src="../images/wallet.png">
+            </a>
+            <img class="cart-icon" src="../images/cart.png">
+        </div>
+        <div class="userIcon">
+            <div class="username"></div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Header End -->
+
+<!-- Currency Options Start -->
+<div class="currency-box">
+    <div class="inr">
+        INR Balance
+    </div>
+    <!-- <div class="usd">
+        USD Balance
+    </div> -->
+</div>
+
+<!-- Currency Options End -->
+
+<!-- Balance Display Start -->
+
+<div class="balance-cont">
+
+    <div class="balance-box">
+        <div class="balance-text">
+                Balance Available
+            <span class="currency-symbol">&#8377;</span>
+            <div class="available-balance"> 0</div>
+        </div>
+    </div>
+    <div class="balance-details">
+        <div class="details-box">
+            <div class="details">
+                Details
+            </div>
+            <div class="all-details">
+
+                <div class="cb">
+                    Closing Balance (CB) : <span class="cd-1">	&#8377;</span><p class="showCB">0.00</p>
+                    
+                </div>
+                <div class="ot">
+                    Ongoing Transactions : <span class="ot-1">	&#8377;</span><p class="showot">0.00</p>
+                </div>
+                <div class="ba">
+                    Balance Available : <span class="ba-1">&#8377;</span><p class="showBA">0.00</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="add-money-container">
+    <div class="add-money__box">
+        <div class="deposit" onclick="deposit()" >
+            Deposit
+        </div>
+        <div class="withdraw" onclick="withdraw()">
+            withdraw
+        </div>
+    </div>
+    <div class="deposit-options">
+
+        <label for="money">Enter Amount
+            <input type="number" id="money" placeholder="0" required>
+        </label>
+        <div class="money-options">
+            <div class="onethousand">+ &#8377; 1,000</div>
+            <div class="fiveThousand">+ &#8377; 5,000</div>
+        </div>
+        <div class="pay-options-box">
+            <div class="pay-options">
+                <p>Pay Using:</p>
+            </div>
+            <div class="pay-options__input">
+                <div class="pay-options__image">
+                    <img src="../Images/upi.svg" alt="UPI">
+                    <div class="pay-input-field">
+                        <input  class="upi-id" type="text" placeholder="Enter UPI ID" >
+                        <div>
+                            ICICI - XXXX3845
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <button class="deposit-button btn-color" onclick="depositmoney()">DEPSOIT MONEY</button>
+    </div>
+
+    <div class="withdraw-options">
+        <div class="withdrawable">
+            withdrawable <span class="faq">&quest;</span>
+            <div class="show-total__amount"> &#8377; <span class="show-amount"></span></div>
+        </div>
+        <label class="withdraw-amount" for="withdraw-money">Enter Amount
+            <input type="number" id="withdraw-money" placeholder="0" required>
+        </label>
+        <div class="withdraw-all">
+            <div class="checkbox-amount">
+
+                <label for="withdraw-all__checkbox">
+                    <input type="checkbox" id="withdraw-all__checkbox">
+                    Withdraw All
+                    
+                </label>
+            </div>
+        </div>
+        <div class="withdraw-to">
+            <div class="bank-name">
+                To
+                <span>
+                    ICICI BANK LIMITED
+                </span>
+            </div>
+
+        </div>
+        <button class="withdraw-money__button btn-color" onclick="withdrawmoney()">WITHDRAW MONEY</button>
+    </div>
+</div>
+
+<script type="text/javascript" src="../src/js/wallet.js"></script>
+</body>
+</html>
+
+

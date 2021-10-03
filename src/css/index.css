@@ -77,7 +77,6 @@ sticky */
 }
 #getStarted {
   cursor: pointer;
-
 }
 
 .btn-color {
@@ -166,13 +165,13 @@ sticky */
 }
 #login .right a {
   width: 19em;
-    margin-top: 28px;
-    margin-bottom: 40px;
-    padding: 9px 29px;
-    display: flex;
-    text-decoration: none;
-    color: black;
-    box-shadow: 2px 2px 2px 0.1px grey;
+  margin-top: 28px;
+  margin-bottom: 40px;
+  padding: 9px 29px;
+  display: flex;
+  text-decoration: none;
+  color: black;
+  box-shadow: 2px 2px 2px 0.1px grey;
   /* width: 62%;
   margin-top: 30px;
   margin-bottom: 40px;
@@ -1035,4 +1034,155 @@ h4 {
   font-weight: 400;
   margin-top: 1px;
   padding-top: 2px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .left-container {
+    margin-left: 50%;
+    /* display : flex; */
+  }
+  .text-change {
+    position: absolute;
+    left: 32rem;
+  }
+
+  .stockslst {
+    position: relative;
+    top: 80%;
+    right: 28%;
+    margin-bottom: 50px;
+  }
+  .tabcontainer {
+    margin-top: 30%;
+    margin-left: 5%;
+  }
+  .our-products {
+    margin-top: 15%;
+  }
+  .canvasArt {
+    display: none;
+  }
+
+  .keepLearningDiv {
+    position: relative;
+    top: 68rem;
+  }
+  .press-container {
+    position: relative;
+    top: 82rem;
+  }
+  #rating {
+    display: none;
+  }
+  .footerDiv {
+    width: 75rem;
+    height: auto;
+    border: 1px solid #1e2232;
+    background-color: #1e2232;
+    margin-top: 50%;
+    position: relative;
+    top: 135vh;
+    /* right: 0; */
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .footerDiv {
+    top: 115vh;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .footerDiv {
+    top: 85vh;
+  }
+  .text-change {
+    left: 25rem;
+  }
+  .canvasArt {
+    display: none;
+  }
+  .keepLearningDiv {
+    top: 50rem;
+  }
+  .press-container {
+    top: 65rem;
+  }
+  #rating {
+    display: flex;
+    margin-left: -15rem;
+    position: relative;
+    top: 43rem;
+  }
+  #rating > div {
+    width: 100rem;
+  }
+  .footerDiv {
+    width: 84rem;
+    height: auto;
+    border: 1px solid #1e2232;
+    background-color: #1e2232;
+    margin-top: 53%;
+    position: relative;
+    top: 40vh;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .footerDiv {
+    top: 18vh;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .text-change {
+    /* position: absolute; */
+    left: 47rem;
+  }
+
+  /* Canvas Section */
+  .canvasArt {
+    display: flex;
+  }
+
+  .keepLearningDiv {
+    /* position: relative; */
+    top: 100rem;
+  }
+  .press-container {
+    /* position: relative; */
+    top: 82rem;
+  }
+
+  .press-container {
+    top: 115rem;
+  }
+
+  /* Rating Style Start */
+
+  #rating {
+    position: relative;
+    top: 95rem;
+    margin: auto;
+  }
+  #rating21:hover {
+    cursor: pointer;
+  }
+
+  /* footer */
+
+  .footerDiv {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 80vh;
+    right: 10px;
+    left: -10px;
+    padding: 1rem;
+  }
 }
