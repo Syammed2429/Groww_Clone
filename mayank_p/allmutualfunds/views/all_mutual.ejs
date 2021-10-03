@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bharatpc.css">
+    <link rel="stylesheet" href="/css/allfunds.css">
+    <link rel="stylesheet" href="css/dashstyle.css">
+    <link rel="stylesheet" href="/">
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+    <title>All Mutual Funds</title>
+</head>
+<body>
+        <!-- header -->
+        <div class="head-container">
+            <div class="header">
+            
+            <div class="logo-image">
+                <a href="../dashboard.html">
+                    <img src="../Images/logolanding.svg" alt="Groww Logo">
+                </a>
+            </div>
+            <div class="navbarOptions">
+                <p>Explore</p>
+                <p>Investments</p>
+            </div>
+            <!-- search bar and search icon  -->
+            <div id="searchbar">
+                <input type="search" id="search" placeholder="What are you looking for today?">
+                <img class="searchIcon" src="https://assets-netstorage.groww.in/website-assets/prod/1.8.1/build/client/images/search.494f6987.svg">
+            </div>
+            <div class="icons">
+                <img class="bell-icon" src="../images/bell.png">
+                <a href="../wallet/wallet.html">
+                    <img class="wallet-icon" src="../images/wallet.png">
+                </a>
+                <img class="cart-icon" src="../images/cart.png">
+            </div>
+            <div class="userIcon">
+                <div class="username"></div>
+                
+            </div>
+        </div>
+      </div>
+      <div id="wings">
+          <div id="right_wing">
+           <div id="head1"> <p>All Mutual Funds</p></div>
+            
+           <% mutuals.forEach(function(data){ %>
+           <div id=boxx1>
+            
+              <div><img src="<%=data.imageurl %>" alt="" id="allimages"></div>
+              <div id=bodypart>
+                  <div><%=data.body %></div>
+                  <div>
+                    <div><%=data.risk %></div>
+                    <div><%=data.others %></div>
+                    <div><%=data.stars %> star</div>
+                  </div>
+              </div>
+              <div id="day">
+                  <div><%=data.daypercen %></div>
+                  <div><%=data.day %></div>
+              </div>
+              <div id="oneyear">
+                  <div><%=data.yearpercen %></div>
+                  <div><%=data.year %></div>
+              </div>
+              <div id="threey">
+                  <div><%=data.threepercen %></div>
+                  <div><%=data.years %></div>
+              </div>
+             
+           </div>
+           <% }) %>
+ 
+          </div>
+          
+      </div>
+          <!--footer-->
+    <div class="footerDiv">
+        <div class="footer">
+          <div id="footer1">
+            <div id="footer11">
+              <img src="images/logo.svg" alt="" />
+            </div>
+            <div id="footer12">
+              No.11, 2nd floor, 80 FT Road 4th Block, S.T Bed, Koramangala
+              Bengaluru - 560034
+            </div>
+            <div id="footer13"><a href="#">ContactUs</a></div>
+            <div id="footer14icons">
+              <div>
+                <a href="#"><img src="images/fb_icon.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/twitter_icon.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/mk.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/instagram_icon.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/linkedin_icon.svg" alt="" /></a>
+              </div>
+              <div>
+                <a href="#"><img src="images/telegram_icon.svg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div id="footer2">
+            <div id="footer21">PRODUCTS</div>
+            <div id="footer22">
+              <a href="#">Stocks</a>
+              <a href="#">Futures & Options</a>
+              <a href="#">Mutual Funds</a>
+              <a href="#">Fixed Deposit</a>
+              <a href="#">Gold</a>
+              <a href="#">US Stocks</a>
+            </div>
+          </div>
+          <div id="footer3">
+            <div id="footer31">GROWW</div>
+            <div id="footer32">
+              <a href="#">About Us</a>
+              <a href="#">Pricing</a>
+              <a href="#">Blog</a>
+              <a href="#">Media & Press</a>
+              <a href="#">Help and Support</a>
+            </div>
+          </div>
+          <div id="footer4">
+            <div id="footer41">QUICK LINKS</div>
+            <div id="footer42">
+              <a href="#">AMC Mutual Funds</a>
+              <a href="#">Calculators</a>
+              <a href="#">Glossary</a>
+              <a href="#">Open Demat Account</a>
+              <a href="#">Groww Digest</a>
+            </div>
+          </div>
+        </div>
+  
+        <div id="footer5">
+          <hr />
+        </div>
+  
+        <div id="footer6">
+          <div id="footer61">
+            ⓒ&nbsp;2016-2021 Groww, All rights reserved, Build with Love in India
+          </div>
+          <div id="footer62">
+            <div id="footer62img">
+              <img src="images/google-play-logo.svg" alt="" />
+            </div>
+            <div>
+              <img src="images/app-store-logo.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fakefooter">
+        <div><img src="images/footer.png" alt="" /></div>
+      </div>
+</body>
+</html>
